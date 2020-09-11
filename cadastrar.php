@@ -19,7 +19,7 @@
             <input type="text" name="id_livro" placeholder="Digite o id do livro"><br><br>
 
             <label> Título: </label>
-            <input type="text" name="nome_livro" placeholder="Digite o título do livro"><br><br>
+            <input type="text" name="titulo_livro" placeholder="Digite o título do livro"><br><br>
 
             <label> ISBN: </label>
             <input type="text" name="isbn_livro" placeholder="Digite o ISBN do livro"><br><br>
