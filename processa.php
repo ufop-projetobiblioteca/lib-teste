@@ -2,17 +2,21 @@
     session_start();
     include_once("conexao.php");
 
-    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-    $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
+    $id = filter_input(INPUT_POST, 'id_livro', FILTER_SANITIZE_STRING);
+    $titulo = filter_input(INPUT_POST, 'titulo_livro', FILTER_SANITIZE_STRING);
+    $isbn = filter_input(INPUT_POST, 'isbn_livro', FILTER_SANITIZE_STRING);
+    $autor = filter_input(INPUT_POST, 'autor_livro', FILTER_SANITIZE_STRING);
+    $edicao = filter_input(INPUT_POST, 'edicao_livro', FILTER_SANITIZE_STRING);
+    $sessao = filter_input(INPUT_POST, 'sessao_livro', FILTER_SANITIZE_STRING);
     
 
-    $result_user = "INSERT INTO usuarios (email, senha) VALUES ('$email', '$senha')";
+    $result_user = "INSERT INTO livros VALUES ('$id', '$titulo', '$isbn', '$autor', '$edicao', '$sessao')";
     $result_query = pg_query($conexao, $result_user);
 
-    if(mysqli_insert_id($conexao)){
-        $_SESSION['msg'] = "<p style='color:green;'>Usuário Cadastrado com sucesso!</p>";
+    if($result_query){
+        $_SESSION['msg'] = "<p style='color:green;'>Livro Cadastrado com sucesso!</p>";
         header("Location: index.php");
     }else{
-        $_SESSION['msg'] = "<p style='color:red;'>Erro ao cadastrar usuário!</p>";
+        $_SESSION['msg'] = "<p style='color:red;'>Erro ao cadastrar livro!</p>";
         header("Location: index.php");
     }
