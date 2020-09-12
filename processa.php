@@ -16,7 +16,7 @@
         $result_user = "INSERT INTO livros VALUES ('$titulo', '$isbn', '$autor', '$edicao', '$sessao')";
         $result_query = pg_query($conexao, $result_user);
 
-        $erro = pg_last_error($result_query);
+        $erro = pg_last_error($conexao);
         echo $erro;
 
             if($result_query){
