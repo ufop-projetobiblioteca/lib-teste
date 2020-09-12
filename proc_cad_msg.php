@@ -4,9 +4,9 @@ session_start();
 include_once 'conexao.php';
 
 // verifica se o usuário clicou no botão, clicou no botão acessa o IF e tenta cadastrar, caso contrario acessa o ELSE
-$SendCadCont = filter_input(INPUT_POST, 'cadLivro', FILTER_SANITIZE_STRING);
+$cadLivro = filter_input(INPUT_POST, 'cadLivro', FILTER_SANITIZE_STRING);
 
-if($SendCadCont){
+if($cadLivro){
     // recebe os dados do formulário
     $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_STRING);
     $titulo = filter_input(INPUT_POST, 'titulo', FILTER_SANITIZE_STRING);
