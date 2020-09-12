@@ -15,5 +15,5 @@
     }
 
     //criar conexão PDO
-    $conn = new PDO($con_string);
+    $conn = new PDO('pgsql:host=$servidor; port=5432; dbname=$bancoDeDados; user=$usuario; password=$senha');
 ?>
