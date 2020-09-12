@@ -15,8 +15,8 @@
             }
         ?>
         <form method="POST" action="processa.php">
-            <!--<label> id: </label>
-            <input type="text" name="id_livro" placeholder="Digite o id do livro"><br><br>-->
+            <label> id: </label>
+            <input type="text" name="id_livro" placeholder="Digite o id do livro"><br><br>
 
             <label> Título: </label>
             <input type="text" name="titulo_livro" placeholder="Digite o título do livro"><br><br>

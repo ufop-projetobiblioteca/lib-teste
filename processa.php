@@ -20,6 +20,8 @@
         echo $erro;
 
             if($result_query){
+                $erro = pg_last_error($conexao);
+                echo $erro;
                 $_SESSION['msg'] = "<p style='color:green;'>Livro Cadastrado com sucesso!</p>";
                 header("Location: index.php");
             }else{
