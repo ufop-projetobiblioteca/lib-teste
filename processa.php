@@ -16,6 +16,8 @@
         $result_user = "INSERT INTO livros VALUES ('$titulo', '$isbn', '$autor', '$edicao', '$sessao')";
         $result_query = pg_query($conexao, $result_user);
 
+        echo pg_last_error();
+
             if($result_query){
                 $_SESSION['msg'] = "<p style='color:green;'>Livro Cadastrado com sucesso!</p>";
                 header("Location: index.php");
