@@ -13,4 +13,7 @@
     {
         die("Não foi possível se conectar ao banco de dados.");
     }
+
+    //criar conexão PDO
+    $conn = new PDO($con_string);
 ?>

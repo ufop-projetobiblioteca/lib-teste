@@ -14,10 +14,11 @@ if($SendCadCont){
     $autor = filter_input(INPUT_POST, 'autor', FILTER_SANITIZE_STRING);
     $edicao = filter_input(INPUT_POST, 'edicao', FILTER_SANITIZE_STRING);
     $sessao = filter_input(INPUT_POST, 'sessao', FILTER_SANITIZE_STRING);
+    
 
     // insere no BD
     $result_msg_cont = "INSERT INTO livros (id, titulo, isbn, autor, edicao, sessao) VALUES (:id, :titulo, :isbn, :autor, :edicao, :sessao)";
-    $insert_msg_cont = $conexao->prepare($result_msg_cont);
+    $insert_msg_cont = $conn->prepare($result_msg_cont);
     $insert_msg_cont->bindParam('id:', $id);
     $insert_msg_cont->bindParam('titulo:', $titulo);
     $insert_msg_cont->bindParam('isbn:', $isbn);
