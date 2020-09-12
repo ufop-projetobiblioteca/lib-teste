@@ -27,7 +27,7 @@ if($cadLivro){
     $insert_msg_cont->bindParam('sessao:', $sessao);
 
     if($insert_msg_cont->execute()){
-        $_SESSION['msg'] = "<p style='color=green;'>Mensagem enviada com!</p>";
+        $_SESSION['msg'] = "<p style='color=green;'>Mensagem enviada com sucesso!</p>";
         header('Location: index.php');
     }else{
         $_SESSION['msg'] = "<p style='color=red;'>Falha ao enviar mensagem!</p>";

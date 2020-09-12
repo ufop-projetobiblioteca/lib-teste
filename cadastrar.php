@@ -33,6 +33,6 @@
             <label> Sessão: </label>
             <input type="text" name="sessao_livro" placeholder="Digite a sessão do livro"><br><br>
 
-            <input type="submit" value="Cadastrar">
+            <input type="submit" name="cadastrar" value="Cadastrar">
         </form>
     </body>
