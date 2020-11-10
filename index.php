@@ -1,6 +1,10 @@
 <!doctype html>
 <?php
-session_start();
+  session_start();
+  if (!isset($_SESSION['cpf'])) {
+    $_SESSION['msg'] = 'Faça o Login para continuar!';
+    header("Location: index.php");
+  }
 ?>
 <html lang="pt-br">
 
