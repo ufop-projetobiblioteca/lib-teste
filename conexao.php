@@ -7,13 +7,9 @@
 
     $con_string = "host=$servidor port=$porta dbname=$bancoDeDados user=$usuario password=$senha";
 
-    //criar conexão
     $conexao = pg_connect($con_string);
     if(!$conexao) 
     {
         die("Não foi possível se conectar ao banco de dados.");
     }
-
-    //criar conexão PDO
-    $conn = new PDO("pgsql:host=$servidor; port=5432; dbname=$bancoDeDados; user=$usuario; password=$senha");
 ?>
