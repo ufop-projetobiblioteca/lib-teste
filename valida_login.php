@@ -14,17 +14,16 @@ include_once("conexao.php"); {
             if ($senha == $row_usuario['senha']) {
                 if ($row_usuario['tipo_usuario'] == 1) {
                     header("Location: admin.php");
-                } else if ($row_usuario['tipo_usuario'] == 0) {
-                    header("Location: usuario.php");
                 } else {
-                    $_SESSION['msg'] = "Usuário ou Senha incorretos!";
-                    header("Location: login.php");
+                    header("Location: usuario.php");
                 }
             }
+        } else {
+            $_SESSION['msg'] = "Usuário ou Senha incorretos!";
+            header("Location: index.php");
         }
-    }
-    else{
+    } else {
         $_SESSION['msg'] = "Página não encontrada";
-        header("Location: login.php");
+        header("Location: index.php");
     }
 }
