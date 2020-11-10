@@ -17,10 +17,10 @@ include_once("conexao.php"); {
                 } else {
                     header("Location: usuario.php");
                 }
+            } else {
+                $_SESSION['msg'] = "Usuário ou Senha incorretos!";
+                header("Location: index.php");
             }
-        } else {
-            $_SESSION['msg'] = "Usuário ou Senha incorretos!";
-            header("Location: index.php");
         }
     } else {
         $_SESSION['msg'] = "Página não encontrada";
