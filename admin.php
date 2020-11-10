@@ -74,21 +74,32 @@
         <div class="starter-template">
             <div class="row">
                 <div class="col-md-12">
-                    <table id="table_id" class="table">
+                    <table id="table_id" class="table table-bordered table-hover">
                         <thead>
                             <tr>
-                                <th>Column 1</th>
-                                <th>Column 2</th>
+                                <th scope="col">#</th>
+                                <th scope="col">Primeiro</th>
+                                <th scope="col">Último</th>
+                                <th scope="col">Nickname</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Row 1 Data 1</td>
-                                <td>Row 1 Data 2</td>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
                             </tr>
                             <tr>
-                                <td>Row 2 Data 1</td>
-                                <td>Row 2 Data 2</td>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td colspan="2">Larry the Bird</td>
+                                <td>@twitter</td>
                             </tr>
                         </tbody>
                     </table>
