@@ -51,7 +51,7 @@ session_start();
     <button class="btn btn-lg btn-primary btn-block" type="submit">Acessar</button>
     <p class="mt-5 mb-3 text-muted">&copy; 2017-2020</p>
   </form>
-  <p class="text-center text-danger">
+  <p class="text-danger">
     <?php
     if (isset($_SESSION['msg'])) {
       echo $_SESSION['msg'];
