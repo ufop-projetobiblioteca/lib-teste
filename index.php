@@ -38,12 +38,6 @@ session_start();
 </head>
 
 <body class="text-center">
-  <?php
-  if (isset($_SESSION['msg'])) {
-    echo $_SESSION['msg'];
-    unset($_SESSION['msg']);
-  }
-  ?>
   <form method="POST" action="valida_login.php" class="form-signin">
     <img class="mb-4" src="img/icone-biblioteca.ico" alt="" width="72" height="72">
     <h1 class="h3 mb-3 font-weight-normal">Biblioteca</h1>
@@ -57,6 +51,14 @@ session_start();
     <button class="btn btn-lg btn-primary btn-block" type="submit">Acessar</button>
     <p class="mt-5 mb-3 text-muted">&copy; 2017-2020</p>
   </form>
+  <p class="text-center text-danger">
+    <?php
+    if (isset($_SESSION['msg'])) {
+      echo $_SESSION['msg'];
+      unset($_SESSION['msg']);
+    }
+    ?>
+  </p>
 </body>
 
 </html>
