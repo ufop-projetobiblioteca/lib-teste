@@ -6,19 +6,25 @@ include_once("conexao.php"); {
 
     if ((!empty($usuario)) and (!empty($senha))) {
         //pesquisar usuário no BD
-        $result_usuario = "SELECT * FROM usuarios WHERE email='$usuario' and senha='$senha'";
+        $result_usuario = "SELECT * FROM usuarios WHERE email='$usuario'";
         $resultado_usuario = pg_query($conexao, $result_usuario);
 
         if ($resultado_usuario) {
             $row_usuario = pg_fetch_assoc($resultado_usuario);
-            if ($row_usuario['tipo_usuario'] == 1) {
-                header("Location: admin.php");
-            } else if ($row_usuario['tipo_usuario'] == 0) {
-                header("Location: usuario.php");
+            if ($senha == $row_usuario['senha']) {
+                if ($row_usuario['tipo_usuario'] == 1) {
+                    header("Location: admin.php");
+                } else if ($row_usuario['tipo_usuario'] == 0) {
+                    header("Location: usuario.php");
+                } else {
+                    $_SESSION['msg'] = "Usuário ou Senha incorretos!";
+                    header("Location: login.php");
+                }
             }
-        } else {
-            $_SESSION['msg'] = "Usuário ou senha incorretos!";
-            header("Location: index.php");
         }
+    }
+    else{
+        $_SESSION['msg'] = "Página não encontrada";
+        header("Location: login.php");
     }
 }
