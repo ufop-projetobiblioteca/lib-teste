@@ -57,7 +57,7 @@ $resultado = pg_fetch_assoc($usuario);
         </div>
         <div class="pull-rigth">
             <a href="admin.php?link=2"><button type="button" class="btn btn-sm btn-primary">Listar</button></a>
-            <a href='admin.php?link=7&id=<?php echo $linhas['matricula']; ?>'><button type="button" class="btn btn-sm btn-warning">Editar</button></a>
+            <a href='admin.php?link=7&id=<?php echo $resultado['matricula']; ?>'><button type="button" class="btn btn-sm btn-warning">Editar</button></a>
             <a href="#"><button type="button" class="btn btn-sm btn-danger">Apagar</button></a>
         </div>
     </div>
