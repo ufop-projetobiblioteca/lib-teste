@@ -49,18 +49,22 @@ session_start();
             <div class="col-md-12">
                 <form>
                     <div class="form-group">
-                        <label for="formGroupExampleInput">Example label</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+                        <label for="formGroupExampleInput" class="col-sm-2 custom-control-label">Example label</label>
+                        <div>
+                            <input type="text" class="form-control" name="cpf" placeholder="Digite o cpf">
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label for="formGroupExampleInput2">Another label</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+                        <label for="formGroupExampleInput" class="col-sm-2 custom-control-label">Example label</label>
+                        <div>
+                            <input type="text" class="form-control" name="nome" placeholder="Digite o primeiro nome">
+                        </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-    
+
     </main><!-- /.container -->
     <script src="script/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script>
