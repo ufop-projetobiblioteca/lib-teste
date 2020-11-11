@@ -45,7 +45,7 @@ include_once('conexao.php');
     <?php
     include_once('menu_admin.php');
     ?>
-    <main role="main" class="container">
+    <div class="container">
         <h1>Cadastrar Usuário</h1></br>
         <div class="starter-template">
             <div class="row">
@@ -92,7 +92,7 @@ include_once('conexao.php');
                             <div class="col-sm-10">
                                 <select class="form-control">
                                     <option value="1">Administrador</option>
-                                    <option value="0">Usuário comum</option>
+                                    <option value="0">Usuário Comum</option>
                                 </select>
                             </div>
                         </div>
@@ -107,7 +107,7 @@ include_once('conexao.php');
 
         </div>
 
-    </main><!-- /.container -->
+    </div><!-- /.container -->
     <script src="script/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script>
         window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')
