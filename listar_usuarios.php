@@ -24,13 +24,14 @@ $linhas = pg_num_rows($resultado);
                             echo "<td>" . $linhas['pnome'] . "</td>";
                             echo "<td>" . $linhas['unome'] . "</td>";
                             echo "<td>" . $linhas['email'] . "</td>";
-                            echo "
-                                    <td>
-                                    <a href=''>
-                                        <button type='button' class='btn btn-warning btn-sm'>Editar</button>
-                                    <a href=''>
-                                        <button type='button' class='btn btn-danger btn-sm'>Apagar</button>
-                                    </td>";
+                        ?>
+                            <td>
+                                <a href=''>
+                                    <button type='button' class='btn btn-warning btn-sm'>Editar</button>
+                                <a href=''>
+                                    <button type='button' class='btn btn-danger btn-sm'>Apagar</button>
+                            </td>";
+                        <?php
                             echo "</tr>";
                         }
                         ?>
