@@ -26,7 +26,7 @@ $linhas = pg_num_rows($resultado);
                             echo "<td>" . $linhas['email'] . "</td>";
                         ?>
                             <td>
-                                <a href=''>
+                                <a href='admin.php?link=7&id=<?php echo $linhas['matricula']; ?>'>
                                     <button type='button' class='btn btn-warning btn-sm'>Editar</button>
                                 <a href=''>
                                     <button type='button' class='btn btn-danger btn-sm'>Apagar</button>

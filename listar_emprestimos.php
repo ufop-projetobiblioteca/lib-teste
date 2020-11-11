@@ -25,13 +25,14 @@ $linhas = pg_num_rows($resultado);
                             echo "<td>" . $linhas['ecodigoexemplar'] . "</td>";
                             echo "<td>" . $linhas['dataemprestimo'] . "</td>";
                             echo "<td>" . $linhas['dataentrega'] . "</td>";
-                            echo "
-                                        <td>
-                                        <a href=''>
-                                            <button type='button' class='btn btn-warning btn-sm'>Editar</button>
-                                        <a href=''>
-                                            <button type='button' class='btn btn-danger btn-sm'>Apagar</button>
-                                        </td>";
+                            ?>
+                            <td>
+                                <a href=''>
+                                    <button type='button' class='btn btn-warning btn-sm'>Editar</button>
+                                <a href=''>
+                                    <button type='button' class='btn btn-danger btn-sm'>Apagar</button>
+                            </td>";
+                        <?php
                             echo "</tr>";
                         }
                         ?>

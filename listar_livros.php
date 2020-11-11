@@ -24,13 +24,14 @@ $linhas = pg_num_rows($resultado);
                             echo "<td>" . $linhas['nome'] . "</td>";
                             echo "<td>" . $linhas['autor'] . "</td>";
                             echo "<td>" . $linhas['edicao'] . "</td>";
-                            echo "
-                                    <td>
-                                    <a href=''>
-                                        <button type='button' class='btn btn-warning btn-sm'>Editar</button>
-                                    <a href=''>
-                                        <button type='button' class='btn btn-danger btn-sm'>Apagar</button>
-                                    </td>";
+                        ?>
+                            <td>
+                                <a href=''>
+                                    <button type='button' class='btn btn-warning btn-sm'>Editar</button>
+                                <a href=''>
+                                    <button type='button' class='btn btn-danger btn-sm'>Apagar</button>
+                            </td>";
+                        <?php
                             echo "</tr>";
                         }
                         ?>
@@ -41,4 +42,4 @@ $linhas = pg_num_rows($resultado);
 
     </div>
 
-</main>
+    </main>

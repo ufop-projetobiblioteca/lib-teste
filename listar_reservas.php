@@ -23,13 +23,14 @@ $linhas = pg_num_rows($resultado);
                             echo "<td>" . $linhas['rmatricula'] . "</td>";
                             echo "<td>" . $linhas['rcodigoexemplar'] . "</td>";
                             echo "<td>" . $linhas['rdata'] . "</td>";
-                            echo "
-                                        <td>
-                                        <a href=''>
-                                            <button type='button' class='btn btn-warning btn-sm'>Editar</button>
-                                        <a href=''>
-                                            <button type='button' class='btn btn-danger btn-sm'>Apagar</button>
-                                        </td>";
+                            ?>
+                            <td>
+                                <a href=''>
+                                    <button type='button' class='btn btn-warning btn-sm'>Editar</button>
+                                <a href=''>
+                                    <button type='button' class='btn btn-danger btn-sm'>Apagar</button>
+                            </td>";
+                        <?php
                             echo "</tr>";
                         }
                         ?>

@@ -53,6 +53,7 @@
     $pages[4] = "listar_livros.php";
     $pages[5] = "listar_emprestimos.php";
     $pages[6] = "listar_reservas.php";
+    $pages[7] = "editar_usuario.php";
 
     if(!empty($link)){
         if(file_exists($pages[$link]))
