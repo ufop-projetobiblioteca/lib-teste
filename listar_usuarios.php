@@ -80,7 +80,12 @@ include_once('conexao.php');
             </div>
 
         </div>
-
+        <?php
+        if (isset($_SESSION['msg'])) {
+				echo $_SESSION['msg'];
+				unset($_SESSION['msg']);
+			}
+        ?>
     </main><!-- /.container -->
     <script src="script/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script>
