@@ -44,24 +44,23 @@ session_start();
     <?php
     include_once('menu_admin.php');
     ?>
-    <main role="main" class="container">
-        <h1>Cadastrar Usuário</h1>
-        
-            <div class="row">
-                <div class="col-md-12">
-                    <form>
-                        <div class="form-group">
-                            <label for="formGroupExampleInput">Example label</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-                        </div>
-                        <div class="form-group">
-                            <label for="formGroupExampleInput2">Another label</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
-                        </div>
-                    </form>
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Example label</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Another label</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+                    </div>
+                </form>
             </div>
-
+        </div>
+    </div>
+    
     </main><!-- /.container -->
     <script src="script/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script>
