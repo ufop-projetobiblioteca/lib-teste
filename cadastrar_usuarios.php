@@ -46,7 +46,7 @@ include_once('conexao.php');
     include_once('menu_admin.php');
     ?>
     <main role="main" class="container">
-        <h1>Cadastrar Usuário</h1>
+        <h1>Cadastrar Usuário</h1></br>
         <div class="starter-template">
             <div class="row">
                 <div class="col-md-12">
