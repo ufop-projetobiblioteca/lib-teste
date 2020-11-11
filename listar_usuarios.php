@@ -73,9 +73,9 @@ include_once('conexao.php');
                                         echo "
                                         <td>
                                         <a href=''>
-                                            <button type='button' class='btn btn-warning'>Editar</button>
+                                            <button type='button' class='btn btn-warning btn-sm'>Editar</button>
                                         <a href=''>
-                                            <button type='button' class='btn btn-danger'>Apagar</button>
+                                            <button type='button' class='btn btn-danger btn-sm'>Apagar</button>
                                         </td>";
                                     echo "</tr>";
                                 }
