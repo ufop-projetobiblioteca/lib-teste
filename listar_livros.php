@@ -14,6 +14,7 @@ $linhas = pg_num_rows($resultado);
                             <th scope="col">Nome</th>
                             <th scope="col">Autor</th>
                             <th scope="col">Edição</th>
+                            <th scope="col">Ações</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -26,6 +27,8 @@ $linhas = pg_num_rows($resultado);
                             echo "<td>" . $linhas['edicao'] . "</td>";
                         ?>
                             <td>
+                                <a href=''>
+                                    <button type='button' class='btn btn-primary btn-sm'>Visualizar</button>
                                 <a href=''>
                                     <button type='button' class='btn btn-warning btn-sm'>Editar</button>
                                 <a href=''>

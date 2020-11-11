@@ -28,7 +28,7 @@ $linhas = pg_num_rows($resultado);
                             ?>
                             <td>
                                 <a href=''>
-                                    <button type='button' class='btn btn-primary btn-sm'>Devolver</button>
+                                    <button type='button' class='btn btn-success btn-sm'>Devolver</button>
                                 <a href=''>
                                     <button type='button' class='btn btn-warning btn-sm'>Renovar</button>
                             </td>";
