@@ -1,6 +1,5 @@
 <?php
 session_start();
-include_once('conexao.php');
 ?>
 
 <!doctype html>
@@ -13,7 +12,7 @@ include_once('conexao.php');
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
     <link rel="icon" href="img/icone-biblioteca.ico">
-    <title>Área Administrativa</title>
+    <title>Cadastrar Usuário</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/starter-template/">
 
@@ -44,38 +43,29 @@ include_once('conexao.php');
 <body>
     <?php
     include_once('menu_admin.php');
-    $resultado = pg_query("SELECT * FROM usuarios");
-    $linhas = pg_num_rows($resultado);
     ?>
     <main role="main" class="container">
+        <h1>Cadastrar Usuário</h1>
 
         <div class="starter-template">
             <div class="row">
                 <div class="col-md-12">
-                    <table id="table_id" class="table table-bordered table-hover">
-                        <thead>
-                            <tr>
-                                <th scope="col">Matrícula</th>
-                                <th scope="col">Nome</th>
-                                <th scope="col">Sobrenome</th>
-                                <th scope="col">E-mail</th>
-                                <th scope="col">Ações</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                                while($linhas = pg_fetch_array($resultado)){
-                                    echo "<tr>";
-                                        echo "<td>".$linhas['matricula']."</td>";
-                                        echo "<td>".$linhas['pnome']."</td>";
-                                        echo "<td>".$linhas['unome']."</td>";
-                                        echo "<td>".$linhas['email']."</td>";
-                                        echo "<td>Editar - Apagar</td>";
-                                    echo "</tr>";
-                                }
-                            ?>
-                        </tbody>
-                    </table>
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
                 </div>
             </div>
 
