@@ -46,8 +46,7 @@ session_start();
     ?>
     <main role="main" class="container">
         <h1>Cadastrar Usuário</h1>
-
-        <div class="starter-template">
+        
             <div class="row">
                 <div class="col-md-12">
                     <form>
@@ -62,8 +61,6 @@ session_start();
                     </form>
                 </div>
             </div>
-
-        </div>
 
     </main><!-- /.container -->
     <script src="script/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
