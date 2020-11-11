@@ -70,7 +70,13 @@ include_once('conexao.php');
                                         echo "<td>".$linhas['pnome']."</td>";
                                         echo "<td>".$linhas['unome']."</td>";
                                         echo "<td>".$linhas['email']."</td>";
-                                        echo "<td>Editar - Apagar</td>";
+                                        echo "
+                                        <td>
+                                        <a href=''>
+                                            <button type='button' class='btn btn-warning'>Editar</button>
+                                        <a href=''>
+                                            <button type='button' class='btn btn-danger'>Apagar</button>
+                                        </td>";
                                     echo "</tr>";
                                 }
                             ?>
