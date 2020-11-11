@@ -2,7 +2,7 @@
 $resultado = pg_query("SELECT * FROM livros");
 $linhas = pg_num_rows($resultado);
 ?>
-<main role="main" class="container">
+<div role="main" class="container">
 
     <div class="starter-template">
         <div class="row">
