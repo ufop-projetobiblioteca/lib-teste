@@ -19,33 +19,27 @@
                         </thead>
                         <tbody>
                             <?php
-                                while($linhas = pg_fetch_array($resultado)){
-                                    echo "<tr>";
-                                        echo "<td>".$linhas['matricula']."</td>";
-                                        echo "<td>".$linhas['pnome']."</td>";
-                                        echo "<td>".$linhas['unome']."</td>";
-                                        echo "<td>".$linhas['email']."</td>";
-                                        echo "
+                            while ($linhas = pg_fetch_array($resultado)) {
+                                echo "<tr>";
+                                echo "<td>" . $linhas['matricula'] . "</td>";
+                                echo "<td>" . $linhas['pnome'] . "</td>";
+                                echo "<td>" . $linhas['unome'] . "</td>";
+                                echo "<td>" . $linhas['email'] . "</td>";
+                                echo "
                                         <td>
                                         <a href=''>
                                             <button type='button' class='btn btn-warning btn-sm'>Editar</button>
                                         <a href=''>
                                             <button type='button' class='btn btn-danger btn-sm'>Apagar</button>
                                         </td>";
-                                    echo "</tr>";
-                                }
+                                echo "</tr>";
+                            }
                             ?>
                         </tbody>
                     </table>
                 </div>
             </div>
-
         </div>
-        <?php
-        if (isset($_SESSION['msg'])) {
-				echo $_SESSION['msg'];
-				unset($_SESSION['msg']);
-			}
-        ?>
     </div>
-</html>
+
+    </html>
