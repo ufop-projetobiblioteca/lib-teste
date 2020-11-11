@@ -53,7 +53,7 @@ session_start();
                     <form>
                         <div class="form-group">
                             <input type="email" class="form-control" id="inputCpf">
-                            <label for="exampleInputEmail1">CPF</label>
+                            <label for="inputCpf">CPF</label>
                         </div>
                         <div class="form-group">
                             <input type="password" class="form-control" id="inputNome">
