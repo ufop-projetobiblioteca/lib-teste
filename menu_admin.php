@@ -20,7 +20,7 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Livros</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown02">
-                    <a class="dropdown-item" href="listar_livros.php">Gerência</a>
+                    <a class="dropdown-item" href="listar_livros.php">Listar</a>
                     <a class="dropdown-item" href="listar_emprestimos.php">Empréstimos</a>
                     <a class="dropdown-item" href="listar_reservas.php">Reservas</a>
                 </div>
