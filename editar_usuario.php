@@ -73,7 +73,7 @@
                     <input type="hidden" name="id" value="<?php echo $resultado['matricula']; ?>">
                     <div class="form-group row">
                         <div class="col-sm-10">
-                            <button type="submit" class="btn btn-primary">Success</button>
+                            <button type="submit" class="btn btn-success">Salvar</button>
                         </div>
                     </div>
                 </form>
