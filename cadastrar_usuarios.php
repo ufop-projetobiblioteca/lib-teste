@@ -52,28 +52,29 @@ session_start();
                 <div class="col-md-12">
                     <form>
                         <div class="form-group">
+                            <input type="email" class="form-control" id="inputCpf">
                             <label for="exampleInputEmail1">CPF</label>
-                            <input type="email" class="form-control" id="inputCpf" aria-describedby="emailHelp">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Nome</label>
                             <input type="password" class="form-control" id="inputNome">
+                            <label for="inputNome">Nome</label>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Sobrenome</label>
-                            <input type="email" class="form-control" id="inputSobrenome" aria-describedby="emailHelp">
+                            <input type="email" class="form-control" id="inputSobrenome">
+                            <label for="inputSobrenome">Sobrenome</label>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Matrícula</label>
                             <input type="password" class="form-control" id="inputMatrícula">
+                            <label for="inputMatrícula">Matrícula</label>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">E-mail</label>
-                            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
+                            <input type="email" class="form-control" id="inputEmail">
+                            <label for="inputEmail">E-mail</label>
+
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Senha</label>
                             <input type="password" class="form-control" id="inputSenha">
+                            <label for="inputSenha">Senha</label>
                         </div>
                         <button type="submit" class="btn btn-primary">Cadastrar</button>
                     </form>
