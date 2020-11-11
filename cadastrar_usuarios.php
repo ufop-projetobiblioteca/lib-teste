@@ -1,5 +1,6 @@
 <?php
 session_start();
+include_once('conexao.php');
 ?>
 
 <!doctype html>
@@ -12,7 +13,7 @@ session_start();
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
     <link rel="icon" href="img/icone-biblioteca.ico">
-    <title>Cadastrar Usuário</title>
+    <title>Área Administrativa</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/starter-template/">
 
@@ -44,49 +45,70 @@ session_start();
     <?php
     include_once('menu_admin.php');
     ?>
-    <div class="container">
-        <div class="form-outer text-center d-flex align-items-center">
-            <div class="form-inner">
-                <form method="POST" action="processaUsuario.php" class="text-left form-validate">
-                    <div class="form-group-material">
-                        <input id="register-username" type="text" name="registerCPF" required data-msg="Please enter your username" class="input-material">
-                        <label for="register-username" class="label-material">CPF:</label>
-                    </div>
-                    <div class="form-group-material">
-                        <input id="register-username" type="text" name="registerType" required data-msg="Please enter your username" class="input-material">
-                        <label for="register-username" class="label-material">Tipo de Usuário:</label>
-                    </div>
-                    <div class="form-group-material">
-                        <input id="register-username" type="text" name="registerPName" required data-msg="Please enter your username" class="input-material">
-                        <label for="register-username" class="label-material">Nome:</label>
-                    </div>
-                    <div class="form-group-material">
-                        <input id="register-username" type="text" name="registerUName" required data-msg="Please enter your username" class="input-material">
-                        <label for="register-username" class="label-material">Sobrenome:</label>
-                    </div>
-                    <div class="form-group-material">
-                        <input id="register-username" type="text" name="registerMatricula" required data-msg="Please enter your username" class="input-material">
-                        <label for="register-username" class="label-material">Matrícula:</label>
-                    </div>
-                    <div class="form-group-material">
-                        <input id="register-email" type="email" name="registerEmail" required data-msg="Please enter a valid email address" class="input-material">
-                        <label for="register-email" class="label-material">Email: </label>
-                    </div>
-                    <div class="form-group-material">
-                        <input id="register-password" type="text" name="registerPassword" required data-msg="Please enter your password" class="input-material">
-                        <label for="register-password" class="label-material">Senha: </label>
-                    </div>
-                    <div class="form-group terms-conditions text-center">
-                        <input id="register-agree" name="registerAgree" type="checkbox" required value="1" data-msg="Your agreement is required" class="form-control-custom">
-                        <label for="register-agree">Eu concordo com a política de termos</label>
-                    </div>
-                    <div class="form-group text-center">
-                        <input id="register" type="submit" value="Cadastrar" class="btn btn-primary">
-                    </div>
-                </form>
+    <main role="main" class="container">
+
+        <div class="starter-template">
+            <div class="row">
+                <div class="col-md-12">
+                    <form>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail3">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputPassword3">
+                            </div>
+                        </div>
+                        <fieldset class="form-group">
+                            <div class="row">
+                                <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+                                <div class="col-sm-10">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                        <label class="form-check-label" for="gridRadios1">
+                                            First radio
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                        <label class="form-check-label" for="gridRadios2">
+                                            Second radio
+                                        </label>
+                                    </div>
+                                    <div class="form-check disabled">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+                                        <label class="form-check-label" for="gridRadios3">
+                                            Third disabled radio
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="form-group row">
+                            <div class="col-sm-2">Checkbox</div>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                    <label class="form-check-label" for="gridCheck1">
+                                        Example checkbox
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                                <button type="submit" class="btn btn-primary">Sign in</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
+
         </div>
-    </div>>
 
     </main><!-- /.container -->
     <script src="script/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
