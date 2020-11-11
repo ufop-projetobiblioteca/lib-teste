@@ -32,7 +32,7 @@
         ";
     }else{
         echo"
-        <META HTTPS-EQUIV=REFRESH CONTENT = '0;URL =
+        <META HTTP-EQUIV=REFRESH CONTENT = '0;URL =
         https://lib-teste.herokuapp.com/listar_usuarios.php'>
         <script type=\"text/javascript\">
             alert(\"Erro ao cadastrar usuário!\");

@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="admin.php">Biblioteca</a>
+    <a class="navbar-brand" href="admin.php?link=1">Biblioteca</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -12,17 +12,17 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Usuários</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="listar_usuarios.php">Listar</a>
-                    <a class="dropdown-item" href="cadastrar_usuario.php">Cadastrar</a>
+                    <a class="dropdown-item" href="admin.php?link=2">Listar</a>
+                    <a class="dropdown-item" href="admin.php?link=3">Cadastrar</a>
                     <a class="dropdown-item" href="#">Something else here</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Livros</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown02">
-                    <a class="dropdown-item" href="listar_livros.php">Listar</a>
-                    <a class="dropdown-item" href="listar_emprestimos.php">Empréstimos</a>
-                    <a class="dropdown-item" href="listar_reservas.php">Reservas</a>
+                    <a class="dropdown-item" href="admin.php?link=4.php">Listar</a>
+                    <a class="dropdown-item" href="admin.php?link=5.php">Empréstimos</a>
+                    <a class="dropdown-item" href="admin.php?link=6.php">Reservas</a>
                 </div>
             </li>
             <li class="nav-item active">

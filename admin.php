@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    include_once("conexao.php");
+?>
+
 <!doctype html>
 <html lang="pt-br">
 
@@ -39,52 +44,35 @@
 <body>
     <?php
     include_once('menu_admin.php');
+
+    $link = $_GET["link"];
+
+    $pages[1] = "bem_vindo.php";
+    $pages[2] = "listar_usuarios.php";
+    $pages[3] = "cadastrar_usuario.php";
+    $pages[4] = "listar_livros.php";
+    $pages[5] = "listar_emprestimos.php";
+    $pages[6] = "listar_reservas.php";
+
+    if(!empty($link)){
+        if(file_exists($pages[$link]))
+        {
+            include $pages[$link];
+        }else{
+            include "bem_vindo.php";
+        }
+    }else{
+        include "bem_vindo.php";
+    }
     ?>
-    <main role="main" class="container">
+    
+    
 
-        <div class="starter-template">
-            <div class="row">
-                <div class="col-md-12">
-                    <table id="table_id" class="table table-bordered table-hover">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Primeiro</th>
-                                <th scope="col">Último</th>
-                                <th scope="col">Nickname</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-        </div>
-
-    </main><!-- /.container -->
     <script src="script/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script>
         window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')
     </script>
     <script src="script/bootstrap.bundle.min.js"></script>
+</body>
 
 </html>
