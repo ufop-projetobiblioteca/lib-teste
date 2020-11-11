@@ -45,25 +45,48 @@ session_start();
     include_once('menu_admin.php');
     ?>
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <form>
-                    <div class="form-group">
-                        <label for="formGroupExampleInput" class="col-sm-2 custom-control-label">Example label</label>
-                        <div>
-                            <input type="text" class="form-control" name="cpf" placeholder="Digite o cpf">
-                        </div>
+        <div class="form-outer text-center d-flex align-items-center">
+            <div class="form-inner">
+                <form method="POST" action="processaUsuario.php" class="text-left form-validate">
+                    <div class="form-group-material">
+                        <input id="register-username" type="text" name="registerCPF" required data-msg="Please enter your username" class="input-material">
+                        <label for="register-username" class="label-material">CPF:</label>
                     </div>
-                    <div class="form-group">
-                        <label for="formGroupExampleInput" class="col-sm-2 custom-control-label">Example label</label>
-                        <div>
-                            <input type="text" class="form-control" name="nome" placeholder="Digite o primeiro nome">
-                        </div>
+                    <div class="form-group-material">
+                        <input id="register-username" type="text" name="registerType" required data-msg="Please enter your username" class="input-material">
+                        <label for="register-username" class="label-material">Tipo de Usuário:</label>
+                    </div>
+                    <div class="form-group-material">
+                        <input id="register-username" type="text" name="registerPName" required data-msg="Please enter your username" class="input-material">
+                        <label for="register-username" class="label-material">Nome:</label>
+                    </div>
+                    <div class="form-group-material">
+                        <input id="register-username" type="text" name="registerUName" required data-msg="Please enter your username" class="input-material">
+                        <label for="register-username" class="label-material">Sobrenome:</label>
+                    </div>
+                    <div class="form-group-material">
+                        <input id="register-username" type="text" name="registerMatricula" required data-msg="Please enter your username" class="input-material">
+                        <label for="register-username" class="label-material">Matrícula:</label>
+                    </div>
+                    <div class="form-group-material">
+                        <input id="register-email" type="email" name="registerEmail" required data-msg="Please enter a valid email address" class="input-material">
+                        <label for="register-email" class="label-material">Email: </label>
+                    </div>
+                    <div class="form-group-material">
+                        <input id="register-password" type="text" name="registerPassword" required data-msg="Please enter your password" class="input-material">
+                        <label for="register-password" class="label-material">Senha: </label>
+                    </div>
+                    <div class="form-group terms-conditions text-center">
+                        <input id="register-agree" name="registerAgree" type="checkbox" required value="1" data-msg="Your agreement is required" class="form-control-custom">
+                        <label for="register-agree">Eu concordo com a política de termos</label>
+                    </div>
+                    <div class="form-group text-center">
+                        <input id="register" type="submit" value="Cadastrar" class="btn btn-primary">
                     </div>
                 </form>
             </div>
         </div>
-    </div>
+    </div>>
 
     </main><!-- /.container -->
     <script src="script/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
