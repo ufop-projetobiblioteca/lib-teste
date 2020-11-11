@@ -46,7 +46,7 @@ include_once('conexao.php');
     include_once('menu_admin.php');
     ?>
     <main role="main" class="container">
-
+        <h1>Cadastrar Usuário</h1>
         <div class="starter-template">
             <div class="row">
                 <div class="col-md-12">
@@ -92,13 +92,13 @@ include_once('conexao.php');
                             <div class="col-sm-10">
                                 <select class="form-control">
                                     <option value="1">Administrador</option>
-                                    <option value="0">Usuário</option>
+                                    <option value="0">Usuário comum</option>
                                 </select>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-10">
-                                <button type="submit" class="btn btn-primary">Sign in</button>
+                                <button type="submit" class="btn btn-primary">Cadastrar</button>
                             </div>
                         </div>
                     </form>
