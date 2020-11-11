@@ -13,7 +13,7 @@
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Usuários</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
                     <a class="dropdown-item" href="listar_usuarios.php">Listar</a>
-                    <a class="dropdown-item" href="cadastrar_usuarios.php">Cadastrar</a>
+                    <a class="dropdown-item" href="cadastrar_usuario.php">Cadastrar</a>
                     <a class="dropdown-item" href="#">Something else here</a>
                 </div>
             </li>

@@ -50,7 +50,7 @@ include_once('conexao.php');
         <div class="starter-template">
             <div class="row">
                 <div class="col-md-12">
-                    <form>
+                    <form method="POST" action="processa/processa_cad_usuario.php">
                         <div class="form-group row">
                             <label for="inputEmail3" class="col-sm-2 col-form-label">CPF:</label>
                             <div class="col-sm-10">
@@ -90,7 +90,7 @@ include_once('conexao.php');
                         <div class="form-group row">
                             <label for="inputPassword3" class="col-sm-2 col-form-label">Tipo de Usuário:</label>
                             <div class="col-sm-10">
-                                <select class="form-control">
+                                <select class="form-control" name="tipo">
                                     <option value="1">Administrador</option>
                                     <option value="0">Usuário Comum</option>
                                 </select>
@@ -104,9 +104,7 @@ include_once('conexao.php');
                     </form>
                 </div>
             </div>
-
         </div>
-
     </div><!-- /.container -->
     <script src="script/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script>
