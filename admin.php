@@ -54,6 +54,8 @@
     $pages[5] = "listar_emprestimos.php";
     $pages[6] = "listar_reservas.php";
     $pages[7] = "editar_usuario.php";
+    $pages[8] = "visualizar_usuario.php";
+
 
     if(!empty($link)){
         if(file_exists($pages[$link]))
