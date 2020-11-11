@@ -52,39 +52,48 @@ include_once('conexao.php');
                 <div class="col-md-12">
                     <form>
                         <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Cpf</label>
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">CPF:</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="inputEmail3" name="cpf">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="inputPassword3" class="col-sm-2 col-form-label">Nome</label>
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">Nome:</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="inputPassword3" name="pnome">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Sobrenome</label>
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Sobrenome:</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="inputEmail3" name="unome">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="inputPassword3" class="col-sm-2 col-form-label">Matrícula</label>
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">Matrícula:</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="inputPassword3" name="matricula">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">E-mail</label>
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">E-mail:</label>
                             <div class="col-sm-10">
                                 <input type="email" class="form-control" id="inputEmail3" name="email">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="inputPassword3" class="col-sm-2 col-form-label">Senha</label>
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">Senha:</label>
                             <div class="col-sm-10">
                                 <input type="password" class="form-control" id="inputPassword3" name="senha">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">Tipo de Usuário:</label>
+                            <div class="col-sm-10">
+                                <select class="form-control">
+                                    <option value="1">Administrador</option>
+                                    <option value="0">Usuário</option>
+                                </select>
                             </div>
                         </div>
                         <div class="form-group row">
