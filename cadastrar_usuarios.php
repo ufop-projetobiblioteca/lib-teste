@@ -52,31 +52,13 @@ session_start();
                 <div class="col-md-12">
                     <form>
                         <div class="form-group">
-                            <input type="email" class="form-control" id="inputCpf">
-                            <label for="inputCpf">CPF</label>
+                            <label for="formGroupExampleInput">Example label</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" id="inputNome">
-                            <label for="inputNome">Nome</label>
+                            <label for="formGroupExampleInput2">Another label</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
                         </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" id="inputSobrenome">
-                            <label for="inputSobrenome">Sobrenome</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" id="inputMatrícula">
-                            <label for="inputMatrícula">Matrícula</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" id="inputEmail">
-                            <label for="inputEmail">E-mail</label>
-
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" id="inputSenha">
-                            <label for="inputSenha">Senha</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Cadastrar</button>
                     </form>
                 </div>
             </div>
