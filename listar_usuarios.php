@@ -44,7 +44,7 @@ include_once('conexao.php');
 <body>
     <?php
     include_once('menu_admin.php');
-    $resultado = pg_query("SELECT * FROM usuarios ORDER BY 'pnome'");
+    $resultado = pg_query("SELECT * FROM usuarios");
     $linhas = pg_num_rows($resultado);
     ?>
     <main role="main" class="container">
