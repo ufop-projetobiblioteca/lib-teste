@@ -13,11 +13,32 @@
 
     $result_user = "INSERT INTO usuarios VALUES ('$cpf', '$tipo', '$pnome','$unome', '$matricula', '$email', '$senha')";
     $result_query = pg_query($conexao, $result_user);
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
 
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<?php
     if($result_query){
-        $_SESSION['msg'] = "<p style='color:green;'>Usuário Cadastrado com sucesso!</p>";
-        header("Location: ../listar_usuarios.php");
+        echo"
+        <META HTTPS-EQUIV=REFRESH CONTENT = '0;URL =
+        https://lib-teste.herokuapp.com/listar_usuarios.php'>
+        <script type=\"text/javascript\">
+            alert(\"Usuário cadastrado com Sucesso!\");
+        </script>
+        ";
     }else{
-        $_SESSION['msg'] = "<p style='color:red;'>Erro ao cadastrar usuário!</p>";
-        header("Location: ../listar_usuarios.php");
+        echo"
+        <META HTTPS-EQUIV=REFRESH CONTENT = '0;URL =
+        https://lib-teste.herokuapp.com/listar_usuarios.php'>
+        <script type=\"text/javascript\">
+            alert(\"Erro ao cadastrar usuário!\");
+        </script>
+        ";
     }
+?>
+</body>
+</html>
