@@ -29,8 +29,10 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
 
     <script>
         $(document).ready(function() {
-            $('#example').DataTable();
-        });
+            $('#example').DataTable( {
+                "pagingType": "full_numbers"
+        } );
+} );
     </script>
 </head>
 
