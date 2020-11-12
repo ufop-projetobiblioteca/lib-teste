@@ -31,25 +31,19 @@ $linhas = pg_num_rows($resultado);
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title">Modal title</h5>
+                                                <h5 class="modal-title">Dados do Usuário</h5>
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
                                             </div>
                                             <div class="modal-body">
-                                                <p>Matrícula</p>
-                                                <form method="POST" action="admin.php?link=8&id=<?php echo $linhas['matricula']; ?>">
-                                                    <input type="submit" value="Excluir" class="btn btn-danger" role="button">
-                                                </form>
                                             </div>
                                             <div class="modal-footer">
                                                 <a class="btn btn-primary" href="javascript: fechar();" role="button">Cancelar</a>
                                             </div>
                                         </div>
                                     </div>
-                                </div> 
-
-
+                                </div>
                                 <a href='admin.php?link=7&id=<?php echo $linhas['matricula']; ?>'>
                                     <button type='button' class='btn btn-warning btn-sm'>Editar</button>
                                 <a href=''>

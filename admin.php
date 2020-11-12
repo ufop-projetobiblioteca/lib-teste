@@ -1,6 +1,6 @@
 <?php
-    session_start();
-    include_once("conexao.php");
+session_start();
+include_once("conexao.php");
 ?>
 
 <!doctype html>
@@ -57,19 +57,18 @@
     $pages[8] = "visualizar_usuario.php";
 
 
-    if(!empty($link)){
-        if(file_exists($pages[$link]))
-        {
+    if (!empty($link)) {
+        if (file_exists($pages[$link])) {
             include $pages[$link];
-        }else{
+        } else {
             include "bem_vindo.php";
         }
-    }else{
+    } else {
         include "bem_vindo.php";
     }
     ?>
-    
-    
+
+
 
     <script src="script/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script>
@@ -77,14 +76,14 @@
     </script>
     <script src="script/bootstrap.bundle.min.js"></script>
     <script type="text/javascript">
-		function abrir() {
-			document.getElementById('popUp').style.display = 'block';
-		}
+        function abrir() {
+            document.getElementById('popUp').style.display = 'block';
+        }
 
-		function fechar() {
-			document.getElementById('popUp').style.display = 'none';
-		}
-	</script>
+        function fechar() {
+            document.getElementById('popUp').style.display = 'none';
+        }
+    </script>
 </body>
 
 </html>
