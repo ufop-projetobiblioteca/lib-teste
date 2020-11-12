@@ -38,9 +38,7 @@ $linhas = pg_num_rows($resultado);
                                                 </button>
                                             </div>
                                             <div class="modal-body">
-                                                <?php
-                                                include_once("visualizar_usuario.php");
-                                                ?>
+                                                <a href='admin.php?link=8&id=<?php echo $linhas['matricula']; ?>'>
                                             </div>
                                             <div class="modal-footer">
                                                 <a class="btn btn-primary" href="javascript: fechar();" role="button">Cancelar</a>

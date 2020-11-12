@@ -1,5 +1,5 @@
 <?php
-$matricula = 987;
+$matricula = $_GET['id'];
 
 //consulta
 $usuario = pg_query("SELECT * FROM usuarios WHERE matricula = '$matricula' LIMIT 1");
