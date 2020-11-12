@@ -8,7 +8,7 @@ $qnt_result_pg = filter_input(INPUT_POST, 'qnt_result_pg', FILTER_SANITIZE_NUMBE
 $inicio = ($pagina * $qnt_result_pg) - $qnt_result_pg;
 
 //consultar no banco de dados
-$result_usuario = "SELECT * FROM usuarios ORDER BY matricula DESC LIMIT 10";
+$result_usuario = "SELECT * FROM usuarios"; //ORDER BY matricula DESC LIMIT 10";
 $resultado_usuario = pg_query($conexao, $result_usuario);
 
 //Verificar se encontrou resultado na tabela "usuarios"
