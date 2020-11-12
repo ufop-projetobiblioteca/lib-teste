@@ -28,15 +28,41 @@ $linhas = pg_num_rows($resultado);
                             <td>
                                 <a href='admin.php?link=8&id=<?php echo $linhas['matricula']; ?>'>
                                     <button type='button' class='btn btn-primary btn-sm'>Visualizar</button>
-                                <a href='admin.php?link=7&id=<?php echo $linhas['matricula']; ?>'>
-                                    <button type='button' class='btn btn-warning btn-sm'>Editar</button>
-                                <a href=''>
-                                    <button type='button' class='btn btn-danger btn-sm'>Apagar</button>
+                                    <a href='admin.php?link=7&id=<?php echo $linhas['matricula']; ?>'>
+                                        <button type='button' class='btn btn-warning btn-sm'>Editar</button>
+                                        <a href=''>
+                                            <button type='button' class='btn btn-danger btn-sm'>Apagar</button>
                             </td>";
                         <?php
                             echo "</tr>";
                         }
                         ?>
+                        <div class="float-right">
+                            <a class="btn btn-primary" href="admin.php?link=3" role="button">Cadastrar Usuário</a>
+                            <a class="btn btn-danger" href="#" role="button">Deletar Usuário</a>
+                            <div id="popUp" class="modal" tabindex="-1" role="dialog">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Modal title</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Matrícula</p>
+                                            <form method="POST" action="processaDeletarUsuario.php">
+                                                <p><input type="text" name="matricula">
+                                                    <p><input type="submit" value="Excluir" class="btn btn-danger" role="button"></p>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a class="btn btn-primary" href="javascript: fechar();" role="button">Cancelar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </tbody>
                 </table>
             </div>
