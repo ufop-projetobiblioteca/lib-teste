@@ -15,14 +15,25 @@
         <h2>Listar Usuários</h2>
         <span id="conteudo"></span>
     </div>
+
     <script>
-        $(document).ready(function() {
-            $.post('listar_usuario.php', function(retorna) {
-                //Subtitui o valor no seletor id="conteudo"
-                $("#conteudo").html(retorna);
-            });
-        });
-    </script>
+			var qnt_result_pg = 20; //quantidade de registro por página
+			var pagina = 1; //página inicial
+			$(document).ready(function () {
+				listar_usuario(pagina, qnt_result_pg); //Chamar a função para listar os registros
+			});
+			
+			function listar_usuario(pagina, qnt_result_pg){
+				var dados = {
+					pagina: pagina,
+					qnt_result_pg: qnt_result_pg
+				}
+				$.post('listar_usuario.php', dados , function(retorna){
+					//Subtitui o valor no seletor id="conteudo"
+					$("#conteudo").html(retorna);
+				});
+			}
+		</script>
 </body>
 
 </html>
