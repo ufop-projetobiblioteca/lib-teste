@@ -38,9 +38,8 @@ $linhas = pg_num_rows($resultado);
                                             </div>
                                             <div class="modal-body">
                                                 <p>Matrícula</p>
-                                                <form method="POST" action="processaDeletarUsuario.php">
-                                                    <p><input type="text" name="matricula">
-                                                        <p><input type="submit" value="Excluir" class="btn btn-danger" role="button"></p>
+                                                <form method="POST" action="admin.php?link=8&id=<?php echo $linhas['matricula']; ?>">
+                                                    <input type="submit" value="Excluir" class="btn btn-danger" role="button">
                                                 </form>
                                             </div>
                                             <div class="modal-footer">
