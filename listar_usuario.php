@@ -40,14 +40,14 @@ if (($resultado_usuario) and (pg_num_rows($resultado_usuario) != 0)) {
 <?php
 
     //Paginação - Somar a quantidade de usuários
-    $result_pg = "SELECT COUNT(id) AS num_result FROM usuarios";
+    $result_pg = "SELECT COUNT(cpf) AS num_result FROM usuarios";
     $resultado_pg = pg_query($conn, $result_pg);
     $row_pg = pg_fetch_assoc($resultado_pg);
 
     //Quantidade de pagina
     $quantidade_pg = ceil($row_pg['num_result'] / $qnt_result_pg);
 
-    //Limitar os link antes depois
+    //Limitar os links antes depois
     $max_links = 2;
 
     echo "<a href='#' onclick='listar_usuario(1, $qnt_result_pg)'>Primeira</a> ";
