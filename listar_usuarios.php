@@ -26,9 +26,9 @@ $linhas = pg_num_rows($resultado);
                             echo "<td>" . $linhas['email'] . "</td>";
                         ?>
                             <td>
-                                <a class="btn btn-danger" href="javascript: abrir();" role="button">Deletar Usuário</a>
-                                <div id="popUp" class="modal" tabindex="-1" role="dialog">
-                                    <div class="modal-dialog" role="document">
+                                <a class="btn btn-primary btn-sm" href="javascript: abrir();" role="button">Visualizar</a>
+                                <div class="modal" tabindex="-1">
+                                    <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <h5 class="modal-title">Modal title</h5>
@@ -37,66 +37,15 @@ $linhas = pg_num_rows($resultado);
                                                 </button>
                                             </div>
                                             <div class="modal-body">
-                                                <!-- <p>Matrícula</p>
-                    <form method="POST" action="processaDeletarUsuario.php">
-                        <p><input type="text" name="matricula">
-                            <p><input type="submit" value="Excluir" class="btn btn-danger" role="button"></p>
-                    </form> -->
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div class="col-xs-3 col-sm-1 col-md-1">
-                                                            <b>CPF:</b>
-                                                        </div>
-                                                        <div class="col-xs-9 col-sm-11 col-md-11">
-                                                            <?php echo $resultado['cpf']; ?>
-                                                        </div>
-                                                        <div class="col-xs-3 col-sm-1 col-md-1">
-                                                            <b>Nome:</b>
-                                                        </div>
-                                                        <div class="col-xs-9 col-sm-11 col-md-11">
-                                                            <?php echo $resultado['pnome']; ?>
-                                                        </div>
-                                                        <div class="col-xs-3 col-sm-1 col-md-1">
-                                                            <b>Sobrenome:</b>
-                                                        </div>
-                                                        <div class="col-xs-9 col-sm-11 col-md-11">
-                                                            <?php echo $resultado['unome']; ?>
-                                                        </div>
-                                                        <div class="col-xs-3 col-sm-1 col-md-1">
-                                                            <b>Matrícula:</b>
-                                                        </div>
-                                                        <div class="col-xs-9 col-sm-11 col-md-11">
-                                                            <?php echo $resultado['matricula']; ?>
-                                                        </div>
-                                                        <div class="col-xs-3 col-sm-1 col-md-1">
-                                                            <b>E-mail:</b>
-                                                        </div>
-                                                        <div class="col-xs-9 col-sm-11 col-md-11">
-                                                            <?php echo $resultado['email']; ?>
-                                                        </div>
-                                                        <div class="col-xs-3 col-sm-1 col-md-1">
-                                                            <b>Senha:</b>
-                                                        </div>
-                                                        <div class="col-xs-9 col-sm-11 col-md-11">
-                                                            <?php echo $resultado['senha']; ?>
-                                                        </div>
-                                                        <div class="col-xs-3 col-sm-1 col-md-1">
-                                                            <b>Tipo de Usuário:</b>
-                                                        </div>
-                                                        <div class="col-xs-9 col-sm-11 col-md-11">
-                                                            <?php echo $resultado['tipo_usuario']; ?>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                <p>Modal body text goes here.</p>
                                             </div>
                                             <div class="modal-footer">
-                                                <a class="btn btn-primary" href="javascript: fechar();" role="button">Cancelar</a>
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <a  href='admin.php?link=8&id=<?php echo $linhas['matricula']; ?>'>
-                                    <button type='button' class='btn btn-primary btn-sm'>Visualizar</button> -->
                                 <a href='admin.php?link=7&id=<?php echo $linhas['matricula']; ?>'>
                                     <button type='button' class='btn btn-warning btn-sm'>Editar</button>
                                     <a href=''>
