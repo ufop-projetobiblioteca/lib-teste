@@ -41,7 +41,6 @@ $linhas = pg_num_rows($resultado);
 
                                             </div>
                                             <div class="pull-rigth">
-                                                <a href="admin.php?link=2"><button type="button" class="btn btn-sm btn-primary">Listar</button></a>
                                                 <a href='admin.php?link=7&id=<?php echo $resultado['matricula']; ?>'><button type="button" class="btn btn-sm btn-warning">Editar</button></a>
                                                 <a href="#"><button type="button" class="btn btn-sm btn-danger">Apagar</button></a>
                                             </div>
@@ -51,21 +50,23 @@ $linhas = pg_num_rows($resultado);
                                 <div class="modal-footer">
                                     <a class="btn btn-primary" href="javascript: fechar();" role="button">Cancelar</a>
                                 </div>
+                    </tbody>
+                </table>
             </div>
+
         </div>
-    </div>
-    <a href='admin.php?link=7&id=<?php echo $linhas['matricula']; ?>'>
-        <button type='button' class='btn btn-warning btn-sm'>Editar</button>
-        <a href=''>
-            <button type='button' class='btn btn-danger btn-sm'>Apagar</button>
-            </td>";
-        <?php
+        <a href='admin.php?link=7&id=<?php echo $linhas['matricula']; ?>'>
+            <button type='button' class='btn btn-warning btn-sm'>Editar</button>
+            <a href=''>
+                <button type='button' class='btn btn-danger btn-sm'>Apagar</button>
+                </td>";
+            <?php
                             echo "</tr>";
                         }
-        ?>
-        </tbody>
-        </table>
-        <!-- <div class="float-right">
+            ?>
+    </div>
+
+    <!-- <div class="float-right">
                     <a class="btn btn-primary" href="admin.php?link=3" role="button">Cadastrar Usuário</a>
                     <a class="btn btn-danger" href="#" role="button">Deletar Usuário</a>
                     <div id="popUp" class="modal" tabindex="-1" role="dialog">
@@ -91,7 +92,4 @@ $linhas = pg_num_rows($resultado);
                         </div>
                     </div>
                 </div> -->
-</div>
-</div>
-</div>
 </div>
