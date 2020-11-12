@@ -39,7 +39,7 @@ $linhas = pg_num_rows($resultado);
                                             </div>
                                             <div class="modal-body">
                                                 <?php 
-                                                    $id = $linhas['matricula'];
+                                                    //$id = $linhas['matricula'];
                                                     include("visualizar_usuario.php")
                                                 ?>
                                             </div>
