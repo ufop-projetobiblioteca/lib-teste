@@ -27,7 +27,7 @@ $linhas = pg_num_rows($resultado);
                         ?>
                             <td>
                                 <a class="btn btn-primary btn-sm" href="javascript: abrir();" role="button">Visualizar</a>
-                                 <div id="popUp" class="modal" tabindex="-1" role="dialog">
+                                <div id="popUp" class="modal" tabindex="-1" role="dialog">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -45,15 +45,16 @@ $linhas = pg_num_rows($resultado);
                                             </div>
                                         </div>
                                     </div>
-                                </div> 
-                                <div class="modal-footer">
-                                    <a class="btn btn-primary" href="javascript: fechar();" role="button">Cancelar</a>
+                                    <div class="modal-footer">
+                                        <a class="btn btn-primary" href="javascript: fechar();" role="button">Cancelar</a>
+                                    </div>
                                 </div>
+
 
                                 <a href='admin.php?link=7&id=<?php echo $linhas['matricula']; ?>'>
                                     <button type='button' class='btn btn-warning btn-sm'>Editar</button>
-                                <a href=''>
-                                    <button type='button' class='btn btn-danger btn-sm'>Apagar</button>
+                                    <a href=''>
+                                        <button type='button' class='btn btn-danger btn-sm'>Apagar</button>
                             </td>
                         <?php
                             echo "</tr>";
