@@ -5,10 +5,10 @@ $pagina = filter_input(INPUT_POST, 'pagina', FILTER_SANITIZE_NUMBER_INT);
 $qnt_result_pg = filter_input(INPUT_POST, 'qnt_result_pg', FILTER_SANITIZE_NUMBER_INT);
 
 //calcular o início da visualização
-$inicio = ($pagina * $qnt_result_pg) - $qnt_result_pg;
+$inicio = ($pagina * $qnt_result_pg) - $qnt_result_pg + 1;
 
 //consultar no banco de dados
-$result_usuario = "SELECT * FROM usuarios ORDER BY pnome DESC LIMIT $inicio, $qnt_result_pg";
+$result_usuario = "SELECT * FROM usuarios ORDER BY matricula DESC LIMIT $inicio, $qnt_result_pg";
 $resultado_usuario = pg_query($conexao, $result_usuario);
 
 //Verificar se encontrou resultado na tabela "usuarios"
