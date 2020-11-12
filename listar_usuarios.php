@@ -44,9 +44,9 @@ $linhas = pg_num_rows($resultado);
                                                 <a href="#"><button type="button" class="btn btn-sm btn-danger">Apagar</button></a>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <a class="btn btn-primary" href="javascript: fechar();" role="button">Cancelar</a>
+                                        <div class="modal-footer">
+                                            <a class="btn btn-primary" href="javascript: fechar();" role="button">Cancelar</a>
+                                        </div>
                                     </div>
                                 </div>
 
