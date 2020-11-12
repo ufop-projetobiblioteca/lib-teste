@@ -5,7 +5,7 @@ $pagina = filter_input(INPUT_POST, 'pagina', FILTER_SANITIZE_NUMBER_INT);
 $qnt_result_pg = filter_input(INPUT_POST, 'qnt_result_pg', FILTER_SANITIZE_NUMBER_INT);
 
 //calcular o início da visualização
-$inicio = ($pagina * $qnt_result_pg) - $qnt_result_pg + 1;
+$inicio = ($pagina * $qnt_result_pg) - $qnt_result_pg;
 
 //consultar no banco de dados
 $result_usuario = "SELECT * FROM usuarios ORDER BY matricula DESC LIMIT 10";
