@@ -21,6 +21,11 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
     <!-- Datatables JS library -->
     <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
 
+    <script src="script/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
 
     <script>
         $(document).ready(function() {
