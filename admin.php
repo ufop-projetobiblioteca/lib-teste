@@ -76,6 +76,15 @@
         window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')
     </script>
     <script src="script/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+		function abrir() {
+			document.getElementById('popUp').style.display = 'block';
+		}
+
+		function fechar() {
+			document.getElementById('popUp').style.display = 'none';
+		}
+	</script>
 </body>
 
 </html>
