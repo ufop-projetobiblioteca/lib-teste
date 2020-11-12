@@ -2,7 +2,7 @@
 include_once("conexao.php");
 
 $pagina = filter_input(INPUT_POST, 'pagina', FILTER_SANITIZE_NUMBER_INT);
-$qnt_result_pg = filter_input(INPUT_POST, 'qnt_result_pg', FILTER_SANITIZE_NUMBER_INT);
+$qnt_result_pg = 10;
 
 //calcular o início da visualização
 $inicio = ($pagina * $qnt_result_pg) - $qnt_result_pg;
