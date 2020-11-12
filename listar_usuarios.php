@@ -37,15 +37,15 @@ $linhas = pg_num_rows($resultado);
                                                 </button>
                                             </div>
                                             <div class="modal-body">
-
+                                                <p>Matrícula</p>
+                                                <form method="POST" action="processaDeletarUsuario.php">
+                                                    <p><input type="text" name="matricula">
+                                                        <p><input type="submit" value="Excluir" class="btn btn-danger" role="button"></p>
+                                                </form>
                                             </div>
-                                            <div class="pull-rigth">
-                                                <a href='admin.php?link=7&id=<?php echo $resultado['matricula']; ?>'><button type="button" class="btn btn-sm btn-warning">Editar</button></a>
-                                                <a href="#"><button type="button" class="btn btn-sm btn-danger">Apagar</button></a>
+                                            <div class="modal-footer">
+                                                <a class="btn btn-primary" href="javascript: fechar();" role="button">Cancelar</a>
                                             </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <a class="btn btn-primary" href="javascript: fechar();" role="button">Cancelar</a>
                                         </div>
                                     </div>
                                 </div>
