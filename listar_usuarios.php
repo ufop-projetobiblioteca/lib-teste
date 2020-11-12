@@ -1,104 +1,85 @@
 <?php
-$resultado = pg_query("SELECT * FROM usuarios");
-$linhas = pg_num_rows($resultado);
-?>
-<div role="main" class="container">
-    <div class="starter-template">
-        <div class="row">
-            <div class="col-md-12">
-                <table id="table_id" class="table table-bordered table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">Matrícula</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Sobrenome</th>
-                            <th scope="col">E-mail</th>
-                            <th scope="col">Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        while ($linhas = pg_fetch_array($resultado)) {
-                            echo "<tr>";
-                            echo "<td>" . $linhas['matricula'] . "</td>";
-                            echo "<td>" . $linhas['pnome'] . "</td>";
-                            echo "<td>" . $linhas['unome'] . "</td>";
-                            echo "<td>" . $linhas['email'] . "</td>";
-                        ?>
-                            <td>
-                                <!-- <a class="btn btn-primary btn-sm" href="javascript: abrir();" role="button">Visualizar</a>
-                                <div id="popUp" class="modal" tabindex="-1" role="dialog">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">Modal title</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Matrícula</p>
-                                                <form method="POST" action="admin.php?link=8&id=<?php echo $linhas['matricula']; ?>">
-                                                    <input type="submit" value="Excluir" class="btn btn-danger" role="button">
-                                                </form>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <a class="btn btn-primary" href="javascript: fechar();" role="button">Cancelar</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
+include_once "conexao.php";
+
+$pagina = filter_input(INPUT_POST, 'pagina', FILTER_SANITIZE_NUMBER_INT);
+$qnt_result_pg = filter_input(INPUT_POST, 'qnt_result_pg', FILTER_SANITIZE_NUMBER_INT);
+//calcular o inicio visualização
+$inicio = ($pagina * $qnt_result_pg) - $qnt_result_pg;
+
+//consultar no banco de dados
+$result_usuario = "SELECT * FROM usuarios ORDER BY matricula DESC LIMIT $inicio, $qnt_result_pg";
+$resultado_usuario = pg_query($conn, $result_usuario);
 
 
-                                <a href='admin.php?link=7&id=<?php echo $linhas['matricula']; ?>'>
-                                    <button type='button' class='btn btn-warning btn-sm'>Editar</button>
-                                <a href=''>
-                                    <button type='button' class='btn btn-danger btn-sm'>Apagar</button>
-                                <button type="button" class="btn btn-outline-primary view_data" id="<?php echo $row_usuario['id']; ?>">Visualizar</button>
-                            </td>
-                        <?php
-                            echo "</tr>";
-                        }
-                        ?>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <script>
-            /* var qnt_result_pg = 50; //quantidade de registro por página
-            var pagina = 1; //página inicial
-            $(document).ready(function() {
-                listar_usuario(pagina, qnt_result_pg); //Chamar a função para listar os registros
-            });
+//Verificar se encontrou resultado na tabela "usuarios"
+if(($resultado_usuario)){ //AND ($resultado_usuario->num_rows != 0)){
+	?>
+	<table class="table table-striped table-bordered table-hover">
+		<thead>
+			<tr>
+				<th>Matrícula</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+				<th>E-mail</th>
+				<th>Ações</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php
+			while($row_usuario = pg_fetch_assoc($resultado_usuario)){
+				?>
+				<tr>
+					<th><?php echo $row_usuario['matricula']; ?></th>
+					<td><?php echo $row_usuario['pnome']; ?></td>
+                    <td><?php echo $row_usuario['unome']; ?></td>
+                    <td><?php echo $row_usuario['email']; ?></td>
+					<td>
+						<button type="button" class="btn btn-outline-primary view_data" id="<?php echo $row_usuario['matricula']; ?>">Visualizar</button>
+					</td>
+				</tr>
+				<?php
+			}?>
+		</tbody>
+	</table>
+	<?php
+	//Paginação - Somar a quantidade de usuários
+	$result_pg = "SELECT COUNT(id) AS num_result FROM usuarios";
+	$resultado_pg = pg_query($conn, $result_pg);
+	$row_pg = pg_fetch_assoc($resultado_pg);
 
-            function listar_usuario(pagina, qnt_result_pg) {
-                var dados = {
-                    pagina: pagina,
-                    qnt_result_pg: qnt_result_pg
-                }
-                $.post('listar_usuario.php', dados, function(retorna) {
-                    //Subtitui o valor no seletor id="conteudo"
-                    $("#conteudo").html(retorna);
-                });
-            } */
+	//Quantidade de pagina
+	$quantidade_pg = ceil($row_pg['num_result'] / $qnt_result_pg);
 
-            $(document).ready(function() {
-                $(document).on('click', '.view_data', function() {
-                    var user_id = $(this).attr("id");
-                    //alert(user_id);
-                    //Verificar se há valor na variável "user_id".
-                    if (user_id !== '') {
-                        var dados = {
-                            user_id: user_id
-                        };
-                        $.post('visualizar.php', dados, function(retorna) {
-                            //Carregar o conteúdo para o usuário
-                            $("#visul_usuario").html(retorna);
-                            $('#visulUsuarioModal').modal('show');
-                        });
-                    }
-                });
-            });
-        </script>
-    </div>
-</div>
+	//Limitar os link antes depois
+	$max_links = 2;
+
+	echo '<nav aria-label="paginacao">';
+	echo '<ul class="pagination">';
+	echo '<li class="page-item">';
+	echo "<span class='page-link'><a href='#' onclick='listar_usuarios(1, $qnt_result_pg)'>Primeira</a> </span>";
+	echo '</li>';
+	for ($pag_ant = $pagina - $max_links; $pag_ant <= $pagina - 1; $pag_ant++) {
+		if($pag_ant >= 1){
+			echo "<li class='page-item'><a class='page-link' href='#' onclick='listar_usuarios($pag_ant, $qnt_result_pg)'>$pag_ant </a></li>";
+		}
+	}
+	echo '<li class="page-item active">';
+	echo '<span class="page-link">';
+	echo "$pagina";
+	echo '</span>';
+	echo '</li>';
+
+	for ($pag_dep = $pagina + 1; $pag_dep <= $pagina + $max_links; $pag_dep++) {
+		if($pag_dep <= $quantidade_pg){
+			echo "<li class='page-item'><a class='page-link' href='#' onclick='listar_usuarios($pag_dep, $qnt_result_pg)'>$pag_dep</a></li>";
+		}
+	}
+	echo '<li class="page-item">';
+	echo "<span class='page-link'><a href='#' onclick='listar_usuarios($quantidade_pg, $qnt_result_pg)'>Última</a></span>";
+	echo '</li>';
+	echo '</ul>';
+	echo '</nav>';
+
+}else{
+	echo "<div class='alert alert-danger' role='alert'>Nenhum usuário encontrado!</div>";
+}
