@@ -108,7 +108,7 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
                                             </blockquote>
                                         </div>
                                         <div class="modal-footer">
-                                            <a class="btn btn-outline-warning" href='admin.php?link=7&id=<?php echo $row_usuario['matricula']; ?>' role="button">Excluir</a>
+                                            <a class="btn btn-outline-danger" href='admin.php?link=9&id=<?php echo $row_usuario['matricula']; ?>' role="button">Excluir</a>
                                             <a class="btn btn-outline-primary" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
                                         </div>
                                     </div>
