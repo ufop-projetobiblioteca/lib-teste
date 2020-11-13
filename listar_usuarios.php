@@ -1,5 +1,4 @@
 <?php
-include_once("conexao.php");
 $result_usuario = "SELECT * FROM usuarios";
 $resultado_usuario = pg_query($conexao, $result_usuario);
 ?>
@@ -18,13 +17,10 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
 
     <script src="script/bootstrap.bundle.min.js"></script>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
 
     <script>
         $(document).ready(function() {
-            $('#example').DataTable( {
+            $('#listaUsuarios').DataTable( {
                 "pagingType": "full_numbers"
         } );
 } );
@@ -35,7 +31,7 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
     <div class="starter-template">
         <div class="row">
             <div class="col-md-12">
-                <table id="example" class="table table-striped table-bordered table-hover">
+                <table id="listaUsuarios" class="table table-striped table-bordered table-hover">
                     <thead>
                         <tr>
                             <th>Matrícula</th>

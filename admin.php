@@ -39,39 +39,10 @@ include_once("conexao.php");
             }
         }
     </style>
+
     <!-- Custom styles for this template -->
     <link href="css/starter-template.css" rel="stylesheet">
 
-    <!-- JQuery library -->
-    <script src="js/jquery-3.5.1.js"></script>
-
-    <!-- Datatables JS library -->
-    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
-
-    <script src="script/bootstrap.bundle.min.js"></script>
-
-    <script src="script/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script>
-        window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')
-    </script>
-    <script src="script/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript">
-        function abrir() {
-            document.getElementById('popUp').style.display = 'block';
-        }
-
-        function fechar() {
-            document.getElementById('popUp').style.display = 'none';
-        }
-    </script>
-
-    <script>
-        $(document).ready(function() {
-            $('#example').DataTable({
-                "pagingType": "full_numbers"
-            });
-        });
-    </script>
 </head>
 
 <body>
@@ -101,5 +72,26 @@ include_once("conexao.php");
     }
     ?>
 </body>
+<!-- JQuery library -->
+    <script src="js/jquery-3.5.1.js"></script>
 
+    <!-- Datatables JS library -->
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+
+    <script src="script/bootstrap.bundle.min.js"></script>
+
+    <script src="script/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')
+    </script>
+    <script src="script/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+        function abrir() {
+            document.getElementById('popUp').style.display = 'block';
+        }
+
+        function fechar() {
+            document.getElementById('popUp').style.display = 'none';
+        }
+    </script>
 </html>
