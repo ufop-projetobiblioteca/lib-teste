@@ -120,7 +120,7 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
                     </tbody>
                 </table>
                 <div class="float-right">
-                    <a class="btn btn-lg btn-outline-success" href="cadastrar_usuario.php" role="button">Cadastrar Usuário</a>
+                    <a class="btn btn-lg btn-outline-success" href="admin.php?link=3" role="button">Cadastrar Usuário</a>
                 </div>
             </div>
         </div>
