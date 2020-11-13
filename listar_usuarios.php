@@ -1,7 +1,8 @@
 <?php
-$resultado = pg_query("SELECT * FROM usuarios");
-$linhas = pg_num_rows($resultado);
+$result_usuario = "SELECT * FROM usuarios";
+$resultado_usuario = pg_query($conexao, $result_usuario);
 ?>
+
 <div role="main" class="container">
     <div class="starter-template">
         <div class="row">
