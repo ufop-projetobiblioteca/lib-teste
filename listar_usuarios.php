@@ -31,7 +31,6 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
             });
         });
     </script>
-    });
 </head>
 
 <div role="main" class="container">
