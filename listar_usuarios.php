@@ -57,8 +57,39 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
                                 <td><?php echo $row_usuario['unome']; ?></td>
                                 <td><?php echo $row_usuario['email']; ?></td>
                                 <td>
-                                    <a class="btn btn-outline-primary btn-sm" href="javascript: abrir();" role="button">Visualizar</a>
-                                    <div id="popUp" class="modal" tabindex="-1" role="dialog">
+                                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#myModal<?php echo $row_usuario['matricula'];?>">Visualizar</button>
+									<button type="button" class="btn btn-sm btn-outline-danger">Apagar</button>
+                                </td>
+                            </tr>
+                            <!-- Inicio Modal -->
+								<div class="modal fade" id="myModal<?php echo $row_usuario['matricula']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title text-center" id="myModalLabel">Dados do Usuário</h4>
+											</div>
+											<div class="modal-body">
+												<p><?php echo $row_usuario['matricula']; ?></p>
+												<p><?php echo $row_usuario['pnome']; ?></p>
+                                                <p><?php echo $row_usuario['unome']; ?></p>
+                                                <p><?php echo $row_usuario['email']; ?></p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Fim Modal -->
+                        <?php
+                        }
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div id="popUp" class="modal" tabindex="-1" role="dialog">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -76,17 +107,4 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <a href='#'>
-                                        <button type='button' class='btn btn-outline-danger btn-sm'>Apagar</button>
-                                </td>
-                            </tr>
-                        <?php
-                        }
-                        ?>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
+                                    </div> -->
