@@ -3,19 +3,19 @@ $result_usuario = "SELECT * FROM usuarios";
 $resultado_usuario = pg_query($conexao, $result_usuario);
 ?>
 
-<head>
+<!-- <head>
     <meta charset="utf-8">
 
-    <!-- Datatables CSS library -->
+    <!-- Datatables CSS library ->
     <link rel="stylesheet" type="text/css" href="css/jquery.datatables.min.css" />
 
-    <!-- JQuery library -->
+    <!-- JQuery library ->
     <script src="js/jquery-3.5.1.js"></script>
 
-    <!-- Datatables JS library -->
+    <!-- Datatables JS library ->
     <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
 
-    <script src="script/bootstrap.bundle.min.js"></script>
+    <script src="script/bootstrap.bundle.min.js"></script> -->
 
 
     <script>
@@ -25,7 +25,7 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
         } );
 } );
     </script>
-</head>
+
 
 <div role="main" class="container">
     <div class="starter-template">

@@ -17,11 +17,6 @@ include_once("conexao.php");
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/starter-template/">
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <script src="script/bootstrap.bundle.min.js"></script>
-
     <!-- JQuery library -->
     <script src="js/jquery-3.5.1.js"></script>
 
@@ -30,6 +25,13 @@ include_once("conexao.php");
 
     <!-- Datatables JS library -->
     <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="script/bootstrap.bundle.min.js"></script>
+
+    
 
     <style>
         .bd-placeholder-img {
