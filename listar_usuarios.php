@@ -33,7 +33,7 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
     </script>
 </head>
 
-<body>
+
     <div role="main" class="container">
         <div class="starter-template">
             <div class="row">
@@ -157,4 +157,3 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
 
         })
     </script>
-</body>
