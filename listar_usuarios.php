@@ -101,23 +101,3 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
         </div>
     </div>
 </div>
-
-<!-- <div id="popUp" class="modal" tabindex="-1" role="dialog">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title">Modal title</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <a class="btn btn-outline-warning" href='admin.php?link=7&id=<?php echo $row_usuario['matricula']; ?>' role="button">Editar</a>
-                                                    <a class="btn btn-outline-danger" href="javascript: fechar();" role="button">Cancelar</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> -->
