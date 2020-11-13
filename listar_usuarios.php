@@ -33,43 +33,44 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
     </script>
 </head>
 
-<div role="main" class="container">
-    <div class="starter-template">
-        <div class="row">
-            <div class="col-md-12">
-                <table id="listaUsuarios" class="table table-striped table-bordered table-hover">
-                    <thead>
-                        <tr>
-                            <th>Matrícula</th>
-                            <th>Nome</th>
-                            <th>Sobrenome</th>
-                            <th>E-mail</th>
-                            <th>Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        while ($row_usuario = pg_fetch_assoc($resultado_usuario)) {
-                        ?>
+<body>
+    <div role="main" class="container">
+        <div class="starter-template">
+            <div class="row">
+                <div class="col-md-12">
+                    <table id="listaUsuarios" class="table table-striped table-bordered table-hover">
+                        <thead>
                             <tr>
-                                <th><?php echo $row_usuario['matricula']; ?></th>
-                                <td><?php echo $row_usuario['pnome']; ?></td>
-                                <td><?php echo $row_usuario['unome']; ?></td>
-                                <td><?php echo $row_usuario['email']; ?></td>
-                                <td>
-                                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#myModal<?php echo $row_usuario['matricula'];?>">Visualizar</button>
-									<button type="button" class="btn btn-sm btn-outline-danger">Apagar</button>
-                                </td>
+                                <th>Matrícula</th>
+                                <th>Nome</th>
+                                <th>Sobrenome</th>
+                                <th>E-mail</th>
+                                <th>Ações</th>
                             </tr>
-                            <!-- Inicio Modal -->
-								<div class="modal fade" id="myModal<?php echo $row_usuario['matricula']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-									<div class="modal-dialog" role="document">
-										<div class="modal-content">
-											<div class="modal-header">
+                        </thead>
+                        <tbody>
+                            <?php
+                            while ($row_usuario = pg_fetch_assoc($resultado_usuario)) {
+                            ?>
+                                <tr>
+                                    <th><?php echo $row_usuario['matricula']; ?></th>
+                                    <td><?php echo $row_usuario['pnome']; ?></td>
+                                    <td><?php echo $row_usuario['unome']; ?></td>
+                                    <td><?php echo $row_usuario['email']; ?></td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#myModal<?php echo $row_usuario['matricula']; ?>">Visualizar</button>
+                                        <button type="button" class="btn btn-sm btn-outline-danger">Apagar</button>
+                                    </td>
+                                </tr>
+                                <!-- Inicio Modal -->
+                                <div class="modal fade" id="myModal<?php echo $row_usuario['matricula']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
                                                 <h5 class="modal-title text-center" id="myModalLabel">Dados do Usuário</h5>
-												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-											</div>
-											<div class="modal-body">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            </div>
+                                            <div class="modal-body">
                                                 <dl class="row">
                                                     <dt class="col-sm-3">Matrícula:</dt>
                                                     <dd class="col-sm-9"><?php echo $row_usuario['matricula']; ?></dd>
@@ -85,19 +86,75 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
                                                 </dl>
                                             </div>
                                             <div class="modal-footer">
-                                                <a class="btn btn-outline-warning" href='admin.php?link=7&id=<?php echo $row_usuario['matricula']; ?>' role="button">Editar</a>
+                                            <button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#exampleModal" data-whatever="<?php echo $row_usuario['matricula']; ?>" data-whatevernome="<?php echo $row_usuario['pnome']; ?>"data-whateverdetalhes="<?php $row_usuario['unome']; ?>">Editar</button>
+                                                <!--<a class="btn btn-outline-warning" href='admin.php?link=7&id=?php echo $row_usuario['matricula']; ?>' role="button">Editar</a> -->
                                                 <a class="btn btn-outline-danger" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
                                             </div>
-										</div>
-									</div>
-								</div>
-								<!-- Fim Modal -->
-                        <?php
-                        }
-                        ?>
-                    </tbody>
-                </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Fim Modal -->
+
+
+                            <?php
+                            }
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
-</div>
+    <!--Início Modal Editar -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="exampleModalLabel">Curso</h4>
+                </div>
+                <div class="modal-body">
+                    <form method="POST" action="http://localhost/Aula/aula_anterior/26-Modal-editar-curso/processa.php" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="recipient-name" class="control-label">Nome:</label>
+                            <input name="nome" type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="control-label">Detalhes:</label>
+                            <textarea name="detalhes" class="form-control" id="detalhes"></textarea>
+                        </div>
+                        <input name="id" type="hidden" class="form-control" id="id-curso" value="">
+
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-danger">Alterar</button>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--Fim Modal Editar -->
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $('#exampleModal').on('show.bs.modal', function(event) {
+            var button = $(event.relatedTarget) // Button that triggered the modal
+            var recipient = button.data('whatever') // Extract info from data-* attributes
+            var recipientnome = button.data('whatevernome')
+            var recipientdetalhes = button.data('whateverdetalhes')
+            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+            var modal = $(this)
+            modal.find('.modal-title').text('ID ' + recipient)
+            modal.find('#id-curso').val(recipient)
+            modal.find('#recipient-name').val(recipientnome)
+            modal.find('#detalhes').val(recipientdetalhes)
+
+        })
+    </script>
+</body>
