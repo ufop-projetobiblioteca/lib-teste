@@ -119,6 +119,9 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
                         ?>
                     </tbody>
                 </table>
+                <div class="float-right">
+                    <a class="btn btn-lg btn-outline-primary" href="cadastrar_usuario.php" role="button">Cadastrar Usuário</a>
+                </div>
             </div>
         </div>
     </div>
