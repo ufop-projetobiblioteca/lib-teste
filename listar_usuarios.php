@@ -15,10 +15,8 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
     <!-- Datatables CSS library -->
     <link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap4.min.css" />
 
-
     <!-- Datatables Bootstrap library -->
     <link rel="stylesheet" type="text/javascript" href="js/dataTables.bootstrap4.min.js" />
-
 
     <!-- JQuery library -->
     <script src="js/jquery-3.5.1.js"></script>
@@ -26,13 +24,10 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
     <!-- Datatables JS library -->
     <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
 
-
-
     <script>
         $(document).ready(function() {
             $('#listaUsuarios').DataTable({
-                "pagingType": "full",
-
+                "pagingType": "full_numbers",
             });
         });
     </script>
@@ -76,17 +71,14 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
 
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <a class="btn btn-outline-primary" href="javascript: fechar();" role="button">Cancelar</a>
+                                                    <a class="btn btn-outline-warning" href='admin.php?link=7&id=<?php echo $row_usuario['matricula']; ?>' role="button">Editar</a>
+                                                    <a class="btn btn-outline-danger" href="javascript: fechar();" role="button">Cancelar</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
-
-                                    <a href='admin.php?link=7&id=<?php echo $linhas['matricula']; ?>'>
-                                        <button type='button' class='btn btn-outline-warning btn-sm'>Editar</button>
-                                        <a href=''>
-                                            <button type='button' class='btn btn-outline-danger btn-sm'>Apagar</button>
+                                    <a href='#'>
+                                        <button type='button' class='btn btn-outline-danger btn-sm'>Apagar</button>
                                 </td>
                             </tr>
                         <?php
