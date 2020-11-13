@@ -41,9 +41,9 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
     <script type="text/javascript">
         $('#exampleModal').on('show.bs.modal', function(event) {
             var button = $(event.relatedTarget) // Button that triggered the modal
-            var recipient = button.data('whatever') // Extract info from data-* attributes
-            var recipientnome = button.data('whatevernome')
-            var recipientdetalhes = button.data('whateverdetalhes')
+            var recipient = button.data('matricula') // Extract info from data-* attributes
+            var recipientnome = button.data('pnome')
+            var recipientdetalhes = button.data('unome')
             // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
             // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
             var modal = $(this)
@@ -109,7 +109,7 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
                                             </dl>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" data-dismiss="modal" aria-label="Close" class="btn btn btn-outline-warning" data-toggle="modal" data-target="#exampleModal" data-whatever="<?php echo $row_usuario['matricula']; ?>" data-whatevernome="<?php echo $row_usuario['pnome']; ?>" data-whateverdetalhes="<?php $row_usuario['unome']; ?>">Editar</button>
+                                            <button type="button" data-dismiss="modal" aria-label="Close" class="btn btn btn-outline-warning" data-toggle="modal" data-target="#exampleModal" data-matricula="<?php echo $row_usuario['matricula']; ?>" data-pnome="<?php echo $row_usuario['pnome']; ?>" data-unome="<?php $row_usuario['unome']; ?>">Editar</button>
                                             <!--<a class="btn btn-outline-warning" href='admin.php?link=7&id=?php echo $row_usuario['matricula']; ?>' role="button">Editar</a> -->
                                             <a class="btn btn-outline-danger" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
                                         </div>
@@ -123,11 +123,11 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
+                                            <h4 class="modal-title" id="exampleModalLabel">Editar Usuário</h4>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                            <h4 class="modal-title" id="exampleModalLabel">Curso</h4>
                                         </div>
                                         <div class="modal-body">
-                                            <form method="POST" action="http://localhost/Aula/aula_anterior/26-Modal-editar-curso/processa.php" enctype="multipart/form-data">
+                                            <form method="POST" action="#" enctype="multipart/form-data">
                                                 <div class="form-group">
                                                     <label for="recipient-name" class="control-label">Nome:</label>
                                                     <input name="nome" type="text" class="form-control" id="recipient-name">
@@ -138,8 +138,8 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
                                                 </div>
                                                 <input name="id" type="hidden" class="form-control" id="id-curso" value="">
 
-                                                <button type="button" class="btn btn-success" data-dismiss="modal">Cancelar</button>
-                                                <button type="submit" class="btn btn-danger">Alterar</button>
+                                                <button type="button" class="btn btn-outline-success" data-dismiss="modal">Cancelar</button>
+                                                <button type="submit" class="btn btn-outline-danger">Alterar</button>
 
                                             </form>
                                         </div>
