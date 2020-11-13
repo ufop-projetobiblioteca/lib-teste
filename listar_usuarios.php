@@ -41,9 +41,9 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
     <script type="text/javascript">
         $('#exampleModal').on('show.bs.modal', function(event) {
             var button = $(event.relatedTarget) // Button that triggered the modal
-            var recipient = button.data('matricula') // Extract info from data-* attributes
-            var recipientnome = button.data('pnome')
-            var recipientdetalhes = button.data('unome')
+            var recipient = button.data('data-matricula') // Extract info from data-* attributes
+            var recipientnome = button.data('data-pnome')
+            var recipientdetalhes = button.data('data-unome')
             // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
             // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
             var modal = $(this)
