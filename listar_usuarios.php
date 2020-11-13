@@ -67,14 +67,18 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
 										<div class="modal-content">
 											<div class="modal-header">
 												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-												<h4 class="modal-title text-center" id="myModalLabel">Dados do Usuário</h4>
+												<h5 class="modal-title text-center" id="myModalLabel">Dados do Usuário</h5>
 											</div>
 											<div class="modal-body">
 												<p><?php echo $row_usuario['matricula']; ?></p>
 												<p><?php echo $row_usuario['pnome']; ?></p>
                                                 <p><?php echo $row_usuario['unome']; ?></p>
                                                 <p><?php echo $row_usuario['email']; ?></p>
-											</div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <a class="btn btn-outline-warning" href='admin.php?link=7&id=<?php echo $row_usuario['matricula']; ?>' role="button">Editar</a>
+                                                <a class="btn btn-outline-danger" href="javascript: fechar();" role="button">Cancelar</a>
+                                            </div>
 										</div>
 									</div>
 								</div>
