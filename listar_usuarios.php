@@ -28,6 +28,7 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
         $(document).ready(function() {
             $('#listaUsuarios').DataTable({
                 "pagingType": "full_numbers",
+                "dom": '<"left"p>'
             });
         });
     </script>
@@ -120,7 +121,7 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
                     </tbody>
                 </table>
                 <div class="float-right">
-                    <a class="btn btn-lg btn-outline-primary" href="cadastrar_usuario.php" role="button">Cadastrar Usuário</a>
+                    <a class="btn btn-lg btn-outline-success" href="cadastrar_usuario.php" role="button">Cadastrar Usuário</a>
                 </div>
             </div>
         </div>
