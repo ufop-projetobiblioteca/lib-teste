@@ -23,9 +23,6 @@ include_once("conexao.php");
     <!-- Datatables CSS library -->
     <link rel="stylesheet" type="text/css" href="css/jquery.datatables.min.css" />
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
