@@ -72,16 +72,16 @@ $resultado_livro = pg_query($conexao, $result_livro);
 											<div class="modal-body">
                                                 <dl class="row">
                                                     <dt class="col-sm-3">ID:</dt>
-                                                    <dd class="col-sm-9"><?php echo $row_livros['matricula']; ?></dd>
+                                                    <dd class="col-sm-9"><?php echo $row_livros['id_livros']; ?></dd>
 
                                                     <dt class="col-sm-3">Nome:</dt>
-                                                    <dd class="col-sm-9"><?php echo $row_livros['pnome']; ?></dd>
+                                                    <dd class="col-sm-9"><?php echo $row_livros['nome']; ?></dd>
 
                                                     <dt class="col-sm-3">Autor:</dt>
-                                                    <dd class="col-sm-9"><?php echo $row_livros['unome']; ?></dd>
+                                                    <dd class="col-sm-9"><?php echo $row_livros['autor']; ?></dd>
 
                                                     <dt class="col-sm-3">Edicao:</dt>
-                                                    <dd class="col-sm-9"><?php echo $row_livros['email']; ?></dd>
+                                                    <dd class="col-sm-9"><?php echo $row_livros['edicao']; ?></dd>
                                                 </dl>
                                             </div>
                                             <div class="modal-footer">
