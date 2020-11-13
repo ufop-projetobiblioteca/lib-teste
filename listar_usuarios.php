@@ -28,7 +28,6 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
         $(document).ready(function() {
             $('#listaUsuarios').DataTable({
                 "pagingType": "full_numbers",
-                "dom": '<"left"p>'
             });
         });
     </script>
