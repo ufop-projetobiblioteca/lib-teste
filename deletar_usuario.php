@@ -8,14 +8,14 @@ if ($resultado_usuario) {
     echo "
                     <META HTTP-EQUIV=REFRESH CONTENT = '0;URL=https://lib-teste.herokuapp.com/admin.php?link=2'>
                     <script type=\"text/javascript\">
-                        alert(\"Curso alterado com Sucesso.\");
+                        alert(\"Usuário deletado com sucesso!\");
                     </script>
                 ";
 } else {
     echo "
                     <META HTTP-EQUIV=REFRESH CONTENT = '0;URL=https://lib-teste.herokuapp.com/admin.php?link=2'>
                     <script type=\"text/javascript\">
-                        alert(\"Curso não foi alterado com Sucesso.\");
+                        alert(\"Erro ao deletar usuário!\");
                     </script>
                 ";
 }
