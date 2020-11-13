@@ -49,6 +49,7 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
                             <th>Nome</th>
                             <th>Sobrenome</th>
                             <th>E-mail</th>
+                            <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -61,7 +62,7 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
                                 <td><?php echo $row_usuario['unome']; ?></td>
                                 <td><?php echo $row_usuario['email']; ?></td>
                                 <td>
-                                    <a class="btn btn-primary btn-sm" href="javascript: abrir();" role="button">Visualizar</a>
+                                    <a class="btn btn-outline-primary btn-sm" href="javascript: abrir();" role="button">Visualizar</a>
                                     <div id="popUp" class="modal" tabindex="-1" role="dialog">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
@@ -72,24 +73,20 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <p>Matrícula</p>
-                                                    <form method="POST" action="admin.php?link=8&id=<?php echo $linhas['matricula']; ?>">
-                                                        <input type="submit" value="Excluir" class="btn btn-danger" role="button">
-                                                    </form>
+
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <a class="btn btn-primary" href="javascript: fechar();" role="button">Cancelar</a>
+                                                    <a class="btn btn-outline-primary" href="javascript: fechar();" role="button">Cancelar</a>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div> -->
+                                    </div>
 
 
                                     <a href='admin.php?link=7&id=<?php echo $linhas['matricula']; ?>'>
-                                        <button type='button' class='btn btn-warning btn-sm'>Editar</button>
-                                    <a href=''>
-                                        <button type='button' class='btn btn-danger btn-sm'>Apagar</button>
-                                        <button type="button" class="btn btn-outline-primary view_data" id="<?php echo $row_usuario['id']; ?>">Visualizar</button>
+                                        <button type='button' class='btn btn-outline-warning btn-sm'>Editar</button>
+                                        <a href=''>
+                                            <button type='button' class='btn btn-outline-danger btn-sm'>Apagar</button>
                                 </td>
                             </tr>
                         <?php
