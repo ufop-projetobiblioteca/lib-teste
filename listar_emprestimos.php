@@ -57,12 +57,12 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                                 <td><?php echo $row_emprestimos['dataemprestimo']; ?></td>
                                 <td><?php echo $row_emprestimos['dataentrega']; ?></td>
                                 <td>
-                                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#myModal<?php echo $row_emprestimos['id_livros'];?>">Visualizar</button>
+                                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#myModal<?php echo $row_emprestimos['ematricula'];?>">Visualizar</button>
 									<button type="button" class="btn btn-sm btn-outline-danger">Apagar</button>
                                 </td>
                             </tr>
                             <!-- Inicio Modal -->
-								<div class="modal fade" id="myModal<?php echo $row_emprestimos['id_livros']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+								<div class="modal fade" id="myModal<?php echo $row_emprestimos['ematricula']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 									<div class="modal-dialog" role="document">
 										<div class="modal-content">
 											<div class="modal-header">
@@ -71,16 +71,16 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
 											</div>
 											<div class="modal-body">
                                                 <dl class="row">
-                                                    <dt class="col-sm-3">ID:</dt>
+                                                    <dt class="col-sm-3">Matrícula:</dt>
                                                     <dd class="col-sm-9"><?php echo $row_emprestimos['ematricula']; ?></dd>
 
-                                                    <dt class="col-sm-3">Nome:</dt>
+                                                    <dt class="col-sm-3">Código do Exemplar:</dt>
                                                     <dd class="col-sm-9"><?php echo $row_emprestimos['ecodigoexemplar']; ?></dd>
 
-                                                    <dt class="col-sm-3">Autor:</dt>
+                                                    <dt class="col-sm-3">Data do Empréstimo:</dt>
                                                     <dd class="col-sm-9"><?php echo $row_emprestimos['dataemprestimo']; ?></dd>
 
-                                                    <dt class="col-sm-3">Edicao:</dt>
+                                                    <dt class="col-sm-3">Data de Devolução:</dt>
                                                     <dd class="col-sm-9"><?php echo $row_emprestimos['dataentrega']; ?></dd>
                                                 </dl>
                                             </div>
