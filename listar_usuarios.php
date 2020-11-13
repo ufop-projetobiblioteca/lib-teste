@@ -6,51 +6,26 @@ $linhas = pg_num_rows($resultado);
     <div class="starter-template">
         <div class="row">
             <div class="col-md-12">
-                <table id="table_id" class="table table-bordered table-hover">
+                <table id="example" class="table table-striped table-bordered table-hover">
                     <thead>
                         <tr>
-                            <th scope="col">Matrícula</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Sobrenome</th>
-                            <th scope="col">E-mail</th>
-                            <th scope="col">Ações</th>
+                            <th>Matrícula</th>
+                            <th>Nome</th>
+                            <th>Sobrenome</th>
+                            <th>E-mail</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                        while ($linhas = pg_fetch_array($resultado)) {
-                            echo "<tr>";
-                            echo "<td>" . $linhas['matricula'] . "</td>";
-                            echo "<td>" . $linhas['pnome'] . "</td>";
-                            echo "<td>" . $linhas['unome'] . "</td>";
-                            echo "<td>" . $linhas['email'] . "</td>";
+                        while ($row_usuario = pg_fetch_assoc($resultado_usuario)) {
                         ?>
-                            <td>
-                                <a class="btn btn-primary btn-sm" href="javascript: abrir();" role="button">Visualizar</a>
-                                <div id="popUp" class="modal" tabindex="-1" role="dialog">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">Dados do Usuário</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                            </div>
-                                            <div class="modal-footer">
-                                                <a class="btn btn-primary" href="javascript: fechar();" role="button">Cancelar</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href='admin.php?link=7&id=<?php echo $linhas['matricula']; ?>'>
-                                    <button type='button' class='btn btn-warning btn-sm'>Editar</button>
-                                <a href=''>
-                                    <button type='button' class='btn btn-danger btn-sm'>Apagar</button>
-                            </td>
+                            <tr>
+                                <th><?php echo $row_usuario['matricula']; ?></th>
+                                <td><?php echo $row_usuario['pnome']; ?></td>
+                                <td><?php echo $row_usuario['unome']; ?></td>
+                                <td><?php echo $row_usuario['email']; ?></td>
+                            </tr>
                         <?php
-                            echo "</tr>";
                         }
                         ?>
                     </tbody>
