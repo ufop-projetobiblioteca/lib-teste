@@ -42,36 +42,6 @@ include_once("conexao.php");
     <!-- Custom styles for this template -->
     <link href="css/starter-template.css" rel="stylesheet">
 
-</head>
-
-<body>
-    <?php
-    include_once('menu_admin.php');
-
-    $link = $_GET["link"];
-
-    $pages[1] = "bem_vindo.php";
-    $pages[2] = "listar_usuarios.php";
-    $pages[3] = "cadastrar_usuario.php";
-    $pages[4] = "listar_livros.php";
-    $pages[5] = "listar_emprestimos.php";
-    $pages[6] = "listar_reservas.php";
-    $pages[7] = "editar_usuario.php";
-    $pages[8] = "visualizar_usuario.php";
-
-
-    if (!empty($link)) {
-        if (file_exists($pages[$link])) {
-            include $pages[$link];
-        } else {
-            include "bem_vindo.php";
-        }
-    } else {
-        include "bem_vindo.php";
-    }
-    ?>
-
-
     <!-- JQuery library -->
     <script src="js/jquery-3.5.1.js"></script>
 
@@ -102,6 +72,34 @@ include_once("conexao.php");
             });
         });
     </script>
+</head>
+
+<body>
+    <?php
+    include_once('menu_admin.php');
+
+    $link = $_GET["link"];
+
+    $pages[1] = "bem_vindo.php";
+    $pages[2] = "listar_usuarios.php";
+    $pages[3] = "cadastrar_usuario.php";
+    $pages[4] = "listar_livros.php";
+    $pages[5] = "listar_emprestimos.php";
+    $pages[6] = "listar_reservas.php";
+    $pages[7] = "editar_usuario.php";
+    $pages[8] = "visualizar_usuario.php";
+
+
+    if (!empty($link)) {
+        if (file_exists($pages[$link])) {
+            include $pages[$link];
+        } else {
+            include "bem_vindo.php";
+        }
+    } else {
+        include "bem_vindo.php";
+    }
+    ?>
 </body>
 
 </html>
