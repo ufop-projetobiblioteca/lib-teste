@@ -95,7 +95,7 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
                             <!-- Fim Modal Visualizar-->
 
                             <!-- Inicio Modal Apagar-->
-                            <div class="modal fade" id="modalApagarr<?php echo $row_usuario['matricula']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal fade" id="modalApagar<?php echo $row_usuario['matricula']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
