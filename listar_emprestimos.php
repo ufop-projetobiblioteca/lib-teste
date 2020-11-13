@@ -1,5 +1,5 @@
 <?php
-$result_emprestimos = "SELECT * FROM livros";
+$result_emprestimos = "SELECT * FROM emprestimos";
 $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
 ?>
 
