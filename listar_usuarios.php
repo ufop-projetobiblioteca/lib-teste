@@ -1,7 +1,35 @@
 <?php
+include_once("conexao.php");
 $result_usuario = "SELECT * FROM usuarios";
 $resultado_usuario = pg_query($conexao, $result_usuario);
 ?>
+
+<head>
+    <meta charset="utf-8">
+
+    <!-- Datatables CSS library -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.datatables.min.css" />
+
+    <!-- JQuery library -->
+    <script src="js/jquery-3.5.1.js"></script>
+
+    <!-- Datatables JS library -->
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+
+    <script src="script/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable( {
+                "pagingType": "full_numbers"
+        } );
+} );
+    </script>
+</head>
 
 <div role="main" class="container">
     <div class="starter-template">
