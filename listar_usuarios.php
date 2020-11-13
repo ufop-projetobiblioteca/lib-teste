@@ -86,7 +86,7 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
                                                 </dl>
                                             </div>
                                             <div class="modal-footer">
-                                            <button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#exampleModal" data-whatever="<?php echo $row_usuario['matricula']; ?>" data-whatevernome="<?php echo $row_usuario['pnome']; ?>"data-whateverdetalhes="<?php $row_usuario['unome']; ?>">Editar</button>
+                                            <button type="button" data-dismiss="modal" aria-label="Close" class="btn btn btn-outline-warning" data-toggle="modal" data-target="#exampleModal" data-whatever="<?php echo $row_usuario['matricula']; ?>" data-whatevernome="<?php echo $row_usuario['pnome']; ?>"data-whateverdetalhes="<?php $row_usuario['unome']; ?>">Editar</button>
                                                 <!--<a class="btn btn-outline-warning" href='admin.php?link=7&id=?php echo $row_usuario['matricula']; ?>' role="button">Editar</a> -->
                                                 <a class="btn btn-outline-danger" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
                                             </div>
