@@ -85,6 +85,7 @@ include_once("conexao.php");
     $pages[6] = "listar_reservas.php";
     $pages[7] = "editar_usuario.php";
     $pages[8] = "visualizar_usuario.php";
+    $pages[9] = "deletar_usuario.php";
 
 
     if (!empty($link)) {

@@ -31,6 +31,7 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
             });
         });
     </script>
+    });
 </head>
 
 <div role="main" class="container">
@@ -57,41 +58,63 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
                                 <td><?php echo $row_usuario['unome']; ?></td>
                                 <td><?php echo $row_usuario['email']; ?></td>
                                 <td>
-                                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#myModal<?php echo $row_usuario['matricula'];?>">Visualizar</button>
-									<button type="button" class="btn btn-sm btn-outline-danger">Apagar</button>
+                                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modalVisualizar<?php echo $row_usuario['matricula']; ?>">Visualizar</button>
+                                    <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modalApagar<?php echo $row_usuario['matricula']; ?>">Apagar</button>
                                 </td>
                             </tr>
-                            <!-- Inicio Modal -->
-								<div class="modal fade" id="myModal<?php echo $row_usuario['matricula']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-									<div class="modal-dialog" role="document">
-										<div class="modal-content">
-											<div class="modal-header">
-                                                <h5 class="modal-title text-center" id="myModalLabel">Dados do Usuário</h5>
-												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-											</div>
-											<div class="modal-body">
-                                                <dl class="row">
-                                                    <dt class="col-sm-3">Matrícula:</dt>
-                                                    <dd class="col-sm-9"><?php echo $row_usuario['matricula']; ?></dd>
+                            <!-- Inicio Modal Visualizar-->
+                            <div class="modal fade" id="modalVisualizar<?php echo $row_usuario['matricula']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title text-center" id="myModalLabel">Dados do Usuário</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <dl class="row">
+                                                <dt class="col-sm-3">Matrícula:</dt>
+                                                <dd class="col-sm-9"><?php echo $row_usuario['matricula']; ?></dd>
 
-                                                    <dt class="col-sm-3">Nome:</dt>
-                                                    <dd class="col-sm-9"><?php echo $row_usuario['pnome']; ?></dd>
+                                                <dt class="col-sm-3">Nome:</dt>
+                                                <dd class="col-sm-9"><?php echo $row_usuario['pnome']; ?></dd>
 
-                                                    <dt class="col-sm-3">Sobrenome:</dt>
-                                                    <dd class="col-sm-9"><?php echo $row_usuario['unome']; ?></dd>
+                                                <dt class="col-sm-3">Sobrenome:</dt>
+                                                <dd class="col-sm-9"><?php echo $row_usuario['unome']; ?></dd>
 
-                                                    <dt class="col-sm-3">E-mail:</dt>
-                                                    <dd class="col-sm-9"><?php echo $row_usuario['email']; ?></dd>
-                                                </dl>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <a class="btn btn-outline-warning" href='admin.php?link=7&id=<?php echo $row_usuario['matricula']; ?>' role="button">Editar</a>
-                                                <a class="btn btn-outline-danger" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
-                                            </div>
-										</div>
-									</div>
-								</div>
-								<!-- Fim Modal -->
+                                                <dt class="col-sm-3">E-mail:</dt>
+                                                <dd class="col-sm-9"><?php echo $row_usuario['email']; ?></dd>
+                                            </dl>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a class="btn btn-outline-warning" href='admin.php?link=7&id=<?php echo $row_usuario['matricula']; ?>' role="button">Editar</a>
+                                            <a class="btn btn-outline-danger" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fim Modal Visualizar-->
+
+                            <!-- Inicio Modal Apagar-->
+                            <div class="modal fade" id="modalApagarr<?php echo $row_usuario['matricula']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title text-center" id="myModalLabel">Deletar Usuário</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <blockquote class="blockquote">
+                                                <p class="mb-0">Tem certeza que deseja excluir '<?php echo $row_usuario['pnome']; ?>' do seu Banco de Dados?</p>
+                                            </blockquote>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a class="btn btn-outline-warning" href='admin.php?link=7&id=<?php echo $row_usuario['matricula']; ?>' role="button">Excluir</a>
+                                            <a class="btn btn-outline-primary" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fim Modal Apagar-->
                         <?php
                         }
                         ?>
