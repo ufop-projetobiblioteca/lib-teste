@@ -20,8 +20,16 @@ include_once("conexao.php");
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <script src="script/bootstrap.bundle.min.js"></script>
+
+    <!-- JQuery library -->
+    <script src="js/jquery-3.5.1.js"></script>
+
     <!-- Datatables CSS library -->
     <link rel="stylesheet" type="text/css" href="css/jquery.datatables.min.css" />
+
+    <!-- Datatables JS library -->
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
 
     <style>
         .bd-placeholder-img {
@@ -42,6 +50,22 @@ include_once("conexao.php");
 
     <!-- Custom styles for this template -->
     <link href="css/starter-template.css" rel="stylesheet">
+
+    <script src="script/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    <script>
+        window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')
+    </script>
+    
+    <script type="text/javascript">
+        function abrir() {
+            document.getElementById('popUp').style.display = 'block';
+        }
+
+        function fechar() {
+            document.getElementById('popUp').style.display = 'none';
+        }
+    </script>
 
 </head>
 
@@ -72,26 +96,4 @@ include_once("conexao.php");
     }
     ?>
 </body>
-<!-- JQuery library -->
-    <script src="js/jquery-3.5.1.js"></script>
-
-    <!-- Datatables JS library -->
-    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
-
-    <script src="script/bootstrap.bundle.min.js"></script>
-
-    <script src="script/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script>
-        window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')
-    </script>
-    <script src="script/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript">
-        function abrir() {
-            document.getElementById('popUp').style.display = 'block';
-        }
-
-        function fechar() {
-            document.getElementById('popUp').style.display = 'none';
-        }
-    </script>
 </html>
