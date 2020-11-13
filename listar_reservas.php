@@ -53,7 +53,7 @@ $resultado_reservas = pg_query($conexao, $result_reservas);
                             <tr>
                                 <th><?php echo $row_reservas['rmatricula']; ?></th>
                                 <td><?php echo $row_reservas['rcodigoexemplar']; ?></td>
-                                <td><?php echo $row_reservas['rdat']; ?></td>
+                                <td><?php echo $row_reservas['rdata']; ?></td>
                                 <td>
                                     <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#myModal<?php echo $row_reservas['rmatricula'];?>">Visualizar</button>
 									<button type="button" class="btn btn-sm btn-outline-danger">Apagar</button>
