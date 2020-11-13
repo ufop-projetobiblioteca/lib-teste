@@ -66,14 +66,23 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
 									<div class="modal-dialog" role="document">
 										<div class="modal-content">
 											<div class="modal-header">
+                                                <h5 class="modal-title text-center" id="myModalLabel">Dados do Usuário</h5>
 												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-												<h5 class="modal-title text-center" id="myModalLabel">Dados do Usuário</h5>
 											</div>
 											<div class="modal-body">
-												<p><?php echo $row_usuario['matricula']; ?></p>
-												<p><?php echo $row_usuario['pnome']; ?></p>
-                                                <p><?php echo $row_usuario['unome']; ?></p>
-                                                <p><?php echo $row_usuario['email']; ?></p>
+                                                <dl class="row">
+                                                    <dt class="col-sm-3">Matrícula:</dt>
+                                                    <dd class="col-sm-9"><?php echo $row_usuario['matricula']; ?></dd>
+
+                                                    <dt class="col-sm-3">Nome:</dt>
+                                                    <dd class="col-sm-9"><?php echo $row_usuario['pnome']; ?></dd>
+
+                                                    <dt class="col-sm-3">Sobrenome:</dt>
+                                                    <dd class="col-sm-9"><?php echo $row_usuario['unome']; ?></dd>
+
+                                                    <dt class="col-sm-3">E-mail:</dt>
+                                                    <dd class="col-sm-9"><?php echo $row_usuario['email']; ?></dd>
+                                                </dl>
                                             </div>
                                             <div class="modal-footer">
                                                 <a class="btn btn-outline-warning" href='admin.php?link=7&id=<?php echo $row_usuario['matricula']; ?>' role="button">Editar</a>
