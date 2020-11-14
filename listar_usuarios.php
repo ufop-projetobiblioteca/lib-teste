@@ -189,7 +189,7 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                                 <div class="form-group row">
                                                     <div class="col-sm-10">
                                                         <button type="submit" class="btn btn-outline-success">Salvar</button>
-                                                        <button type="submit" class="btn btn-outline-danger" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                                                        <button class="btn btn-outline-danger" data-dismiss="modal" aria-label="Close">Cancelar</button>
                                                     </div>
                                                 </div>
                                             </form>
@@ -199,13 +199,82 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
 
                             </div>
                             <!-- Fim Modal Editar-->
+
+                            <!-- Inicio Modal Cadastrar-->
+                            <div class="modal fade" id="modalCadastrar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title text-center" id="myModalLabel">Cadastrar Usuário</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form method="POST" action="admin.php?link=3">
+                                                <div class="form-group row">
+                                                    <label for="inputEmail3" class="col-sm-2 col-form-label">CPF:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="inputEmail3" name="cpf">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Nome:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="pnome">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputEmail3" class="col-sm-2 col-form-label">Sobrenome:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="inputEmail3" name="unome">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Matrícula:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="matricula">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputEmail3" class="col-sm-2 col-form-label">E-mail:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="email" class="form-control" id="inputEmail3" name="email">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Senha:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="password" class="form-control" id="inputPassword3" name="senha">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Tipo de Usuário:</label>
+                                                    <div class="col-sm-10">
+                                                        <select class="form-control" name="tipo">
+                                                            <option selected>Selecione</option>
+                                                            <option value="1">Administrador</option>
+                                                            <option value="0">Usuário Comum</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-10">
+                                                        <a class="btn btn-outline-success" type="submit" role="button">Cadastrar</a>
+                                                        <a class="btn btn-outline-primary" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fim Modal Cadastrar-->
                         <?php
                         }
                         ?>
                     </tbody>
                 </table>
                 <div class="float-right">
-                    <a class="btn btn-lg btn-outline-success" href="admin.php?link=3" role="button">Cadastrar Usuário</a>
+                    <a class="btn btn-lg btn-outline-success" data-toggle="modal" data-target="#modalCadastrar" role="button">Cadastrar Usuário</a>
                 </div>
             </div>
         </div>
