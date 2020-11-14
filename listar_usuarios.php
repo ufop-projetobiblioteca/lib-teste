@@ -114,6 +114,31 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
                                 </div>
                             </div>
                             <!-- Fim Modal Apagar-->
+
+                            <!-- Inicio Modal Editar-->
+                            <div class="modal" id="modalEditar" tabindex="-1" role="dialog">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Editar usuário</h5>
+                                            <button type="button" class="close" data-dismiss="modal">
+                                                <span>&times;</span>
+                                            </button>
+                                        </div>
+
+                                        <div class="modal-body">
+                                        
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <a class="btn btn-outline-success" href='#' role="button">Confirmar</a>
+                                            <a class="btn btn-outline-danger" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            <!-- Fim Modal Editar-->
                         <?php
                         }
                         ?>
