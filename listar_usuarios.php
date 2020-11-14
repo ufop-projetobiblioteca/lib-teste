@@ -181,7 +181,7 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                                                                 if ($row_usuario['tipo_usuario'] == 0) {
                                                                                     echo 'selected';
                                                                                 }
-                                                                                ?>>Usuário Comum</option>
+                                                                                ?>>Aluno</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -194,11 +194,6 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                                 </div>
                                             </form>
                                         </div>
-
-                                        <!-- <div class="modal-footer">
-                                            <a class="btn btn-outline-success" href='#' role="button">Salvar</a>
-                                            <a class="btn btn-outline-danger" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
-                                        </div> -->
                                     </div>
                                 </div>
 

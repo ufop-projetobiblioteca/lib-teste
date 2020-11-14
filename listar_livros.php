@@ -1,5 +1,11 @@
 <?php
-$result_livro = "SELECT * FROM livros";
+//$result_livro = "SELECT * FROM livros";
+$result_livro = "SELECT COUNT(exisbn), id_livros, nome, autor, edicao
+                FROM exemplares
+                INNER JOIN livros ON isbn = exisbn
+                WHERE emprestado = 0
+                GROUP BY exisbn, isbn, id_livros";
+
 $resultado_livro = pg_query($conexao, $result_livro);
 ?>
 
@@ -28,6 +34,9 @@ $resultado_livro = pg_query($conexao, $result_livro);
         $(document).ready(function() {
             $('#listaLivros').DataTable({
                 "pagingType": "full_numbers",
+                language: {
+                    url: "https://cdn.datatables.net/plug-ins/1.10.20/i18n/Portuguese-Brasil.json"
+                },
             });
         });
     </script>
@@ -44,6 +53,7 @@ $resultado_livro = pg_query($conexao, $result_livro);
                             <th>Nome</th>
                             <th>Autor</th>
                             <th>Edição</th>
+                            <th>Exemplares Disponíveis</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
@@ -56,42 +66,43 @@ $resultado_livro = pg_query($conexao, $result_livro);
                                 <td><?php echo $row_livros['nome']; ?></td>
                                 <td><?php echo $row_livros['autor']; ?></td>
                                 <td><?php echo $row_livros['edicao']; ?></td>
+                                <td><?php echo $row_livros['count']; ?></td>
                                 <td>
-                                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#myModal<?php echo $row_livros['id_livros'];?>">Visualizar</button>
-									<button type="button" class="btn btn-sm btn-outline-danger">Apagar</button>
+                                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#myModal<?php echo $row_livros['id_livros']; ?>">Visualizar</button>
+                                    <button type="button" class="btn btn-sm btn-outline-danger">Apagar</button>
                                 </td>
                             </tr>
                             <!-- Inicio Modal -->
-								<div class="modal fade" id="myModal<?php echo $row_livros['id_livros']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-									<div class="modal-dialog" role="document">
-										<div class="modal-content">
-											<div class="modal-header">
-                                                <h5 class="modal-title text-center" id="myModalLabel">Dados do Livro</h5>
-												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-											</div>
-											<div class="modal-body">
-                                                <dl class="row">
-                                                    <dt class="col-sm-3">ID:</dt>
-                                                    <dd class="col-sm-9"><?php echo $row_livros['id_livros']; ?></dd>
+                            <div class="modal fade" id="myModal<?php echo $row_livros['id_livros']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title text-center" id="myModalLabel">Dados do Livro</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <dl class="row">
+                                                <dt class="col-sm-3">ID:</dt>
+                                                <dd class="col-sm-9"><?php echo $row_livros['id_livros']; ?></dd>
 
-                                                    <dt class="col-sm-3">Nome:</dt>
-                                                    <dd class="col-sm-9"><?php echo $row_livros['nome']; ?></dd>
+                                                <dt class="col-sm-3">Nome:</dt>
+                                                <dd class="col-sm-9"><?php echo $row_livros['nome']; ?></dd>
 
-                                                    <dt class="col-sm-3">Autor:</dt>
-                                                    <dd class="col-sm-9"><?php echo $row_livros['autor']; ?></dd>
+                                                <dt class="col-sm-3">Autor:</dt>
+                                                <dd class="col-sm-9"><?php echo $row_livros['autor']; ?></dd>
 
-                                                    <dt class="col-sm-3">Edicao:</dt>
-                                                    <dd class="col-sm-9"><?php echo $row_livros['edicao']; ?></dd>
-                                                </dl>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <a class="btn btn-outline-warning" href='#' role="button">Editar</a>
-                                                <a class="btn btn-outline-danger" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
-                                            </div>
-										</div>
-									</div>
-								</div>
-								<!-- Fim Modal -->
+                                                <dt class="col-sm-3">Edicao:</dt>
+                                                <dd class="col-sm-9"><?php echo $row_livros['edicao']; ?></dd>
+                                            </dl>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a class="btn btn-outline-warning" href='#' role="button">Editar</a>
+                                            <a class="btn btn-outline-danger" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fim Modal -->
                         <?php
                         }
                         ?>
