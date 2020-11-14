@@ -28,6 +28,9 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
         $(document).ready(function() {
             $('#listaUsuarios').DataTable({
                 "pagingType": "full_numbers",
+                language: {
+                    url: "https://cdn.datatables.net/plug-ins/1.10.20/i18n/Portuguese-Brasil.json"
+                },
             });
         });
     </script>
@@ -169,17 +172,16 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                                     <div class="col-sm-10">
                                                         <select class="form-control" name="tipo">
                                                             <option>Selecione</option>
-                                                            <option value="1" 
-                                                            <?php
-                                                                if ($row_usuario['tipo_usuario'] == 1) {
-                                                                    echo 'selected';
-                                                                }
-                                                            ?>>Administrador</option>
+                                                            <option value="1" <?php
+                                                                                if ($row_usuario['tipo_usuario'] == 1) {
+                                                                                    echo 'selected';
+                                                                                }
+                                                                                ?>>Administrador</option>
                                                             <option value="0" <?php
-                                                                if ($row_usuario['tipo_usuario'] == 0) {
-                                                                    echo 'selected';
-                                                                }
-                                                            ?>>Usuário Comum</option>
+                                                                                if ($row_usuario['tipo_usuario'] == 0) {
+                                                                                    echo 'selected';
+                                                                                }
+                                                                                ?>>Usuário Comum</option>
                                                         </select>
                                                     </div>
                                                 </div>
