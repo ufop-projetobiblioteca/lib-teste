@@ -1,6 +1,6 @@
 <?php
 $result_usuario = "SELECT * FROM usuarios";
-$resultado_usuario = pg_query($conexao, $result_usuario);
+$row_usuario_usuario = pg_query($conexao, $result_usuario);
 ?>
 
 <head>
@@ -49,7 +49,7 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
                     </thead>
                     <tbody>
                         <?php
-                        while ($row_usuario = pg_fetch_assoc($resultado_usuario)) {
+                        while ($row_usuario = pg_fetch_assoc($row_usuario_usuario)) {
                         ?>
                             <tr>
                                 <th><?php echo $row_usuario['matricula']; ?></th>
@@ -86,7 +86,7 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
                                         </div>
                                         <div class="modal-footer">
                                             <!--<a class="btn btn-outline-warning" href='admin.php?link=7&id=<php echo $row_usuario['matricula']; ?>' role="button">Editar</a>-->
-                                            <a class="btn btn-outline-warning" role="button" data-dismiss="modal" data-toggle="modal" data-target="#modalEditar">Editar</a>
+                                            <a class="btn btn-outline-warning" role="button" data-dismiss="modal" data-toggle="modal" data-target="#modalEditar<?php echo $row_usuario['matricula']; ?>">Editar</a>
                                             <a class="btn btn-outline-danger" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
                                         </div>
                                     </div>
@@ -117,7 +117,7 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
                             <!-- Fim Modal Apagar-->
 
                             <!-- Inicio Modal Editar-->
-                            <div class="modal" id="modalEditar" tabindex="-1" role="dialog">
+                            <div class="modal fade" id="modalEditar<?php echo $row_usuario['matricula']; ?>" tabindex="-1" role="dialog">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -126,9 +126,70 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
                                                 <span>&times;</span>
                                             </button>
                                         </div>
-
                                         <div class="modal-body">
-                                        
+                                            <form method="POST" action="processa/processa_edt_usuario.php">
+                                                <div class="form-group row">
+                                                    <label for="inputEmail3" class="col-sm-2 col-form-label">CPF:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="inputEmail3" name="cpf" value="<?php echo $row_usuario['cpf'] ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Nome:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="pnome" value="<?php echo $row_usuario['pnome'] ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputEmail3" class="col-sm-2 col-form-label">Sobrenome:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="inputEmail3" name="unome" value="<?php echo $row_usuario['unome'] ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Matrícula:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="matricula" value="<?php echo $row_usuario['matricula'] ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputEmail3" class="col-sm-2 col-form-label">E-mail:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="email" class="form-control" id="inputEmail3" name="email" value="<?php echo $row_usuario['email'] ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Senha:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="password" class="form-control" id="inputPassword3" name="senha" value="<?php echo $row_usuario['senha'] ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Tipo de Usuário:</label>
+                                                    <div class="col-sm-10">
+                                                        <select class="form-control" name="tipo">
+                                                            <option>Selecione</option>
+                                                            <option value="1" 
+                                                            <?php
+                                                                if ($row_usuario['tipo_usuario'] == 1) {
+                                                                    echo 'selected';
+                                                                }
+                                                            ?>>Administrador</option>
+                                                            <option value="0" <?php
+                                                                if ($row_usuario['tipo_usuario'] == 0) {
+                                                                    echo 'selected';
+                                                                }
+                                                            ?>>Usuário Comum</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <input type="hidden" name="id" value="<?php echo $row_usuario['matricula']; ?>">
+                                                <div class="form-group row">
+                                                    <div class="col-sm-10">
+                                                        <button type="submit" class="btn btn-success">Salvar</button>
+                                                    </div>
+                                                </div>
+                                            </form>
                                         </div>
 
                                         <div class="modal-footer">
@@ -137,7 +198,7 @@ $resultado_usuario = pg_query($conexao, $result_usuario);
                                         </div>
                                     </div>
                                 </div>
-                            
+
                             </div>
                             <!-- Fim Modal Editar-->
                         <?php
