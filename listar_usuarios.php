@@ -186,16 +186,17 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                                 <input type="hidden" name="id" value="<?php echo $row_usuario['matricula']; ?>">
                                                 <div class="form-group row">
                                                     <div class="col-sm-10">
-                                                        <button type="submit" class="btn btn-success">Salvar</button>
+                                                        <button type="submit" class="btn btn-outline-success">Salvar</button>
+                                                        <button type="submit" class="btn btn-outline-danger" data-dismiss="modal" aria-label="Close">Cancelar</button>
                                                     </div>
                                                 </div>
                                             </form>
                                         </div>
 
-                                        <div class="modal-footer">
-                                            <a class="btn btn-outline-success" href='#' role="button">Confirmar</a>
+                                        <!-- <div class="modal-footer">
+                                            <a class="btn btn-outline-success" href='#' role="button">Salvar</a>
                                             <a class="btn btn-outline-danger" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
 
