@@ -44,6 +44,9 @@ $resultado_livro = pg_query($conexao, $result_livro);
 
 <div role="main" class="container">
     <div class="starter-template">
+    <div class="title"> 
+            <h1>Lista de Livros</h1>
+        </div>
         <div class="row">
             <div class="col-md-12">
                 <table id="listaLivros" class="table table-striped table-bordered table-hover">
