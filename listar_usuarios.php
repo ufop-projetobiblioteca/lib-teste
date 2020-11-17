@@ -38,6 +38,7 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
 
 <div role="main" class="container">
     <div class="starter-template">
+        <div class="title"> Lista de Usuários</div>
         <div class="row">
             <div class="col-md-12">
                 <div class="float-right">
