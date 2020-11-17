@@ -99,7 +99,7 @@ $resultado_livro = pg_query($conexao, $result_livro);
                                             </dl>
                                         </div>
                                         <div class="modal-footer">
-                                            <a class="btn btn-outline-warning" role="button" data-dismiss="modal" data-toggle="modal" data-target="#modalEditar<?php echo $row_livros['id_livros']; ?>">Editar</a>
+                                            <a class="btn btn-outline-info" role="button" data-dismiss="modal" data-toggle="modal" data-target="#modalEditar<?php echo $row_livros['id_livros']; ?>">Editar</a>
                                             <a class="btn btn-outline-danger" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
                                         </div>
                                     </div>
