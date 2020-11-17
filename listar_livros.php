@@ -140,12 +140,12 @@ $resultado_livro = pg_query($conexao, $result_livro);
                                                         <input type="text" class="form-control" id="inputPassword3" name="edicao" value="<?php echo $row_livros['edicao'] ?>">
                                                     </div>
                                                 </div>
-                                                <div class="form-group row">
+                                                <!-- <div class="form-group row">
                                                     <label for="inputPassword3" class="col-sm-2 col-form-label">Sessão:</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" id="inputPassword3" name="sessao_id" value="<?php echo $row_livros['sessao_id'] ?>">
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 <input type="hidden" name="id_livros" value="<?php echo $row_livros['id_livros']; ?>">
                                                 <div class="form-group row">
                                                     <div class="col-sm-10">

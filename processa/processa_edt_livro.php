@@ -4,13 +4,12 @@
 
     $id_livros = filter_input(INPUT_POST, 'id_livros', FILTER_SANITIZE_NUMBER_INT);
     $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
-    $isbn = filter_input(INPUT_POST, 'isbn', FILTER_SANITIZE_STRING);
+    $isbn = filter_input(INPUT_POST, 'isbn', FILTER_SANITIZE_NUMBER_INT);
     $autor = filter_input(INPUT_POST, 'autor', FILTER_SANITIZE_STRING);
     $edicao = filter_input(INPUT_POST, 'edicao', FILTER_SANITIZE_NUMBER_INT);
-    $sessao_id = filter_input(INPUT_POST, 'sessao_id', FILTER_SANITIZE_STRING);
 
     $result_livro = "UPDATE livros SET nome = '$nome', isbn = '$isbn', autor = '$autor', 
-                                      edicao = '$edicao', sessao_id = '$sessao_id', WHERE id_livros = '$id_livros'";
+                                      edicao = '$edicao', WHERE id_livros = '$id_livros'";
     $result_query = pg_query($conexao, $result_livro);
 ?>
 <!DOCTYPE html>
