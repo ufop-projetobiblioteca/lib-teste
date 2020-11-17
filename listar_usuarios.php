@@ -39,9 +39,10 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
 <div role="main" class="container">
     <div class="starter-template">
         <div class="row">
-        <div class="float-right">
-                    <a class="btn btn-lg btn-outline-success" data-toggle="modal" data-target="#modalCadastrar" role="button">Cadastrar Usuário</a>
             <div class="col-md-12">
+                <div class="float-right">
+                    <a class="btn btn-lg btn-outline-success" data-toggle="modal" data-target="#modalCadastrar" role="button">Cadastrar Usuário</a>
+                </div>
                 <table id="listaUsuarios" class="table table-striped table-bordered table-hover">
                     <thead>
                         <tr>
