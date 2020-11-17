@@ -72,7 +72,7 @@ $resultado_livro = pg_query($conexao, $result_livro);
                                     <button type="button" class="btn btn-sm btn-outline-danger">Apagar</button>
                                 </td>
                             </tr>
-                            <!-- Inicio Modal -->
+                            <!-- Inicio Modal Visualizar -->
                             <div class="modal fade" id="myModal<?php echo $row_livros['id_livros']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
@@ -102,7 +102,64 @@ $resultado_livro = pg_query($conexao, $result_livro);
                                     </div>
                                 </div>
                             </div>
-                            <!-- Fim Modal -->
+                            <!-- Fim Modal Visualizar-->
+
+                            <!-- Inicio Modal Editar-->
+                            <div class="modal fade" id="modalEditar<?php echo $row_livros['id_livros']; ?>" tabindex="-1" role="dialog">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Editar livro</h5>
+                                            <button type="button" class="close" data-dismiss="modal">
+                                                <span>&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form method="POST" action="processa/processa_edt_livro.php">
+                                                <div class="form-group row">
+                                                    <label for="inputEmail3" class="col-sm-2 col-form-label">Título:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="inputEmail3" name="nome" value="<?php echo $row_livros['nome'] ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">ISBN:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="isbn" value="<?php echo $row_livros['isbn'] ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputEmail3" class="col-sm-2 col-form-label">Autor:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="inputEmail3" name="autor" value="<?php echo $row_livros['autor'] ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Edição:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="edicao" value="<?php echo $row_livros['edicao'] ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Sessão:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="sessao_id" value="<?php echo $row_livros['sessao_id'] ?>">
+                                                    </div>
+                                                </div>
+                                                <input type="hidden" name="id_livros" value="<?php echo $row_livros['id_livros']; ?>">
+                                                <div class="form-group row">
+                                                    <div class="col-sm-10">
+                                                        <button type="submit" class="btn btn-outline-success">Salvar</button>
+                                                        <button class="btn btn-outline-danger" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Fim Modal Editar-->
                         <?php
                         }
                         ?>
