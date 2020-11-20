@@ -100,7 +100,7 @@ $resultado_reservas = pg_query($conexao, $result_reservas);
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                         </div>
                                         <div class="modal-body">
-                                            <form method="POST" action="processa/processa_cad_emprestimo.php">
+                                            <form method="POST" action="processa/processa_cad_reserva.php">
                                                 <div class="form-group row">
                                                     <label for="inputEmail3" class="col-sm-2 col-form-label">Matrícula:</label>
                                                     <div class="col-sm-10">
