@@ -174,7 +174,7 @@ $resultado_livro = pg_query($conexao, $result_livro);
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                         </div>
                                         <div class="modal-body">
-                                            <form method="POST" action="processa/processa_cad_livro">
+                                            <form method="POST" action="processa/processa_cad_livro.php">
                                                 <div class="form-group row">
                                                     <label for="inputEmail3" class="col-sm-2 col-form-label">ID:</label>
                                                     <div class="col-sm-10">
