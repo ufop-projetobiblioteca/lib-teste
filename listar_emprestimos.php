@@ -97,7 +97,7 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                                 <!-- Fim Modal -->
                                 
                                 <!-- Inicio Modal Cadastrar Empréstimo -->
-                            <div class="modal fade" id="modalCadastrarEmpréstimo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal fade" id="modalCadastrarEmprestimo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                 <div class="modal-dialog modal-lg" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -154,7 +154,7 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
 <div class="container">
     <div class="row">
         <div class="col text-center">
-            <a class="btn btn-lg btn-outline-success" data-toggle="modal" data-target="#modalCadastrarEmpréstimo" role="button">Realizar Empréstimo</a>
+            <a class="btn btn-lg btn-outline-success" data-toggle="modal" data-target="#modalCadastrarEmprestimo" role="button">Realizar Empréstimo</a>
         </div>
     </div>
 </div>
