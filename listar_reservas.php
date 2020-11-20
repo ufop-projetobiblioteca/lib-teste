@@ -28,6 +28,9 @@ $resultado_reservas = pg_query($conexao, $result_reservas);
         $(document).ready(function() {
             $('#listaReservas').DataTable({
                 "pagingType": "full_numbers",
+                language: {
+                    url: "https://cdn.datatables.net/plug-ins/1.10.20/i18n/Portuguese-Brasil.json"
+                },
             });
         });
     </script>

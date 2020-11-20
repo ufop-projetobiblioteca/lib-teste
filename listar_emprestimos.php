@@ -28,6 +28,9 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
         $(document).ready(function() {
             $('#listaEmprestimos').DataTable({
                 "pagingType": "full_numbers",
+                language: {
+                    url: "https://cdn.datatables.net/plug-ins/1.10.20/i18n/Portuguese-Brasil.json"
+                },
             });
         });
     </script>
