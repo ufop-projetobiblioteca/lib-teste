@@ -10,24 +10,21 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Usuários</a>
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gerência</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="admin.php?link=2">Listar</a>
-                    <a class="dropdown-item" href="admin.php?link=3">Cadastrar</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Livros</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown02">
-                    <a class="dropdown-item" href="admin.php?link=4">Listar</a>
-                    <a class="dropdown-item" href="admin.php?link=5">Empréstimos</a>
-                    <a class="dropdown-item" href="admin.php?link=6">Reservas</a>
+                    <a class="dropdown-item" href="admin.php?link=2">Usuários</a>
+                    <a class="dropdown-item" href="admin.php?link=4">Livros</a>
                 </div>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#">Sair <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="admin.php?link=5">Empréstimos <span class="sr-only">(current)</span></a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="admin.php?link=6">Reservas <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Sair <span class="sr-only">(current)</span></a>
+            </li> 
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">

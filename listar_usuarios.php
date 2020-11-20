@@ -36,16 +36,13 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
     </script>
 </head>
 
-<div role="main" class="container">
+<div class="container">
     <div class="starter-template">
-        <div class="title"> 
+        <div class="title">
             <h1>Lista de Usuários</h1>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div class="float-right">
-                    <a class="btn btn-lg btn-outline-success" data-toggle="modal" data-target="#modalCadastrar" role="button">Cadastrar Usuário</a>
-                </div>
                 <table id="listaUsuarios" class="table table-striped table-bordered table-hover">
                     <thead>
                         <tr>
@@ -279,6 +276,11 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                         ?>
                     </tbody>
                 </table>
+            </div>
+        </div>
+        <div class="container">
+            <div class="float-right">
+                <a class="btn btn-lg btn-outline-success" data-toggle="modal" data-target="#modalCadastrar" role="button">Cadastrar Usuário</a>
             </div>
         </div>
     </div>
