@@ -278,10 +278,10 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                 </table>
             </div>
         </div>
-        <div class="container">
-            <div class="float-right">
-                <a class="btn btn-lg btn-outline-success" data-toggle="modal" data-target="#modalCadastrar" role="button">Cadastrar Usuário</a>
-            </div>
-        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="float-center">
+        <a class="btn btn-lg btn-outline-success" data-toggle="modal" data-target="#modalCadastrar" role="button">Cadastrar Usuário</a>
     </div>
 </div>

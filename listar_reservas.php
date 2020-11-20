@@ -33,7 +33,7 @@ $resultado_reservas = pg_query($conexao, $result_reservas);
     </script>
 </head>
 
-<div role="main" class="container">
+<div class="container">
     <div class="starter-template">
         <div class="row">
             <div class="col-md-12">
@@ -94,5 +94,10 @@ $resultado_reservas = pg_query($conexao, $result_reservas);
                 </table>
             </div>
         </div>
+    </div>
+</div>
+<div class="container">
+    <div class="float-center">
+        <a class="btn btn-lg btn-outline-success" data-toggle="modal" data-target="#modalCadastrar" role="button">Realizar Reserva</a>
     </div>
 </div>

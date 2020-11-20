@@ -42,11 +42,11 @@ $resultado_livro = pg_query($conexao, $result_livro);
     </script>
 </head>
 
-<div role="main" class="container">
+<div class="container">
     <div class="starter-template">
     <div class="title"> 
-            <h1>Lista de Livros</h1>
-        </div>
+        <h1>Lista de Livros</h1>
+    </div>
         <div class="row">
             <div class="col-md-12">
                 <table id="listaLivros" class="table table-striped table-bordered table-hover">
@@ -170,5 +170,10 @@ $resultado_livro = pg_query($conexao, $result_livro);
                 </table>
             </div>
         </div>
+    </div>
+</div>
+<div class="container">
+    <div class="float-center">
+        <a class="btn btn-lg btn-outline-success" data-toggle="modal" data-target="#modalCadastrar" role="button">Cadastrar Livro</a>
     </div>
 </div>
