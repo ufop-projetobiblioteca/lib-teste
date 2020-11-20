@@ -237,25 +237,25 @@ $resultado_livro = pg_query($conexao, $result_livro);
                                                 <div class="form-group row">
                                                     <label for="inputEmail3" class="col-sm-2 col-form-label">Código do Exemplar:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputEmail3" name="cpf">
+                                                        <input type="text" class="form-control" id="inputEmail3" name="codigoexemplar">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputPassword3" class="col-sm-2 col-form-label">Código de Localização:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputPassword3" name="pnome">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="codlocalizacao">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputEmail3" class="col-sm-2 col-form-label">ISBN:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputEmail3" name="unome">
+                                                        <input type="text" class="form-control" id="inputEmail3" name="exisbn">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputPassword3" class="col-sm-2 col-form-label">Localização:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputPassword3" name="matricula">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="exlocalizacao">
                                                     </div>
                                                 </div>
                                                 <input type="hidden" name="emprestado" value="0">

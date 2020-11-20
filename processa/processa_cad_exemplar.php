@@ -5,7 +5,7 @@
     $codigoexemplar = filter_input(INPUT_POST, 'codigoexemplar', FILTER_SANITIZE_STRING);
     $codlocalizacao = filter_input(INPUT_POST, 'codlocalizacao', FILTER_SANITIZE_STRING);
     $emprestado = filter_input(INPUT_POST, 'emprestado', FILTER_SANITIZE_NUMBER_INT);
-    $reservado = filter_input(INPUT_POST, 'reservado', FILTER_SANITIZE_STRING);
+    $reservado = filter_input(INPUT_POST, 'reservado', FILTER_SANITIZE_NUMBER_INT);
     $exisbn = filter_input(INPUT_POST, 'exisbn', FILTER_SANITIZE_NUMBER_INT);
     $exlocalizacao = filter_input(INPUT_POST, 'exlocalizacao', FILTER_SANITIZE_STRING);
     
