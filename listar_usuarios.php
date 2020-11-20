@@ -68,8 +68,8 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                 </td>
                             </tr>
                             <!-- Inicio Modal Visualizar-->
-                            <div class="modal fade modal-lg" id="modalVisualizar<?php echo $row_usuario['matricula']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                <div class="modal-dialog" role="document">
+                            <div class="modal fade" id="modalVisualizar<?php echo $row_usuario['matricula']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog modal-lg" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h5 class="modal-title text-center" id="myModalLabel">Dados do Usuário</h5>
