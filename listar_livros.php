@@ -99,6 +99,7 @@ $resultado_livro = pg_query($conexao, $result_livro);
                                             </dl>
                                         </div>
                                         <div class="modal-footer">
+                                            <a class="btn btn-outline-success" role="button" data-dismiss="modal" data-toggle="modal" data-target="#">Cadastrar Exemplar</a>
                                             <a class="btn btn-outline-info" role="button" data-dismiss="modal" data-toggle="modal" data-target="#modalEditar<?php echo $row_livros['id_livros']; ?>">Editar</a>
                                             <a class="btn btn-outline-danger" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
                                         </div>
@@ -163,6 +164,65 @@ $resultado_livro = pg_query($conexao, $result_livro);
 
                             </div>
                             <!-- Fim Modal Editar-->
+
+                            <!-- Inicio Modal Cadastrar Livro-->
+                            <div class="modal fade" id="modalCadastrarLivro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title text-center" id="myModalLabel">Cadastrar Livro</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form method="POST" action="processa/processa_cad_livro">
+                                                <div class="form-group row">
+                                                    <label for="inputEmail3" class="col-sm-2 col-form-label">ID:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="inputEmail3" name="id_livro">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Título:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="nome">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">ISBN:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="isbn">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputEmail3" class="col-sm-2 col-form-label">Autor:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="inputEmail3" name="autor">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Edição:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="edicao">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputEmail3" class="col-sm-2 col-form-label">Sessão:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="email" class="form-control" id="inputEmail3" name="sessao_id">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-10">
+                                                        <button type="submit" class="btn btn-outline-success">Cadastrar</button>
+                                                        <button class="btn btn-outline-danger" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fim Modal Cadastrar-->
                         <?php
                         }
                         ?>
@@ -175,7 +235,7 @@ $resultado_livro = pg_query($conexao, $result_livro);
 <div class="container">
     <div class="row">
         <div class="col text-center">
-            <a class="btn btn-lg btn-outline-success" data-toggle="modal" data-target="#modalCadastrar" role="button">Cadastrar Livro</a>
+            <a class="btn btn-lg btn-outline-success" data-toggle="modal" data-target="#modalCadastrarLivro" role="button">Cadastrar Livro</a>
         </div>
     </div>
 </div>
