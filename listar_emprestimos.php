@@ -121,13 +121,13 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                                                 <div class="form-group row">
                                                     <label for="inputEmail3" class="col-sm-2 col-form-label">Data de Empréstimo:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="date" class="form-control" id="inputEmail3" name="exisbn">
+                                                        <input type="date" class="form-control" id="inputEmail3" name="dataemprestimo">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputPassword3" class="col-sm-2 col-form-label">Data de Devolução:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="date" class="form-control" id="inputPassword3" name="exlocalizacao">
+                                                        <input type="date" class="form-control" id="inputPassword3" name="dataentrega">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
