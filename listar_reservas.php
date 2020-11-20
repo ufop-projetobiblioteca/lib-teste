@@ -96,7 +96,7 @@ $resultado_reservas = pg_query($conexao, $result_reservas);
                                 <div class="modal-dialog modal-lg" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title text-center" id="myModalLabel">Cadastrar Empréstimo</h5>
+                                            <h5 class="modal-title text-center" id="myModalLabel">Cadastrar Reserva</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                         </div>
                                         <div class="modal-body">
@@ -104,25 +104,19 @@ $resultado_reservas = pg_query($conexao, $result_reservas);
                                                 <div class="form-group row">
                                                     <label for="inputEmail3" class="col-sm-2 col-form-label">Matrícula:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputEmail3" name="ematricula">
+                                                        <input type="text" class="form-control" id="inputEmail3" name="rmatricula">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputPassword3" class="col-sm-2 col-form-label">Código do Exemplar:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputPassword3" name="ecodigoexemplar">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="rcodigoexemplar">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label for="inputEmail3" class="col-sm-2 col-form-label">Data de Empréstimo:</label>
+                                                    <label for="inputEmail3" class="col-sm-2 col-form-label">Data da Reserva:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="date" class="form-control" id="inputEmail3" name="exisbn">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Data de Devolução:</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="date" class="form-control" id="inputPassword3" name="exlocalizacao">
+                                                        <input type="date" class="form-control" id="inputEmail3" name="rdata">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -149,7 +143,7 @@ $resultado_reservas = pg_query($conexao, $result_reservas);
 <div class="container">
     <div class="row">
         <div class="col text-center">
-            <a class="btn btn-lg btn-outline-success" data-toggle="modal" data-target="#modalCadastrar" role="button">Realizar Reserva</a>
+            <a class="btn btn-lg btn-outline-success" data-toggle="modal" data-target="#modalCadastrarReserva" role="button">Realizar Reserva</a>
         </div>
     </div>
 </div>

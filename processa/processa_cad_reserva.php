@@ -2,12 +2,11 @@
     session_start();
     include_once("../conexao.php");
 
-    $ematricula = filter_input(INPUT_POST, 'ematricula', FILTER_SANITIZE_NUMBER_INT);
-    $ecodigoexemplar = filter_input(INPUT_POST, 'ecodigoexemplar', FILTER_SANITIZE_STRING);
-    $dataemprestimo = filter_input(INPUT_POST, 'dataemprestimo', FILTER_SANITIZE_STRING);
-    $dataentrega = filter_input(INPUT_POST, 'dataentrega', FILTER_SANITIZE_STRING);
+    $rmatricula = filter_input(INPUT_POST, 'rmatricula', FILTER_SANITIZE_NUMBER_INT);
+    $rcodigoexemplar = filter_input(INPUT_POST, 'rcodigoexemplar', FILTER_SANITIZE_STRING);
+    $rdata = filter_input(INPUT_POST, 'rdata', FILTER_SANITIZE_STRING);
 
-    $result_user = "INSERT INTO emprestimos VALUES ('$ematricula', '$ecodigoexemplar', '$dataemprestimo','$dataentrega')";
+    $result_user = "INSERT INTO emprestimos VALUES ('$rmatricula', '$rcodigoexemplar', '$rdata')";
     $result_query = pg_query($conexao, $result_user);
 ?>
 <!DOCTYPE html>
@@ -23,7 +22,7 @@
         <META HTTP-EQUIV=REFRESH CONTENT = '0;URL =
         https://lib-teste.herokuapp.com/admin.php?link=5'>
         <script type=\"text/javascript\">
-            alert(\"Empréstimo realizado com Sucesso!\");
+            alert(\"Reserva realizada com Sucesso!\");
         </script>
         ";
     }else{
@@ -31,7 +30,7 @@
         <META HTTP-EQUIV=REFRESH CONTENT = '0;URL =
         https://lib-teste.herokuapp.com/admin.php?link=5'>
         <script type=\"text/javascript\">
-            alert(\"Erro ao realizar empréstimo!\");
+            alert(\"Erro ao realizar reserva!\");
         </script>
         ";
     }
