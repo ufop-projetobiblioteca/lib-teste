@@ -35,6 +35,9 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
 
 <div class="container">
     <div class="starter-template">
+        <div class="title">
+            <h1>Lista de Empréstimos</h1></br>
+        </div>
         <div class="row">
             <div class="col-md-12">
                 <table id="listaEmprestimos" class="table table-striped table-bordered table-hover">

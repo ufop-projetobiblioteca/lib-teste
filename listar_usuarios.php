@@ -39,7 +39,7 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
 <div class="container">
     <div class="starter-template">
         <div class="title">
-            <h1>Lista de Usuários</h1>
+            <h1>Lista de Usuários</h1></br>
         </div>
         <div class="row">
             <div class="col-md-12">

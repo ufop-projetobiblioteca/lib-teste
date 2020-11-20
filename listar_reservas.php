@@ -35,6 +35,9 @@ $resultado_reservas = pg_query($conexao, $result_reservas);
 
 <div class="container">
     <div class="starter-template">
+        <div class="title">
+            <h1>Lista de Reservas</h1></br>
+        </div>
         <div class="row">
             <div class="col-md-12">
                 <table id="listaReservas" class="table table-striped table-bordered table-hover">
