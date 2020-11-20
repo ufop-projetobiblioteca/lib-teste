@@ -173,7 +173,9 @@ $resultado_livro = pg_query($conexao, $result_livro);
     </div>
 </div>
 <div class="container">
-    <div class="float-center">
-        <a class="btn btn-lg btn-outline-success" data-toggle="modal" data-target="#modalCadastrar" role="button">Cadastrar Livro</a>
+    <div class="row">
+        <div class="col text-center">
+            <a class="btn btn-lg btn-outline-success" data-toggle="modal" data-target="#modalCadastrar" role="button">Cadastrar Livro</a>
+        </div>
     </div>
 </div>
