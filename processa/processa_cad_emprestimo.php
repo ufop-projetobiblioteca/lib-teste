@@ -4,8 +4,8 @@
 
     $ematricula = filter_input(INPUT_POST, 'ematricula', FILTER_SANITIZE_NUMBER_INT);
     $ecodigoexemplar = filter_input(INPUT_POST, 'ecodigoexemplar', FILTER_SANITIZE_STRING);
-    $dataemprestimo = filter_input(INPUT_POST, 'dataemprestimo', FILTER_SANITIZE_STRING);
-    $dataentrega = filter_input(INPUT_POST, 'dataentrega', FILTER_SANITIZE_STRING);
+    $dataemprestimo = $_INPUT('dataemprestimo');
+    $dataentrega = $_INPUT('dataentrega');
 
     $result_user = "INSERT INTO emprestimos VALUES ('$ematricula', '$ecodigoexemplar', '$dataemprestimo','$dataentrega')";
     $result_query = pg_query($conexao, $result_user);
