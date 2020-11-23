@@ -91,7 +91,7 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                                                 </dl>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-sm btn-outline-success" data-toggle="modal" data-target='#myModal<?php echo $row_emprestimos['ematricula']; ?>'>Devolver</button>
+                                                <a class="btn btn-outline-primary" role="button" data-dismiss="modal" data-toggle="modal" data-target="#myModal<?php echo $row_emprestimos['ematricula']; ?>">Devolver</a>
                                                 <a class="btn btn-outline-warning" role="button" data-dismiss="modal" aria-label="Close">Renovar</a>
                                             </div>
 										</div>
