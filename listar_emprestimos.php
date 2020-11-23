@@ -67,7 +67,7 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
 									<button type="button" class="btn btn-sm btn-outline-danger">Apagar</button>
                                 </td>
                             </tr>
-                            <!-- Inicio Modal -->
+                            <!-- Inicio Modal Visualizar -->
 								<div class="modal fade" id="myModal<?php echo $row_emprestimos['ematricula']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 									<div class="modal-dialog" role="document">
 										<div class="modal-content">
@@ -97,7 +97,7 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
 										</div>
 									</div>
 								</div>
-                                <!-- Fim Modal -->
+                                <!-- Fim Modal Visualizar -->
                                 
                                 <!-- Inicio Modal Cadastrar Empréstimo -->
                             <div class="modal fade" id="modalCadastrarEmprestimo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
