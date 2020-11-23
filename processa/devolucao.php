@@ -22,7 +22,7 @@
     if($result_query){
         echo"
         <META HTTP-EQUIV=REFRESH CONTENT = '0;URL =
-        https://lib-teste.herokuapp.com/admin.php?link=4'>
+        https://lib-teste.herokuapp.com/admin.php?link=5'>
         <script type=\"text/javascript\">
             alert(\"Livro devolvido com Sucesso!\");
         </script>
@@ -30,7 +30,7 @@
     }else{
         echo"
         <META HTTP-EQUIV=REFRESH CONTENT = '0;URL =
-        https://lib-teste.herokuapp.com/admin.php?link=4'>
+        https://lib-teste.herokuapp.com/admin.php?link=5'>
         <script type=\"text/javascript\">
             alert(\"Erro ao devover livro!\");
         </script>
