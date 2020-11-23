@@ -161,19 +161,19 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                                                 <div class="form-group row">
                                                     <label for="inputEmail3" class="col-sm-2 col-form-label">Matrícula:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputEmail3" name="ematricula" value="<?php echo $row_emprestimos['ematricula'] ?>">
+                                                        <input type="text" class="form-control" id="inputEmail3" name="ematricula">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputPassword3" class="col-sm-2 col-form-label">Código do Exemplar:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputPassword3" name="ecodigoexemplar" value="<?php $row_emprestimos['ecodigoexemplar'] ?>">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="ecodigoexemplar">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputPassword3" class="col-sm-2 col-form-label">Data de Devolução:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="date" class="form-control" id="inputPassword3" name="dataentrega" value="<?php $row_emprestimos['dataentrega'] ?>">
+                                                        <input type="date" class="form-control" id="inputPassword3" name="dataentrega">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
