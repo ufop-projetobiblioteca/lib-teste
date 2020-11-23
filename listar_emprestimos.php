@@ -91,7 +91,7 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                                                 </dl>
                                             </div>
                                             <div class="modal-footer">
-                                                <a class="btn btn-outline-primary" role="button" data-dismiss="modal" data-toggle="modal" data-target="#myModal<?php echo $row_emprestimos['ematricula']; ?>">Devolver</a>
+                                                <a class="btn btn-outline-primary" role="button" data-dismiss="modal" data-toggle="modal" data-target="#modalDevolverEmprestimo">Devolver</a>
                                                 <a class="btn btn-outline-warning" role="button" data-dismiss="modal" aria-label="Close">Renovar</a>
                                             </div>
 										</div>
@@ -147,7 +147,7 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                             <!-- Fim Modal Cadastrar Empréstimo-->
 
                             <!-- Inicio Modal Devolver -->
-                            <div class="modal fade" id="myModal<?php echo $row_emprestimos['ematricula']; ?>" tabindex="-1" role="dialog">
+                            <div class="modal fade" id="modalDevolverEmprestimo" tabindex="-1" role="dialog">
                                 <div class="modal-dialog modal-lg" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
