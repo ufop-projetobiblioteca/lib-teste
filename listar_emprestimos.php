@@ -1,5 +1,5 @@
 <?php
-$result_emprestimos = "SELECT * FROM emprestimos";
+$result_emprestimos = "SELECT * FROM emprestimos WHERE devolvido = '0'";
 $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
 ?>
 
@@ -91,7 +91,7 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                                                 </dl>
                                             </div>
                                             <div class="modal-footer">
-                                                <a class="btn btn-outline-success" href='#' role="button">Devolver</a>
+                                                <button type="button" class="btn btn-sm btn-outline-success" data-toggle="modal" data-target='myModal<?php echo $row_emprestimos['ematricula']; ?>'>Devolver</button>
                                                 <a class="btn btn-outline-warning" role="button" data-dismiss="modal" aria-label="Close">Renovar</a>
                                             </div>
 										</div>
@@ -145,6 +145,50 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                                 </div>
                             </div>
                             <!-- Fim Modal Cadastrar Empréstimo-->
+
+                            <!-- Inicio Modal Devolver -->
+                            <div class="modal fade" id="myModal<?php echo $row_emprestimos['ematricula']; ?>" tabindex="-1" role="dialog">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Devolução</h5>
+                                            <button type="button" class="close" data-dismiss="modal">
+                                                <span>&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form method="POST" action="processa/devolucao.php">
+                                                <div class="form-group row">
+                                                    <label for="inputEmail3" class="col-sm-2 col-form-label">Matrícula:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="inputEmail3" name="ematricula" value="<?php echo $row_emprestimos['ematricula'] ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Código do Exemplar:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="ecodigoexemplar" value="<?php $row_emprestimos['ecodigoexemplar'] ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Data de Devolução:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="date" class="form-control" id="inputPassword3" name="dataentrega" value="<?php $row_emprestimos['dataentrega'] ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-10">
+                                                        <button type="submit" class="btn btn-outline-success">Confirmar</button>
+                                                        <button class="btn btn-outline-danger" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Fim Modal Editar-->
                         <?php
                         }
                         ?>
