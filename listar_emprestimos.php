@@ -1,5 +1,5 @@
 <?php
-$result_emprestimos = "SELECT * FROM emprestimos WHERE devolvido = 1";
+$result_emprestimos = "SELECT * FROM emprestimos WHERE devolvido = 0";
 $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
 ?>
 
