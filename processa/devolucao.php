@@ -6,7 +6,7 @@
     $ecodigoexemplar = filter_input(INPUT_POST, 'ecodigoexemplar', FILTER_SANITIZE_STRING);
     $dataentrega = filter_input(INPUT_POST,'dataentrega');
 
-    $result_emprestimos = "UPDATE emprestimos SET dataentrega = '$dataentrega', devolvido = 1, 
+    $result_emprestimos = "UPDATE emprestimos SET dataentrega = '$dataentrega', devolvido = 1 
                         WHERE ematricula = '$ematricula' AND ecodigoexemplar = '$ecodigoexemplar'";
     $result_query = pg_query($conexao, $result_emprestimos);
 ?>
