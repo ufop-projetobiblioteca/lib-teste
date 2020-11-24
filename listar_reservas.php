@@ -61,12 +61,12 @@ $resultado_reservas = pg_query($conexao, $result_reservas);
                                 <td><?php echo $row_reservas['rcodigoexemplar']; ?></td>
                                 <td><?php echo $row_reservas['rdata']; ?></td>
                                 <td>
-                                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#myModal<?php echo $row_reservas['rmatricula'];?>">Visualizar</button>
+                                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#myModal<?php echo $row_reservas['rcodigoexemplar'];?>">Visualizar</button>
 									<button type="button" class="btn btn-sm btn-outline-danger">Apagar</button>
                                 </td>
                             </tr>
                             <!-- Inicio Modal Visualizar -->
-								<div class="modal fade" id="myModal<?php echo $row_reservas['rmatricula']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+								<div class="modal fade" id="myModal<?php echo $row_reservas['rcodigoexemplar']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 									<div class="modal-dialog" role="document">
 										<div class="modal-content">
 											<div class="modal-header">
