@@ -65,7 +65,7 @@ $resultado_reservas = pg_query($conexao, $result_reservas);
 									<button type="button" class="btn btn-sm btn-outline-danger">Apagar</button>
                                 </td>
                             </tr>
-                            <!-- Inicio Modal -->
+                            <!-- Inicio Modal Visualizar -->
 								<div class="modal fade" id="myModal<?php echo $row_reservas['rmatricula']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 									<div class="modal-dialog" role="document">
 										<div class="modal-content">
@@ -92,9 +92,9 @@ $resultado_reservas = pg_query($conexao, $result_reservas);
 										</div>
 									</div>
 								</div>
-                                <!-- Fim Modal -->
+                                <!-- Fim Modal Visualizar -->
                                 
-                                 <!-- Inicio Modal Cadastrar Reserva -->
+                            <!-- Inicio Modal Cadastrar Reserva -->
                             <div class="modal fade" id="modalCadastrarReserva" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                 <div class="modal-dialog modal-lg" role="document">
                                     <div class="modal-content">
@@ -134,6 +134,53 @@ $resultado_reservas = pg_query($conexao, $result_reservas);
                                 </div>
                             </div>
                             <!-- Fim Modal Cadastrar Reserva -->
+
+                            <!-- Inicio Modal Cadastrar Empréstimo -->
+                            <div class="modal fade" id="modalCadastrarEmprestimo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title text-center" id="myModalLabel">Cadastrar Empréstimo</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <dl class="row">
+                                                <dt class="col-sm-3">Matrícula:</dt>
+                                                <dd class="col-sm-9"><?php echo $row_reservas['rmatricula']; ?></dd>
+
+                                                <dt class="col-sm-3">Código do Exemplar:</dt>
+                                                <dd class="col-sm-9"><?php echo $row_reservas['rcodigoexemplar']; ?></dd>
+
+                                                <dt class="col-sm-3">Data da Reserva:</dt>
+                                                <dd class="col-sm-9"><?php echo $row_reservas['rdata']; ?></dd>
+                                            </dl>
+                                            <form method="POST" action="processa/processa_cad_emprestimo.php">
+                                                <div class="form-group row">
+                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Data do Empréstimo:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="date" class="form-control" id="inputPassword3" name="dataemprestimo">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Data de Devolução:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="date" class="form-control" id="inputPassword3" name="dataentrega">
+                                                    </div>
+                                                </div>
+                                                <input type="hidden" name="ematricula" value="<?php echo $row_reservas['rmatricula']; ?>">
+                                                <input type="hidden" name="ecodigoexemplar" value="<?php echo $row_reservas['rcodigoexemplar']; ?>">
+                                                <div class="form-group row">
+                                                    <div class="col-sm-10">
+                                                        <button type="submit" class="btn btn-outline-success">Confirmar</button>
+                                                        <button class="btn btn-outline-danger" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fim Modal Cadastrar Empréstimo-->
                         <?php
                         }
                         ?>
