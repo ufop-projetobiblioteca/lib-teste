@@ -78,7 +78,7 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                                 <td><?php echo $row_emprestimos['dataemprestimo']; ?></td>
                                 <td><?php echo $row_emprestimos['dataentrega']; ?></td>
                                 <td>
-                                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#myModal<?php echo $row_emprestimos['ematricula'];?>">Visualizar</button>
+                                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#myModal<?php echo $row_emprestimos['matricula'];?>">Visualizar</button>
 									<button type="button" class="btn btn-sm btn-outline-danger">  Apagar  </button>
                                 </td>
                             </tr>
