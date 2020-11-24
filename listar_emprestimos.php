@@ -84,7 +84,7 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                             </tr>
                             <!-- Inicio Modal Visualizar -->
 								<div class="modal fade" id="myModal<?php echo $row_emprestimos['ematricula']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-									<div class="modal-dialog" role="document">
+									<div class="modal-dialog modal-lg" role="document">
 										<div class="modal-content">
 											<div class="modal-header">
                                                 <h5 class="modal-title text-center" id="myModalLabel">Dados do Empréstimo</h5>
@@ -106,7 +106,7 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                                                 </dl>
                                             </div>
                                             <div class="modal-footer">
-                                                <a class="btn btn-outline-warning" role="button" data-dismiss="modal" aria-label="Close">Renovar</a>
+                                                <a class="btn btn-outline-warning" role="button" data-dismiss="modal" data-target="modalRenovar<?php echo $row_emprestimos['ematricula']; ?>" role="button">Renovar</a>
                                                 <a class="btn btn-outline-danger" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
                                             </div>
 										</div>
@@ -203,7 +203,47 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                                 </div>
 
                             </div>
-                            <!-- Fim Modal Editar-->
+                            <!-- Fim Modal Devolver-->
+
+                            <!-- Inicio Modal Renovar -->
+                            <div class="modal fade" id="modalRenovar<?php echo $row_emprestimos['ematricula']; ?>" tabindex="-1" role="dialog">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Renovação</h5>
+                                            <button type="button" class="close" data-dismiss="modal">
+                                                <span>&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <dt class="col-sm-3">Matrícula:</dt>
+                                            <dd class="col-sm-9"><?php echo $row_emprestimos['matricula']; ?></dd>
+
+                                            <dt class="col-sm-3">Código do Exemplar:</dt>
+                                            <dd class="col-sm-9"><?php echo $row_emprestimos['ecodigoexemplar']; ?></dd>
+
+                                            <dt class="col-sm-3">Data do Empréstimo:</dt>
+                                            <dd class="col-sm-9"><?php echo $row_emprestimos['dataemprestimo']; ?></dd>
+                                            <form method="POST" action="processa/renovacao.php">
+                                                <div class="form-group row">
+                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Nova Data de Devolução:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="date" class="form-control" id="inputPassword3" name="dataentrega">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-10">
+                                                        <button type="submit" class="btn btn-outline-success">Confirmar</button>
+                                                        <button class="btn btn-outline-danger" data-dismiss="modal" aria-label="Close">Cancelar</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Fim Modal Renovar-->
                         <?php
                         }
                         ?>
@@ -216,8 +256,8 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
 <div class="container">
     <div class="row">
         <div class="col text-center">
-            <a class="btn btn-outline-primary" data-toggle="modal" data-target="#modalDevolverEmprestimo" role="button" >Devolver Empréstimo</a>
             <a class="btn btn-lg btn-outline-success" data-toggle="modal" data-target="#modalCadastrarEmprestimo" role="button">Realizar Empréstimo</a>
+            <a class="btn btn-lg btn-outline-primary" data-toggle="modal" data-target="#modalDevolverEmprestimo" role="button" >Devolver Empréstimo</a>
         </div>
     </div>
 </div>
