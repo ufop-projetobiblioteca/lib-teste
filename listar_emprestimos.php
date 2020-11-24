@@ -83,7 +83,7 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                                 </td>
                             </tr>
                             <!-- Inicio Modal Visualizar -->
-								<div class="modal fade" id="myModal<?php echo $row_emprestimos['ematricula']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+								<div class="modal fade" id="myModal<?php echo $row_emprestimos['matricula']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 									<div class="modal-dialog modal-lg" role="document">
 										<div class="modal-content">
 											<div class="modal-header">
