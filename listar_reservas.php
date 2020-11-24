@@ -86,7 +86,7 @@ $resultado_reservas = pg_query($conexao, $result_reservas);
                                                 </dl>
                                             </div>
                                             <div class="modal-footer">
-                                                <a class="btn btn-outline-success" href='#' role="button">Emprestar</a>
+                                                <a class="btn btn-outline-success" role="button" data-dismiss="modal" data-toggle="modal" data-target='#modalCadastrarEmprestimo'>Emprestar</a>
                                                 <a class="btn btn-outline-danger" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
                                             </div>
 										</div>
