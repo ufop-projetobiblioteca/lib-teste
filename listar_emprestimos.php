@@ -53,16 +53,15 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                 <table id="listaEmprestimos" class="table table-striped table-bordered table-hover">
                     <thead>
                         <tr>
-                            <th>Nome</th>
-                            <th>Sobrenome</th>
-                            <th>Matrícula</th>
-                            <th>Código do Exemplar</th>
-                            <th>Título</th>
-                            <th>Edição</th>
-                            <th>Autor</th>
-                            <th>Data do Empréstimo</th>
-                            <th>Data de Devolução</th>
-                            <th>Ações</th>
+                            <td>Nome</td>
+                            <td>Matrícula</td>
+                            <td>Cód. Exemplar</td>
+                            <td>Título</td>
+                            <td>Edição</td>
+                            <td>Autor</td>
+                            <td>Data Empréstimo</td>
+                            <td>Data Devolução</td>
+                            <td>Ações</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -70,8 +69,7 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                         while ($row_emprestimos = pg_fetch_assoc($resultado_emprestimos)) {
                         ?>
                             <tr>
-                                <th><?php echo $row_emprestimos['pnome']; ?></th>
-                                <td><?php echo $row_emprestimos['unome']; ?></td>
+                                <td><?php echo $row_emprestimos['pnome']." ".['unome']; ?></td>
                                 <td><?php echo $row_emprestimos['matricula']; ?></td>
                                 <td><?php echo $row_emprestimos['ecodigoexemplar']; ?></td>
                                 <td><?php echo $row_emprestimos['nome']; ?></td>
@@ -95,7 +93,7 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
 											<div class="modal-body">
                                                 <dl class="row">
                                                     <dt class="col-sm-3">Matrícula:</dt>
-                                                    <dd class="col-sm-9"><?php echo $row_emprestimos['ematricula']; ?></dd>
+                                                    <dd class="col-sm-9"><?php echo $row_emprestimos['matricula']; ?></dd>
 
                                                     <dt class="col-sm-3">Código do Exemplar:</dt>
                                                     <dd class="col-sm-9"><?php echo $row_emprestimos['ecodigoexemplar']; ?></dd>
