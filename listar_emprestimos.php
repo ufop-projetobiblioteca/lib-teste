@@ -69,7 +69,8 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                         while ($row_emprestimos = pg_fetch_assoc($resultado_emprestimos)) {
                         ?>
                             <tr>
-                                <td><?php echo $row_emprestimos['pnome']; echo $row_emprestimos['unome']; ?></td>
+                                <td><?php echo $row_emprestimos['pnome'];?> </br>
+                                <?php echo $row_emprestimos['unome']; ?></td>
                                 <td><?php echo $row_emprestimos['matricula']; ?></td>
                                 <td><?php echo $row_emprestimos['ecodigoexemplar']; ?></td>
                                 <td><?php echo $row_emprestimos['nome']; ?></td>
@@ -230,6 +231,8 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                                                     <div class="col-sm-10">
                                                         <input type="date" class="form-control" id="inputPassword3" name="dataentrega">
                                                     </div>
+                                                    <input type="hidden" name="matricula" value="<?php echo $row_emprestimos['matricula']; ?>">
+                                                    <input type="hidden" name="codExemplar" value="<?php echo $row_emprestimos['ecodigoexemplar']; ?>">
                                                 </div>
                                                 <div class="form-group row">
                                                     <div class="col-sm-10">
