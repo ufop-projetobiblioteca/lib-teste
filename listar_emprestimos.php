@@ -1,5 +1,12 @@
 <?php
-$result_emprestimos = "SELECT * FROM emprestimos WHERE devolvido = 0";
+$result_emprestimos = " SELECT pnome, unome, matricula, ecodigoexemplar, nome, edicao, autor, dataemprestimo, dataentrega 
+                        FROM usuarios
+                        INNER JOIN emprestimos ON ematricula = matricula
+                        INNER JOIN exemplares ON codigoexemplar = ecodigoexemplar
+                        INNER JOIN livros ON isbn = exisbn
+                        WHERE devolvido = 0
+                        GROUP BY matricula, ematricula, codigoexemplar, ecodigoexemplar, nome, edicao, pnome, unome, autor
+                        ORDER BY pnome ";
 $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
 ?>
 
@@ -46,8 +53,13 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                 <table id="listaEmprestimos" class="table table-striped table-bordered table-hover">
                     <thead>
                         <tr>
+                            <th>Nome</th>
+                            <th>Sobrenome</th>
                             <th>Matrícula</th>
                             <th>Código do Exemplar</th>
+                            <th>Título</th>
+                            <th>Edição</th>
+                            <th>Autor</th>
                             <th>Data do Empréstimo</th>
                             <th>Data de Devolução</th>
                             <th>Ações</th>
@@ -58,8 +70,13 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                         while ($row_emprestimos = pg_fetch_assoc($resultado_emprestimos)) {
                         ?>
                             <tr>
-                                <th><?php echo $row_emprestimos['ematricula']; ?></th>
+                                <th><?php echo $row_emprestimos['pnome']; ?></th>
+                                <td><?php echo $row_emprestimos['unome']; ?></td>
+                                <td><?php echo $row_emprestimos['matricula']; ?></td>
                                 <td><?php echo $row_emprestimos['ecodigoexemplar']; ?></td>
+                                <td><?php echo $row_emprestimos['nome']; ?></td>
+                                <td><?php echo $row_emprestimos['edicao']; ?></td>
+                                <td><?php echo $row_emprestimos['autor']; ?></td>
                                 <td><?php echo $row_emprestimos['dataemprestimo']; ?></td>
                                 <td><?php echo $row_emprestimos['dataentrega']; ?></td>
                                 <td>
