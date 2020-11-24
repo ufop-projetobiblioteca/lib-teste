@@ -79,7 +79,7 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                                 <td><?php echo $row_emprestimos['dataentrega']; ?></td>
                                 <td>
                                     <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#myModal<?php echo $row_emprestimos['ematricula'];?>">Visualizar</button>
-									<button type="button" class="btn btn-sm btn-outline-danger">Apagar</button>
+									<button type="button" class="btn btn-sm btn-outline-danger">  Apagar  </button>
                                 </td>
                             </tr>
                             <!-- Inicio Modal Visualizar -->
@@ -106,7 +106,7 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                                                 </dl>
                                             </div>
                                             <div class="modal-footer">
-                                                <a class="btn btn-outline-warning" role="button" data-dismiss="modal" data-target="modalRenovar<?php echo $row_emprestimos['ematricula']; ?>" role="button">Renovar</a>
+                                                <a class="btn btn-outline-warning" role="button" data-dismiss="modal" data-target="#modalRenovar<?php echo $row_emprestimos['ematricula']; ?>" role="button">Renovar</a>
                                                 <a class="btn btn-outline-danger" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
                                             </div>
 										</div>
