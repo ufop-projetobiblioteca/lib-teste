@@ -78,12 +78,12 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                                 <td><?php echo $row_emprestimos['dataemprestimo']; ?></td>
                                 <td><?php echo $row_emprestimos['dataentrega']; ?></td>
                                 <td>
-                                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#myModal<?php echo $row_emprestimos['matricula'];?>">Visualizar</button>
+                                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#myModal<?php echo $row_emprestimos['ecodigoexemplar'];?>">Visualizar</button>
 									<button type="button" class="btn btn-sm btn-outline-danger">  Apagar  </button>
                                 </td>
                             </tr>
                             <!-- Inicio Modal Visualizar -->
-								<div class="modal fade" id="myModal<?php echo $row_emprestimos['matricula']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+								<div class="modal fade" id="myModal<?php echo $row_emprestimos['ecodigoexemplar']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 									<div class="modal-dialog modal-lg" role="document">
 										<div class="modal-content">
 											<div class="modal-header">
@@ -106,7 +106,7 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                                                 </dl>
                                             </div>
                                             <div class="modal-footer">
-                                                <a class="btn btn-outline-warning" role="button" data-dismiss="modal" data-target="#modalRenovar<?php echo $row_emprestimos['matricula']; ?>" role="button">Renovar</a>
+                                                <a class="btn btn-outline-warning" role="button" data-dismiss="modal" data-target="#modalRenovar<?php echo $row_emprestimos['ecodigoexemplar']; ?>" role="button">Renovar</a>
                                                 <a class="btn btn-outline-danger" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
                                             </div>
 										</div>
@@ -206,7 +206,7 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                             <!-- Fim Modal Devolver-->
 
                             <!-- Inicio Modal Renovar -->
-                            <div class="modal fade" id="modalRenovar<?php echo $row_emprestimos['matricula']; ?>" tabindex="-1" role="dialog">
+                            <div class="modal fade" id="modalRenovar<?php echo $row_emprestimos['ecodigoexemplar']; ?>" tabindex="-1" role="dialog">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
