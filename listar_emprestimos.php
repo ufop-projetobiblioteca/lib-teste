@@ -53,15 +53,15 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                 <table id="listaEmprestimos" class="table table-striped table-bordered table-hover">
                     <thead>
                         <tr>
-                            <td>Nome</td>
-                            <td>Matrícula</td>
-                            <td>Cód. Exemplar</td>
-                            <td>Título</td>
-                            <td>Edição</td>
-                            <td>Autor</td>
-                            <td>Data Empréstimo</td>
-                            <td>Data Devolução</td>
-                            <td>Ações</td>
+                            <th>Nome</th>
+                            <th>Matrícula</th>
+                            <th>Cód. Exemplar</th>
+                            <th>Título</th>
+                            <th>Edição</th>
+                            <th>Autor</th>
+                            <th>Data Empréstimo</th>
+                            <th>Data Devolução</th>
+                            <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -69,7 +69,7 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                         while ($row_emprestimos = pg_fetch_assoc($resultado_emprestimos)) {
                         ?>
                             <tr>
-                                <td><?php echo $row_emprestimos['pnome']." ".['unome']; ?></td>
+                                <td><?php echo $row_emprestimos['pnome']; echo $row_emprestimos['unome']; ?></td>
                                 <td><?php echo $row_emprestimos['matricula']; ?></td>
                                 <td><?php echo $row_emprestimos['ecodigoexemplar']; ?></td>
                                 <td><?php echo $row_emprestimos['nome']; ?></td>
@@ -106,8 +106,8 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                                                 </dl>
                                             </div>
                                             <div class="modal-footer">
-                                                <a class="btn btn-outline-primary" role="button" data-dismiss="modal" data-toggle="modal" data-target="#modalDevolverEmprestimo">Devolver</a>
                                                 <a class="btn btn-outline-warning" role="button" data-dismiss="modal" aria-label="Close">Renovar</a>
+                                                <a class="btn btn-outline-danger" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
                                             </div>
 										</div>
 									</div>
@@ -216,6 +216,7 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
 <div class="container">
     <div class="row">
         <div class="col text-center">
+            <a class="btn btn-outline-primary" data-toggle="modal" data-target="#modalDevolverEmprestimo" role="button" >Devolver Empréstimo</a>
             <a class="btn btn-lg btn-outline-success" data-toggle="modal" data-target="#modalCadastrarEmprestimo" role="button">Realizar Empréstimo</a>
         </div>
     </div>
