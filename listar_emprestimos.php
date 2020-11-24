@@ -207,7 +207,7 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
 
                             <!-- Inicio Modal Renovar -->
                             <div class="modal fade" id="modalRenovar<?php echo $row_emprestimos['ecodigoexemplar']; ?>" tabindex="-1" role="dialog">
-                                <div class="modal-dialog" role="document">
+                                <div class="modal-dialog modal-lg" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h5 class="modal-title">Renovação</h5>
@@ -226,7 +226,7 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                                             <dd class="col-sm-9"><?php echo $row_emprestimos['dataemprestimo']; ?></dd>
                                             <form method="POST" action="processa/renovacao.php">
                                                 <div class="form-group row">
-                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Nova Data de Devolução:</label>
+                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Nova Data:</label>
                                                     <div class="col-sm-10">
                                                         <input type="date" class="form-control" id="inputPassword3" name="dataentrega">
                                                     </div>
