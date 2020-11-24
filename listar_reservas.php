@@ -86,7 +86,7 @@ $resultado_reservas = pg_query($conexao, $result_reservas);
                                                 </dl>
                                             </div>
                                             <div class="modal-footer">
-                                                <a class="btn btn-outline-success" role="button" data-dismiss="modal" data-toggle="modal" data-target='#modalCadastrarEmprestimo'>Emprestar</a>
+                                                <a class="btn btn-outline-success" role="button" data-dismiss="modal" data-toggle="modal" data-target='#modalCadastrarEmprestimo<?php echo $row_reservas['rcodigoexemplar']; ?>'>Emprestar</a>
                                                 <a class="btn btn-outline-danger" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
                                             </div>
 										</div>
@@ -136,7 +136,7 @@ $resultado_reservas = pg_query($conexao, $result_reservas);
                             <!-- Fim Modal Cadastrar Reserva -->
 
                             <!-- Inicio Modal Cadastrar Empréstimo -->
-                            <div class="modal fade" id="modalCadastrarEmprestimo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal fade" id="modalCadastrarEmprestimo<?php echo $row_reservas['rcodigoexemplar']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                 <div class="modal-dialog modal-lg" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
