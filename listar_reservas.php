@@ -12,8 +12,8 @@ $resultado_reservas = pg_query($conexao, $result_reservas);
     <!-- Datatables CSS library -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
-    <!-- Datatables CSS library -->
-    <link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap4.min.css" />
+    <!-- Datatables CSS library ->
+    <link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap4.min.css" />-->
 
     <!-- Datatables Bootstrap library -->
     <link rel="stylesheet" type="text/javascript" href="js/dataTables.bootstrap4.min.js" />

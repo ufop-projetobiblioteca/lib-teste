@@ -19,8 +19,8 @@ $resultado_livro = pg_query($conexao, $result_livro);
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
     <!-- Datatables CSS library -->
-    <link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap4.min.css" />
-
+    <!-- <link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap4.min.css" />
+ -->
     <!-- Datatables Bootstrap library -->
     <link rel="stylesheet" type="text/javascript" href="js/dataTables.bootstrap4.min.js" />
 
