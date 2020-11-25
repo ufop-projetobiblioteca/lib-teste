@@ -10,7 +10,7 @@
     $exlocalizacao = filter_input(INPUT_POST, 'exlocalizacao', FILTER_SANITIZE_STRING);
     
 
-    $result_user = "INSERT INTO livros VALUES ('$codigoexemplar', '$codlocalizacao', '$emprestado','$reservado', '$exisbn', '$exlocalizacao')";
+    $result_user = "INSERT INTO exemplares VALUES ('$codigoexemplar', '$codlocalizacao', '$emprestado','$reservado', '$exisbn', '$exlocalizacao')";
     $result_query = pg_query($conexao, $result_user);
 ?>
 <!DOCTYPE html>
