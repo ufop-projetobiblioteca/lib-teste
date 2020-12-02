@@ -18,13 +18,13 @@ if ((!empty($usuario)) and (!empty($senha))) {
                 $_SESSION['pnome'] = $row_usuario['pnome'];
                 $_SESSION['email'] = $row_usuario['email'];
 
-                header("Location: admin.php");
+                header("Location: 1_admin/admin.php");
             } else {
                 $_SESSION['cpf'] = $row_usuario['cpf'];
                 $_SESSION['pnome'] = $row_usuario['pnome'];
                 $_SESSION['email'] = $row_usuario['email'];
 
-                header("Location: usuario.php");
+                header("Location: 2_usuario/usuario.php");
             }
         } else {
             $_SESSION['msg'] = "Usuário ou Senha incorretos!";
