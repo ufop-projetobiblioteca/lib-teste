@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("conexao.php");
+include_once("../conexao.php");
 ?>
 
 <!doctype html>
@@ -18,18 +18,18 @@ include_once("conexao.php");
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/starter-template/">
 
     <!-- JQuery library -->
-    <script src="js/jquery-3.5.1.js"></script>
+    <script src="../js/jquery-3.5.1.js"></script>
 
     <!-- Datatables CSS library -->
-    <link rel="stylesheet" type="text/css" href="css/jquery.datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery.datatables.min.css" />
 
     <!-- Datatables JS library -->
-    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.dataTables.min.js"></script>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
-    <script src="script/bootstrap.bundle.min.js"></script>
+    <script src="../script/bootstrap.bundle.min.js"></script>
 
     
 
@@ -51,9 +51,9 @@ include_once("conexao.php");
     </style>
 
     <!-- Custom styles for this template -->
-    <link href="css/starter-template.css" rel="stylesheet">
+    <link href="../css/starter-template.css" rel="stylesheet">
 
-    <script src="script/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="../script/jquery-3.5.1.slim.min.js"> </script>
     
     <script>
         window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')
