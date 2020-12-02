@@ -77,26 +77,20 @@ include_once("../conexao.php");
 
     $link = $_GET["link"];
 
-    $pages[1] = "bem_vindo.php";
-    $pages[2] = "listar_usuarios.php";
-    $pages[3] = "cadastrar_usuario.php";
-    $pages[4] = "listar_livros.php";
-    $pages[5] = "listar_emprestimos.php";
-    $pages[6] = "listar_reservas.php";
-    $pages[7] = "editar_usuario.php";
-    $pages[8] = "visualizar_usuario.php";
-    $pages[9] = "deletar_usuario.php";
-    $pages[10] = "processa/processa_cad_usuario.php";
-
+    $pages[1] = "../bem_vindo.php";
+    $pages[2] = "gerencia_usuarios.php";
+    $pages[3] = "gerencia_livros.php";
+    $pages[4] = "gerencia_emprestimos.php";
+    $pages[5] = "gerencia_reservas.php";
 
     if (!empty($link)) {
         if (file_exists($pages[$link])) {
             include $pages[$link];
         } else {
-            include "bem_vindo.php";
+            include "../bem_vindo.php";
         }
     } else {
-        include "bem_vindo.php";
+        include "../bem_vindo.php";
     }
     ?>
 </body>
