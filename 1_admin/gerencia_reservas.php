@@ -7,22 +7,22 @@ $resultado_reservas = pg_query($conexao, $result_reservas);
     <meta charset="utf-8">
 
     <!-- Datatables CSS library -->
-    <link rel="stylesheet" type="text/css" href="css/jquery.datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery.datatables.min.css" />
 
     <!-- Datatables CSS library -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
 
     <!-- Datatables CSS library -->
-    <link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/dataTables.bootstrap4.min.css" />
 
     <!-- Datatables Bootstrap library -->
-    <link rel="stylesheet" type="text/javascript" href="js/dataTables.bootstrap4.min.js" />
+    <link rel="stylesheet" type="text/javascript" href="../js/dataTables.bootstrap4.min.js" />
 
     <!-- JQuery library -->
-    <script src="js/jquery-3.5.1.js"></script>
+    <script src="../js/jquery-3.5.1.js"></script>
 
     <!-- Datatables JS library -->
-    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.dataTables.min.js"></script>
 
     <script>
         $(document).ready(function() {
@@ -39,7 +39,7 @@ $resultado_reservas = pg_query($conexao, $result_reservas);
 <div class="container">
     <div class="starter-template">
         <div class="title">
-            <h1>Lista de Reservas</h1></br>
+            <h1>Reservas</h1></br>
         </div>
         <div class="row">
             <div class="col-md-12">
