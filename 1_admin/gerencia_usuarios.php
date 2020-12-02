@@ -6,8 +6,8 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
 <head>
     <meta charset="utf-8">
 
-    <!-- Datatables CSS library -->
-    <link rel="stylesheet" type="text/css" href="../css/jquery.datatables.min.css" />
+    <!-- Datatables CSS library ->
+    <link rel="stylesheet" type="text/css" href="../css/jquery.datatables.min.css" />-->
 
     <!-- Datatables CSS library -->
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
@@ -16,7 +16,7 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
     <link rel="stylesheet" type="text/css" href="../css/dataTables.bootstrap4.min.css" />
 
     <!-- Datatables Bootstrap library -->
-    <link rel="stylesheet" type="text/css" href="../js/dataTables.bootstrap4.min.js" />
+    <link rel="stylesheet" type="text/javascript" href="../js/dataTables.bootstrap4.min.js" />
 
     <!-- JQuery library -->
     <script src="../js/jquery-3.5.1.js"></script>
