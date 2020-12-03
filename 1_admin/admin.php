@@ -96,10 +96,9 @@ include_once("../conexao.php");
 
     <footer class="footer mt-auto py-3">
         <div class="container">
-            <span class="text-muted">Coloque o conteúdo do sticky footer aqui.</span>
-            <!-- Facebook -->
+            <!-- ICEA -->
             <a href="https://google.com">
-                <img src="img/icone-icea.ico"> </i>
+                <img src="../img/icone-icea.ico"> </i>
             </a>
         </div>
     </footer>
