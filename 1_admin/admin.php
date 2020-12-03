@@ -115,10 +115,10 @@ include_once("../conexao.php");
     }
     ?>
 
-
+</br>
 </body>
 <!-- Footer -->
-<footer class="page-footer font-small cyan darken-3">
+<footer class="page-footer font-small bg-dark darken-3">
 
     <!-- Footer Elements -->
     <div class="container">
