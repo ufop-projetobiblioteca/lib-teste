@@ -26,7 +26,7 @@
 <body>
     <div class="container">
         <h2 class='mb-3'>Basic example</h2>
-        <table id="dtBasicExample" class="table" width="100%">
+        <table id="dtBasicExample" class="table table-striped table-bordered table-hover">
             <thead>
                 <tr>
                     <th class="th-sm">Name
