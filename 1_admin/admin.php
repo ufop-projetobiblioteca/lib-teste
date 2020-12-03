@@ -129,8 +129,8 @@ include_once("../conexao.php");
                 <div class="mb-5 flex-center">
 
                     <!-- Facebook -->
-                    <a class="fb-ic">
-                        <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    <a href="https://google.com">
+                        <img src="../img/icone-icea.ico"> </i>
                     </a>
                     <!-- Twitter -->
                     <a class="tw-ic">
