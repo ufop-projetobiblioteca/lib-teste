@@ -130,28 +130,17 @@ include_once("../conexao.php");
 
                     <!-- Facebook -->
                     <a href="https://google.com">
-                        <img src="../img/icone-icea.ico"> </i>
-                    </a>
-                    <!-- Twitter -->
-                    <a class="tw-ic">
-                        <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        <i src="../img/icone-icea.ico"> </i>
                     </a>
                     <!-- Google +-->
                     <a href="https://google.com">
-                        <img src="../img/icone-decis.ico"> </i>
-                    </a>
-                    <!--Linkedin -->
-                    <a class="li-ic">
-                        <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        <i src="../img/icone-decsi.ico"> </i>
                     </a>
                     <!--Instagram-->
                     <a href="https://google.com">
-                        <img src="../img/icone-imobilis.ico"> </i>
+                        <i src="../img/icone-imobilis.ico"> </i>
                     </a>
-                    <!--Pinterest-->
-                    <a class="pin-ic">
-                        <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
-                    </a>
+                    
                 </div>
             </div>
             <!-- Grid column -->
