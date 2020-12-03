@@ -137,16 +137,16 @@ include_once("../conexao.php");
                         <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                     </a>
                     <!-- Google +-->
-                    <a class="gplus-ic">
-                        <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    <a href="https://google.com">
+                        <img src="../img/icone-decis.ico"> </i>
                     </a>
                     <!--Linkedin -->
                     <a class="li-ic">
                         <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                     </a>
                     <!--Instagram-->
-                    <a class="ins-ic">
-                        <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    <a href="https://google.com">
+                        <img src="../img/icone-imobilis.ico"> </i>
                     </a>
                     <!--Pinterest-->
                     <a class="pin-ic">
