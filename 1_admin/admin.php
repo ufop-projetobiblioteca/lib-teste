@@ -130,17 +130,17 @@ include_once("../conexao.php");
 
                     <!-- Facebook -->
                     <a href="https://google.com">
-                        <i src="../img/icone-icea.ico"> </i>
+                        <i><img src="../img/icone-icea.ico"></i>
                     </a>
                     <!-- Google +-->
                     <a href="https://google.com">
-                        <i src="../img/icone-decsi.ico"> </i>
+                        <i><img src="../img/icone-decsi.ico"></i>
                     </a>
                     <!--Instagram-->
                     <a href="https://google.com">
-                        <i src="../img/icone-imobilis.ico"> </i>
+                        <i><img src="../img/icone-imobilis.ico"></i>
                     </a>
-                    
+
                 </div>
             </div>
             <!-- Grid column -->
