@@ -20,7 +20,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark primary-color">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark primary-color fixed-top">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -42,5 +42,5 @@
         </ul>
     </div>
 </nav>
-
+</br>
 </html>
