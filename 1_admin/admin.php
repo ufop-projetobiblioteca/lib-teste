@@ -100,6 +100,14 @@ include_once("../conexao.php");
             <a href="https://google.com">
                 <img src="../img/icone-icea.ico"> </i>
             </a>
+            <!-- DECSI -->
+            <a href="https://google.com">
+                <img src="../img/icone-decsi.ico"> </i>
+            </a>
+            <!-- IMOBILIS -->
+            <a href="https://google.com">
+                <img src="../img/icone-imobilis.ico"> </i>
+            </a>
         </div>
     </footer>
 </body>
