@@ -95,22 +95,16 @@ include_once("../conexao.php");
     ?>
 
     <footer class="footer mt-auto py-3">
-        <div class="container">
-            <!-- ICEA -->
-            <link rel="shortcut icon" type="image/x-icon" href="../img/icone-icea.ico">
-            <!-- <a href="https://google.com">
-                <img src="../img/icone-icea.ico"> </i>
-            </a>
-            <!-- DECSI ->
-            <a href="https://google.com">
-                <img src="../img/icone-decsi.ico"> </i>
-            </a>
-            <!-- IMOBILIS ->
-            <a href="https://google.com">
-                <img src="../img/icone-imobilis.ico"> </i>
-            </a> -->
+        <div class="container-fluid text-center">
+            <ul>
+                <!-- ICEA -->
+                <li> <a href="https://google.com"> <img src="../img/icone-icea.ico"> </a></li>
+                <!-- DECSI -->
+                <li><a href="https://google.com"> <img src="../img/icone-decsi.ico"> </a></li>
+                <!-- IMOBILIS -->
+                <li><a href="https://google.com"> <img src="../img/icone-imobilis.ico"> </a></li>
+            </ul>
         </div>
     </footer>
 </body>
-
 </html>
