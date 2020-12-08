@@ -56,6 +56,12 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
             <h1>Empréstimos</h1></br>
         </div>
         <div class="row">
+            <div class="col text-center">
+                <a class="btn btn-lg btn-outline-success" data-toggle="modal" data-target="#modalCadastrarEmprestimo" role="button">Realizar Empréstimo</a>
+                <a class="btn btn-lg btn-outline-primary" data-toggle="modal" data-target="#modalDevolverEmprestimo" role="button">Devolver Empréstimo</a>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-md-12">
                 <table id="listaEmprestimos" class="table table-striped table-bordered table-hover">
                     <thead>
@@ -76,8 +82,8 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                         while ($row_emprestimos = pg_fetch_assoc($resultado_emprestimos)) {
                         ?>
                             <tr>
-                                <td><?php echo $row_emprestimos['pnome'];?> </br>
-                                <?php echo $row_emprestimos['unome']; ?></td>
+                                <td><?php echo $row_emprestimos['pnome']; ?> </br>
+                                    <?php echo $row_emprestimos['unome']; ?></td>
                                 <td><?php echo $row_emprestimos['matricula']; ?></td>
                                 <td><?php echo $row_emprestimos['ecodigoexemplar']; ?></td>
                                 <td><?php echo $row_emprestimos['nome']; ?></td>
@@ -86,42 +92,42 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                                 <td><?php echo $row_emprestimos['dataemprestimo']; ?></td>
                                 <td><?php echo $row_emprestimos['dataentrega']; ?></td>
                                 <td>
-                                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#myModal<?php echo $row_emprestimos['ecodigoexemplar'];?>">Visualizar</button>
-									<button type="button" class="btn btn-sm btn-outline-danger">  Apagar  </button>
+                                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#myModal<?php echo $row_emprestimos['ecodigoexemplar']; ?>">Visualizar</button>
+                                    <button type="button" class="btn btn-sm btn-outline-danger"> Apagar </button>
                                 </td>
                             </tr>
                             <!-- Inicio Modal Visualizar -->
-								<div class="modal fade" id="myModal<?php echo $row_emprestimos['ecodigoexemplar']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-									<div class="modal-dialog modal-lg" role="document">
-										<div class="modal-content">
-											<div class="modal-header">
-                                                <h5 class="modal-title text-center" id="myModalLabel">Dados do Empréstimo</h5>
-												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-											</div>
-											<div class="modal-body">
-                                                <dl class="row">
-                                                    <dt class="col-sm-3">Matrícula:</dt>
-                                                    <dd class="col-sm-9"><?php echo $row_emprestimos['matricula']; ?></dd>
+                            <div class="modal fade" id="myModal<?php echo $row_emprestimos['ecodigoexemplar']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title text-center" id="myModalLabel">Dados do Empréstimo</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <dl class="row">
+                                                <dt class="col-sm-3">Matrícula:</dt>
+                                                <dd class="col-sm-9"><?php echo $row_emprestimos['matricula']; ?></dd>
 
-                                                    <dt class="col-sm-3">Código do Exemplar:</dt>
-                                                    <dd class="col-sm-9"><?php echo $row_emprestimos['ecodigoexemplar']; ?></dd>
+                                                <dt class="col-sm-3">Código do Exemplar:</dt>
+                                                <dd class="col-sm-9"><?php echo $row_emprestimos['ecodigoexemplar']; ?></dd>
 
-                                                    <dt class="col-sm-3">Data do Empréstimo:</dt>
-                                                    <dd class="col-sm-9"><?php echo $row_emprestimos['dataemprestimo']; ?></dd>
+                                                <dt class="col-sm-3">Data do Empréstimo:</dt>
+                                                <dd class="col-sm-9"><?php echo $row_emprestimos['dataemprestimo']; ?></dd>
 
-                                                    <dt class="col-sm-3">Data de Devolução:</dt>
-                                                    <dd class="col-sm-9"><?php echo $row_emprestimos['dataentrega']; ?></dd>
-                                                </dl>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <a class="btn btn-outline-warning" role="button" data-dismiss="modal" data-toggle="modal" data-target="#modalRenovar<?php echo $row_emprestimos['ecodigoexemplar']; ?>" role="button">Renovar</a>
-                                                <a class="btn btn-outline-danger" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
-                                            </div>
-										</div>
-									</div>
-								</div>
-                                <!-- Fim Modal Visualizar -->
-                                
+                                                <dt class="col-sm-3">Data de Devolução:</dt>
+                                                <dd class="col-sm-9"><?php echo $row_emprestimos['dataentrega']; ?></dd>
+                                            </dl>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a class="btn btn-outline-warning" role="button" data-dismiss="modal" data-toggle="modal" data-target="#modalRenovar<?php echo $row_emprestimos['ecodigoexemplar']; ?>" role="button">Renovar</a>
+                                            <a class="btn btn-outline-danger" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fim Modal Visualizar -->
+
                             <!-- Inicio Modal Cadastrar Empréstimo -->
                             <div class="modal fade" id="modalCadastrarEmprestimo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                 <div class="modal-dialog modal-lg" role="document">
@@ -260,14 +266,6 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
                     </tbody>
                 </table>
             </div>
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-            <a class="btn btn-lg btn-outline-success" data-toggle="modal" data-target="#modalCadastrarEmprestimo" role="button">Realizar Empréstimo</a>
-            <a class="btn btn-lg btn-outline-primary" data-toggle="modal" data-target="#modalDevolverEmprestimo" role="button" >Devolver Empréstimo</a>
         </div>
     </div>
 </div>
