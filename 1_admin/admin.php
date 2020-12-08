@@ -25,7 +25,7 @@ include_once("../conexao.php");
     <link rel="stylesheet" type="text/css" href="../css/jquery.dataTables.min.css" />
 
     <!-- Custom styles for this template -->
-    <link href="../css/starter-template.css" rel="stylesheet"> 
+    <link href="../css/starter-template.css" rel="stylesheet">
 
     <style>
         .bd-placeholder-img {
@@ -48,26 +48,27 @@ include_once("../conexao.php");
     <!-- ================================= -->
 
     <!-- Foi colocado no final para a página carregar mais rápido -->
+
     <script src="../js/jquery-3.3.1.slim.min.js"></script>
 
     <script>
         window.jQuery || document.write('<script src="../js/jquery-slim.min.js"><\/script>')
     </script>
 
-    <script src="../js/popper.min.js"></script>
-
-    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.slim.min.js"> </script>
 
     <!-- JQuery library -->
     <script src="../js/jquery-3.5.1.js"></script>
 
     <!-- Datatables JS library -->
     <script src="../js/jquery.dataTables.min.js"></script>
+    
+    <script src="../js/popper.min.js"></script>
+
+    <script src="../js/bootstrap.min.js"></script>
 
     <script src="../js/bootstrap.bundle.min.js"></script>
 
-    <script src="../js/jquery.slim.min.js"> </script>
-    
     <script type="text/javascript">
         function abrir() {
             document.getElementById('popUp').style.display = 'block';
@@ -109,4 +110,5 @@ include_once("../conexao.php");
         <span class="text-muted">Coloque o conteúdo do sticky footer aqui.</span>
     </div>
 </footer>
+
 </html>
