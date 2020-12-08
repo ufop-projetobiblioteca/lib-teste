@@ -48,7 +48,7 @@ include_once("../conexao.php");
     <!-- ================================= -->
 
     <!-- Foi colocado no final para a página carregar mais rápido -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="../js/jquery-3.3.1.slim.min.js"></script>
 
     <script>
         window.jQuery || document.write('<script src="../js/jquery-slim.min.js"><\/script>')
