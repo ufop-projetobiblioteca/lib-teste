@@ -51,9 +51,14 @@ $resultado_livro = pg_query($conexao, $result_livro);
 
 <div class="container">
     <div class="starter-template">
-    <div class="title"> 
-        <h1>Gerência de Livros</h1></br>
-    </div>
+        <div class="title">
+            <h1>Gerência de Livros</h1></br>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <a class="btn btn-lg btn-outline-success" data-toggle="modal" data-target="#modalCadastrarLivro" role="button">Cadastrar Livro</a>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-12">
                 <table id="listaLivros" class="table table-striped table-bordered table-hover">
@@ -285,13 +290,6 @@ $resultado_livro = pg_query($conexao, $result_livro);
                     </tbody>
                 </table>
             </div>
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-            <a class="btn btn-lg btn-outline-success" data-toggle="modal" data-target="#modalCadastrarLivro" role="button">Cadastrar Livro</a>
         </div>
     </div>
 </div>

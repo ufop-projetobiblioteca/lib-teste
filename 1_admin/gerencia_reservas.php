@@ -49,6 +49,11 @@ $resultado_reservas = pg_query($conexao, $result_reservas);
             <h1>Reservas</h1></br>
         </div>
         <div class="row">
+            <div class="col text-center">
+                <a class="btn btn-lg btn-outline-success" data-toggle="modal" data-target="#modalCadastrarReserva" role="button">Realizar Reserva</a>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-md-12">
                 <table id="listaReservas" class="table table-striped table-bordered table-hover">
                     <thead>
@@ -68,39 +73,39 @@ $resultado_reservas = pg_query($conexao, $result_reservas);
                                 <td><?php echo $row_reservas['rcodigoexemplar']; ?></td>
                                 <td><?php echo $row_reservas['rdata']; ?></td>
                                 <td>
-                                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#myModal<?php echo $row_reservas['rcodigoexemplar'];?>">Visualizar</button>
-									<button type="button" class="btn btn-sm btn-outline-danger">Apagar</button>
+                                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#myModal<?php echo $row_reservas['rcodigoexemplar']; ?>">Visualizar</button>
+                                    <button type="button" class="btn btn-sm btn-outline-danger">Apagar</button>
                                 </td>
                             </tr>
                             <!-- Inicio Modal Visualizar -->
-								<div class="modal fade" id="myModal<?php echo $row_reservas['rcodigoexemplar']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-									<div class="modal-dialog" role="document">
-										<div class="modal-content">
-											<div class="modal-header">
-                                                <h5 class="modal-title text-center" id="myModalLabel">Dados da Reserva</h5>
-												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-											</div>
-											<div class="modal-body">
-                                                <dl class="row">
-                                                    <dt class="col-sm-3">Matrícula:</dt>
-                                                    <dd class="col-sm-9"><?php echo $row_reservas['rmatricula']; ?></dd>
+                            <div class="modal fade" id="myModal<?php echo $row_reservas['rcodigoexemplar']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title text-center" id="myModalLabel">Dados da Reserva</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <dl class="row">
+                                                <dt class="col-sm-3">Matrícula:</dt>
+                                                <dd class="col-sm-9"><?php echo $row_reservas['rmatricula']; ?></dd>
 
-                                                    <dt class="col-sm-3">Código do Exemplar:</dt>
-                                                    <dd class="col-sm-9"><?php echo $row_reservas['rcodigoexemplar']; ?></dd>
+                                                <dt class="col-sm-3">Código do Exemplar:</dt>
+                                                <dd class="col-sm-9"><?php echo $row_reservas['rcodigoexemplar']; ?></dd>
 
-                                                    <dt class="col-sm-3">Data da Reserva:</dt>
-                                                    <dd class="col-sm-9"><?php echo $row_reservas['rdata']; ?></dd>
-                                                </dl>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <a class="btn btn-outline-success" role="button" data-dismiss="modal" data-toggle="modal" data-target='#modalCadastrarEmprestimo<?php echo $row_reservas['rcodigoexemplar']; ?>'>Emprestar</a>
-                                                <a class="btn btn-outline-danger" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
-                                            </div>
-										</div>
-									</div>
-								</div>
-                                <!-- Fim Modal Visualizar -->
-                                
+                                                <dt class="col-sm-3">Data da Reserva:</dt>
+                                                <dd class="col-sm-9"><?php echo $row_reservas['rdata']; ?></dd>
+                                            </dl>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a class="btn btn-outline-success" role="button" data-dismiss="modal" data-toggle="modal" data-target='#modalCadastrarEmprestimo<?php echo $row_reservas['rcodigoexemplar']; ?>'>Emprestar</a>
+                                            <a class="btn btn-outline-danger" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fim Modal Visualizar -->
+
                             <!-- Inicio Modal Cadastrar Reserva -->
                             <div class="modal fade" id="modalCadastrarReserva" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                 <div class="modal-dialog modal-lg" role="document">
@@ -194,13 +199,6 @@ $resultado_reservas = pg_query($conexao, $result_reservas);
                     </tbody>
                 </table>
             </div>
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-            <a class="btn btn-lg btn-outline-success" data-toggle="modal" data-target="#modalCadastrarReserva" role="button">Realizar Reserva</a>
         </div>
     </div>
 </div>
