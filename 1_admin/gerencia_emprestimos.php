@@ -55,8 +55,8 @@ $resultado_emprestimos = pg_query($conexao, $result_emprestimos);
         <div class="title">
             <h1>Empréstimos</h1></br>
         </div>
-        <div class="row">
-            <div class="col float-right">
+        <div class="row float-right">
+            <div class="col text-center">
                 <a class="btn btn-lg btn-outline-success" data-toggle="modal" data-target="#modalCadastrarEmprestimo" role="button">Realizar Empréstimo</a>
                 <a class="btn btn-lg btn-outline-primary" data-toggle="modal" data-target="#modalDevolverEmprestimo" role="button">Devolver Empréstimo</a>
             </div>
