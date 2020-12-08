@@ -104,7 +104,7 @@ include_once("../conexao.php");
     }
     ?>
 
-    <footer class="footer bg-dark mt-auto navbar-fixed-bottom py-3">
+    <!-- <footer class="footer bg-dark mt-auto navbar-fixed-bottom py-3">
         <div class="container text-center">
             <div class="row d-flex align-items-center">
                 <div class="col">
@@ -128,7 +128,7 @@ include_once("../conexao.php");
             <font color="white">© 2020 Copyright:</font>
             <a href="https://www.google.com"> MDBootstrap.com</a>
         </div>
-    </footer>
+    </footer> -->
 </body>
 
 </html>
