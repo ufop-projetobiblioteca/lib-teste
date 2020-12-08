@@ -27,6 +27,8 @@ include_once("../conexao.php");
     <!-- Custom styles for this template -->
     <link href="../css/starter-template.css" rel="stylesheet">
 
+    <link href="../css/style.css" rel="stylesheet">
+
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -82,30 +84,27 @@ include_once("../conexao.php");
 </head>
 
 <body>
-    <main role="main" class="flex-shrink-0">
-        <?php
-        include_once('menu_admin.php');
+    <?php
+    include_once('menu_admin.php');
 
-        $link = $_GET["link"];
+    $link = $_GET["link"];
 
-        $pages[1] = "../bem_vindo.php";
-        $pages[2] = "gerencia_usuarios.php";
-        $pages[3] = "gerencia_livros.php";
-        $pages[4] = "gerencia_emprestimos.php";
-        $pages[5] = "gerencia_reservas.php";
+    $pages[1] = "../bem_vindo.php";
+    $pages[2] = "gerencia_usuarios.php";
+    $pages[3] = "gerencia_livros.php";
+    $pages[4] = "gerencia_emprestimos.php";
+    $pages[5] = "gerencia_reservas.php";
 
-        if (!empty($link)) {
-            if (file_exists($pages[$link])) {
-                include $pages[$link];
-            } else {
-                include "../bem_vindo.php";
-            }
+    if (!empty($link)) {
+        if (file_exists($pages[$link])) {
+            include $pages[$link];
         } else {
             include "../bem_vindo.php";
         }
-        ?>
-
-    </main>
+    } else {
+        include "../bem_vindo.php";
+    }
+    ?>
     <footer class="footer bg-dark mt-auto navbar-fixed-bottom py-3">
         <div class="container text-center">
             <div class="row d-flex align-items-center">
@@ -131,7 +130,6 @@ include_once("../conexao.php");
             <a href="https://www.google.com"> MDBootstrap.com</a>
         </div>
     </footer>
-
 </body>
 
 </html>
