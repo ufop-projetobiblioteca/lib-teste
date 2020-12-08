@@ -22,7 +22,7 @@ include_once("../conexao.php");
     <link href="../css/sticky-footer-navbar.css" rel="stylesheet">
 
     <!-- Datatables CSS library -->
-    <link rel="stylesheet" type="text/css" href="../css/jquery.datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery.dataTables.min.css" />
 
     <!-- Custom styles for this template -->
     <link href="../css/starter-template.css" rel="stylesheet"> 
@@ -66,7 +66,7 @@ include_once("../conexao.php");
 
     <script src="../js/bootstrap.bundle.min.js"></script>
 
-    <script src="../script/jquery.slim.min.js"> </script>
+    <script src="../js/jquery.slim.min.js"> </script>
     
     <script type="text/javascript">
         function abrir() {
