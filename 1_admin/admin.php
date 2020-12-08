@@ -123,6 +123,11 @@ include_once("../conexao.php");
                     <img border="0" src="../img/imobilis.png" class="img-fluid" alt="imobilisLogo" width="100" height="100">
                 </a>
             </div>
+        </div>
+    </div>
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="https://www.google.com"> MDBootstrap.com</a>
+          </div>
 </footer>
 
 </html>
