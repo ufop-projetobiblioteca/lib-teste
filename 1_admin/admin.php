@@ -103,4 +103,10 @@ include_once("../conexao.php");
     }
     ?>
 </body>
+
+<footer class="footer bg-dark mt-auto py-3">
+    <div class="container">
+        <span class="text-muted">Coloque o conteúdo do sticky footer aqui.</span>
+    </div>
+</footer>
 </html>
