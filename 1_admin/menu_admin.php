@@ -17,6 +17,15 @@
                         <a class="dropdown-item" href="admin.php?link=3">Livros</a>
                     </div>
                 </li>
+                <li class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Gerência
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="admin.php?link=2">Usuários</a>
+                        <a class="dropdown-item" href="admin.php?link=3">Livros</a>
+                    </div>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="admin.php?link=4">Empréstimos</a>
                 </li>

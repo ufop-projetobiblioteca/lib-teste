@@ -13,7 +13,7 @@ include_once("../conexao.php");
     <meta name="author" content="Victor Dias">
     <link rel="icon" href="../img/icone-biblioteca.ico">
 
-    <title>Template para sticky footer e navbar fixa, usando Bootstrap.</title>
+    <title>Biblioteca</title>
 
     <!-- Principal CSS do Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -24,8 +24,8 @@ include_once("../conexao.php");
     <!-- Datatables CSS library -->
     <link rel="stylesheet" type="text/css" href="../css/jquery.datatables.min.css" />
 
-    <!-- Custom styles for this template
-    <link href="../css/starter-template.css" rel="stylesheet"> -->
+    <!-- Custom styles for this template -->
+    <link href="../css/starter-template.css" rel="stylesheet"> 
 
     <style>
         .bd-placeholder-img {
@@ -62,7 +62,7 @@ include_once("../conexao.php");
     <script src="../js/jquery-3.5.1.js"></script>
 
     <!-- Datatables JS library -->
-    <script type="text/javascript" src="../js/jquery.dataTables.min.js"></script>
+    <script src="../js/jquery.dataTables.min.js"></script>
 
     <script src="../js/bootstrap.bundle.min.js"></script>
 
