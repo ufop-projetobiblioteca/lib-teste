@@ -110,17 +110,17 @@ include_once("../conexao.php");
         <div class="row">
             <div class="col">
                 <a href="https://www.google.com">
-                    <img border="0" src="../img/icea.png" class="rounded float-left img-fluid" alt="iceaLogo" width="100" height="100">
+                    <img border="0" src="../img/icea.png" class="img-fluid" alt="iceaLogo" width="100" height="100">
                 </a>
             </div>
             <div class="col">
                 <a href="https://www.google.com">
-                    <img border="0" src="../img/decsi.png" class="rounded mx-auto img-fluid" alt="decsiLogo" width="100" height="100">
+                    <img border="0" src="../img/decsi.png" class="img-fluid" alt="decsiLogo" width="100" height="100">
                 </a>
             </div>
             <div class="col">
                 <a href="https://www.google.com">
-                    <img border="0" src="../img/imobilis.png" class="rounded float-right img-fluid" alt="imobilisLogo" width="100" height="100">
+                    <img border="0" src="../img/imobilis.png" class="img-fluid" alt="imobilisLogo" width="100" height="100">
                 </a>
             </div>
 </footer>
