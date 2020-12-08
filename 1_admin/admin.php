@@ -82,29 +82,31 @@ include_once("../conexao.php");
 </head>
 
 <body>
-    <?php
-    include_once('menu_admin.php');
+    <main role="main" class="flex-shrink-0">
+        <?php
+        include_once('menu_admin.php');
 
-    $link = $_GET["link"];
+        $link = $_GET["link"];
 
-    $pages[1] = "../bem_vindo.php";
-    $pages[2] = "gerencia_usuarios.php";
-    $pages[3] = "gerencia_livros.php";
-    $pages[4] = "gerencia_emprestimos.php";
-    $pages[5] = "gerencia_reservas.php";
+        $pages[1] = "../bem_vindo.php";
+        $pages[2] = "gerencia_usuarios.php";
+        $pages[3] = "gerencia_livros.php";
+        $pages[4] = "gerencia_emprestimos.php";
+        $pages[5] = "gerencia_reservas.php";
 
-    if (!empty($link)) {
-        if (file_exists($pages[$link])) {
-            include $pages[$link];
+        if (!empty($link)) {
+            if (file_exists($pages[$link])) {
+                include $pages[$link];
+            } else {
+                include "../bem_vindo.php";
+            }
         } else {
             include "../bem_vindo.php";
         }
-    } else {
-        include "../bem_vindo.php";
-    }
-    ?>
+        ?>
 
-    <!-- <footer class="footer bg-dark mt-auto navbar-fixed-bottom py-3">
+    </main>
+    <footer class="footer bg-dark mt-auto navbar-fixed-bottom py-3">
         <div class="container text-center">
             <div class="row d-flex align-items-center">
                 <div class="col">
@@ -128,7 +130,8 @@ include_once("../conexao.php");
             <font color="white">© 2020 Copyright:</font>
             <a href="https://www.google.com"> MDBootstrap.com</a>
         </div>
-    </footer> -->
+    </footer>
+
 </body>
 
 </html>
