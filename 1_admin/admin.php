@@ -9,29 +9,23 @@ include_once("../conexao.php");
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Página Administrativa">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.1.1">
-    <link rel="icon" href="img/icone-biblioteca.ico">
-    <title>Área Administrativa</title>
+    <meta name="description" content="">
+    <meta name="author" content="Victor Dias">
+    <link rel="icon" href="../img/icone-biblioteca.ico">
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/starter-template/">
+    <title>Template para sticky footer e navbar fixa, usando Bootstrap.</title>
 
-    <!-- JQuery library -->
-    <script src="../js/jquery-3.5.1.js"></script>
+    <!-- Principal CSS do Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilos customizados para esse template -->
+    <link href="../css/sticky-footer-navbar.css" rel="stylesheet">
 
     <!-- Datatables CSS library -->
     <link rel="stylesheet" type="text/css" href="../css/jquery.datatables.min.css" />
 
-    <!-- Datatables JS library -->
-    <script type="text/javascript" src="../js/jquery.dataTables.min.js"></script>
-
-    <!-- Bootstrap core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-
-    <script src="../script/bootstrap.bundle.min.js"></script>
-
-    
+    <!-- Custom styles for this template
+    <link href="../css/starter-template.css" rel="stylesheet"> -->
 
     <style>
         .bd-placeholder-img {
@@ -50,14 +44,29 @@ include_once("../conexao.php");
         }
     </style>
 
-    <!-- Custom styles for this template -->
-    <link href="../css/starter-template.css" rel="stylesheet">
+    <!-- Principal JavaScript do Bootstrap -->
+    <!-- ================================= -->
 
-    <script src="../script/jquery-3.5.1.slim.min.js"> </script>
-    
+    <!-- Foi colocado no final para a página carregar mais rápido -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
     <script>
-        window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')
+        window.jQuery || document.write('<script src="../js/jquery-slim.min.js"><\/script>')
     </script>
+
+    <script src="../js/popper.min.js"></script>
+
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- JQuery library -->
+    <script src="../js/jquery-3.5.1.js"></script>
+
+    <!-- Datatables JS library -->
+    <script type="text/javascript" src="../js/jquery.dataTables.min.js"></script>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+    <script src="../script/jquery.slim.min.js"> </script>
     
     <script type="text/javascript">
         function abrir() {
