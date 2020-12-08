@@ -36,16 +36,17 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
     </script>
 </head>
 
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="admin.php?link=1">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Gerência Usuários</li>
+    </ol>
+</nav>
 <div class="container">
     <div class="title">
         <h1>Gerência de Usuários</h1></br>
     </div>
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="admin.php?link=1">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Gerência Usuários</li>
-        </ol>
-    </nav>
     <div class="row">
         <div class="col-md-12">
             <table id="listaUsuarios" class="table table-striped table-bordered table-hover">
