@@ -109,7 +109,7 @@ include_once("../conexao.php");
     <div class="container">
         <p>
             <a href="https://www.google.com">
-                <img border="0" alt="W3Schools" src="../img/logo_w3s.gif" width="100" height="100">
+                <img border="0" alt="W3Schools" src="../img/icea.png" width="100" height="100">
             </a>
         </p>
         <span class="text-muted">Coloque o conteúdo do sticky footer aqui.</span>
