@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="pt-br" class="h-100">
 
-
 <!-- Navbar fixa -->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <a class="navbar-brand" href="admin.php?link=1">Biblioteca</a>
