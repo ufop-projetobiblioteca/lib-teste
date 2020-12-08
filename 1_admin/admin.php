@@ -107,18 +107,22 @@ include_once("../conexao.php");
 
 <footer class="footer bg-dark mt-auto fixed-bottom py-3">
     <div class="container">
-        <a href="https://www.google.com">
-            <img border="0" src="../img/icea.png" class="rounded float-left" alt="iceaLogo" width="100" height="100">
-        </a>
-        <div class="text-center">
-            <a href="https://www.google.com">
-                <img border="0" src="../img/decsi.png" class="rounded mx-auto" alt="decsiLogo" width="100" height="100">
-            </a>
-        </div>
-        <a href="https://www.google.com">
-            <img border="0" src="../img/imobilis.png" class="rounded float-right" alt="imobilisLogo" width="100" height="100">
-        </a>
-    </div>
+        <div class="row">
+            <div class="col-lg-2 col-md-12 mb-4">
+                <a href="https://www.google.com">
+                    <img border="0" src="../img/icea.png" class="rounded float-left" alt="iceaLogo" width="100" height="100">
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-4">
+                <a href="https://www.google.com">
+                    <img border="0" src="../img/decsi.png" class="rounded mx-auto" alt="decsiLogo" width="100" height="100">
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-4">
+                <a href="https://www.google.com">
+                    <img border="0" src="../img/imobilis.png" class="rounded float-right" alt="imobilisLogo" width="100" height="100">
+                </a>
+            </div>
 </footer>
 
 </html>
