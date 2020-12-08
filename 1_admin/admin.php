@@ -106,8 +106,8 @@ include_once("../conexao.php");
 </body>
 
 <footer class="footer bg-dark mt-auto fixed-bottom py-3">
-    <div class="container">
-        <div class="row">
+    <div class="container text-center">
+        <div class="row align-items-center">
             <div class="col">
                 <a href="https://www.google.com">
                     <img border="0" src="../img/icea.png" class="img-fluid" alt="iceaLogo" width="100" height="100">
@@ -125,9 +125,9 @@ include_once("../conexao.php");
             </div>
         </div>
     </div>
-    <div class="footer-copyright text-center py-3">© 2020 Copyright:
-            <a href="https://www.google.com"> MDBootstrap.com</a>
-          </div>
+    <div class="footer-copyright bg-light text-center py-3">© 2020 Copyright:
+        <a href="https://www.google.com"> MDBootstrap.com</a>
+    </div>
 </footer>
 
 </html>
