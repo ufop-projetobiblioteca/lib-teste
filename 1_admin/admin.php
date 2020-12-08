@@ -111,12 +111,11 @@ include_once("../conexao.php");
             <img border="0" src="../img/icea.png" class="rounded float-left" alt="iceaLogo" width="100" height="100">
         </a>
         <a href="https://www.google.com">
-            <img border="0" src="../img/decsi.png" class="rounded float-center" alt="decsiLogo" width="100" height="100">
+            <img border="0" src="../img/decsi.png" class="rounded text-center" alt="decsiLogo" width="100" height="100">
         </a>
         <a href="https://www.google.com">
             <img border="0" src="../img/imobilis.png" class="rounded float-right" alt="imobilisLogo" width="100" height="100">
         </a>
-        <img src="..." class="rounded float-right" alt="...">
     </div>
 </footer>
 
