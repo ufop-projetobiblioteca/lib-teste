@@ -36,6 +36,13 @@ $resultado_reservas = pg_query($conexao, $result_reservas);
     </script>
 </head>
 
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="admin.php?link=1">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Gerência Reservas</li>
+    </ol>
+</nav>
+
 <div class="container">
     <div class="starter-template">
         <div class="title">

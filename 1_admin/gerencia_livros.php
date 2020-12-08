@@ -42,6 +42,13 @@ $resultado_livro = pg_query($conexao, $result_livro);
     </script>
 </head>
 
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="admin.php?link=1">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Gerência Livros</li>
+    </ol>
+</nav>
+
 <div class="container">
     <div class="starter-template">
     <div class="title"> 
