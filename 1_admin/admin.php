@@ -81,7 +81,7 @@ include_once("../conexao.php");
 
 </head>
 
-<body display="flex">
+<body>
     <?php
     include_once('menu_admin.php');
 
@@ -105,7 +105,7 @@ include_once("../conexao.php");
     ?>
 </body>
 
-<footer class="footer bg-dark mt-auto fixed-bottom py-3">
+<footer class="footer bg-dark mt-auto navbar-fixed-bottom py-3">
     <div class="container text-center">
         <div class="row d-flex align-items-center">
             <div class="col">
