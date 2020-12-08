@@ -62,7 +62,7 @@ include_once("../conexao.php");
 
     <!-- Datatables JS library -->
     <script src="../js/jquery.dataTables.min.js"></script>
-    
+
     <script src="../js/popper.min.js"></script>
 
     <script src="../js/bootstrap.min.js"></script>
@@ -107,6 +107,11 @@ include_once("../conexao.php");
 
 <footer class="footer bg-dark mt-auto fixed-bottom py-3">
     <div class="container">
+        <p>
+            <a href="https://www.google.com">
+                <img border="0" alt="W3Schools" src="../img/logo_w3s.gif" width="100" height="100">
+            </a>
+        </p>
         <span class="text-muted">Coloque o conteúdo do sticky footer aqui.</span>
     </div>
 </footer>
