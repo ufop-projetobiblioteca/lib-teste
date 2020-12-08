@@ -17,25 +17,6 @@ include_once("../conexao.php");
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/starter-template/">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-
-    <!-- JQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
-
-
     <!-- JQuery library -->
     <script src="../js/jquery-3.5.1.js"></script>
 
@@ -50,7 +31,7 @@ include_once("../conexao.php");
 
     <script src="../script/bootstrap.bundle.min.js"></script>
 
-
+    
 
     <style>
         .bd-placeholder-img {
@@ -73,11 +54,11 @@ include_once("../conexao.php");
     <link href="../css/starter-template.css" rel="stylesheet">
 
     <script src="../script/jquery-3.5.1.slim.min.js"> </script>
-
+    
     <script>
         window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')
     </script>
-
+    
     <script type="text/javascript">
         function abrir() {
             document.getElementById('popUp').style.display = 'block';
@@ -112,52 +93,5 @@ include_once("../conexao.php");
         include "../bem_vindo.php";
     }
     ?>
-
-    </br>
 </body>
-<!-- Footer -->
-<footer class="page-footer font-small bg-dark darken-3">
-
-    <!-- Footer Elements -->
-    <div class="container">
-
-        <!-- Grid row-->
-        <div class="row">
-
-            <!-- Grid column -->
-            <div class="col-md-12 py-5">
-                <div class="mb-5 flex-center">
-
-                    <!-- Facebook -->
-                    <a href="https://google.com">
-                        <i><img src="../img/icone-icea.ico"></i>
-                    </a>
-                    <!-- Google +-->
-                    <a href="https://google.com">
-                        <i><img src="../img/icone-decsi.ico"></i>
-                    </a>
-                    <!--Instagram-->
-                    <a href="https://google.com">
-                        <i><img src="../img/icone-imobilis.ico"></i>
-                    </a>
-
-                </div>
-            </div>
-            <!-- Grid column -->
-
-        </div>
-        <!-- Grid row-->
-
-    </div>
-    <!-- Footer Elements -->
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2020 Copyright:
-        <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
-
 </html>
