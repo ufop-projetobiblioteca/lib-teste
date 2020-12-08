@@ -81,7 +81,7 @@ include_once("../conexao.php");
 
 </head>
 
-<body>
+<body display="flex">
     <?php
     include_once('menu_admin.php');
 
