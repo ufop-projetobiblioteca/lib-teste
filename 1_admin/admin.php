@@ -105,7 +105,7 @@ include_once("../conexao.php");
         include "../bem_vindo.php";
     }
     ?>
-    <footer class="footer bg-dark mt-auto navbar-fixed-bottom py-3">
+    <footer class="footer bg-dark mt-auto navbar-fixed-bottom py-3" id="footer">
         <div class="container text-center">
             <div class="row d-flex align-items-center">
                 <div class="col">
@@ -124,10 +124,10 @@ include_once("../conexao.php");
                     </a>
                 </div>
             </div>
-            <div class="footer-copyright bg-dark text-center py-3">
-                <font color="white">© 2020 Copyright:</font>
-                <a href="https://www.google.com"> MDBootstrap.com</a>
-            </div>
+        </div>
+        <div class="footer-copyright bg-dark text-center py-3">
+            <font color="white">© 2020 Copyright:</font>
+            <a href="https://www.google.com"> MDBootstrap.com</a>
         </div>
     </footer>
 </body>
