@@ -34,32 +34,6 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
             });
         });
     </script>
-
-    <script type="text/javascript">
-        function validar() {
-            var nome = formUser.nome.value;
-            var email = formUser.email.value;
-            var senha = formUser.senha.value;
-
-            if (nome == "") {
-                alert('Preencha o campo nome.');
-                formUser.nome.focus();
-                return false;
-            }
-
-            if (email == "" || email.indexOf('@') == -1) {
-                alert('Preencha o campo E-mail.');
-                formUser.email.focus();
-                return false;
-            }
-
-            if (senha == "" || senha.length <= 5) {
-                alert('Preencha o campo senha com minimo 6 caracteres');
-                formUser.senha.focus();
-                return false;
-            }
-        }
-    </script>
 </head>
 
 <nav aria-label="breadcrumb">
@@ -129,6 +103,7 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                             </dl>
                                         </div>
                                         <div class="modal-footer">
+                                            <!--<a class="btn btn-outline-warning" href='admin.php?link=7&id=<php echo $row_usuario['matricula']; ?>' role="button">Editar</a>-->
                                             <a class="btn btn-outline-warning" role="button" data-dismiss="modal" data-toggle="modal" data-target="#modalEditar<?php echo $row_usuario['matricula']; ?>">Editar</a>
                                             <a class="btn btn-outline-danger" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
                                         </div>
@@ -249,54 +224,50 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                         </div>
                                         <div class="modal-body">
-                                            <!-- <form method="POST" action="../processa/novo_usuario.php" class="was-validated">
+                                            <form method="POST" action="admin.php?link=10">
                                                 <div class="form-group row">
-                                                    <label for="cpf" class="col-sm-2 col-form-label">CPF:</label>
+                                                    <label for="inputEmail3" class="col-sm-2 col-form-label">CPF:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="cpf" name="cpf" required maxlength="11" minlength="11" aria-describedby="cpfHelp">
-                                                        <small id="cpfHelp" class="text-muted">
-                                                            Somente números.
-                                                        </small>
+                                                        <input type="text" class="form-control" id="inputEmail3" name="cpf">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label for="pnome" class="col-sm-2 col-form-label">Nome:</label>
+                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Nome:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="pnome" name="pnome" required maxlength="30" minlength="2">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="pnome">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label for="unome" class="col-sm-2 col-form-label">Sobrenome:</label>
+                                                    <label for="inputEmail3" class="col-sm-2 col-form-label">Sobrenome:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="unome" name="unome" required maxlength="30" minlength="2">
+                                                        <input type="text" class="form-control" id="inputEmail3" name="unome">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label for="matricula" class="col-sm-2 col-form-label">Matrícula:</label>
+                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Matrícula:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="matricula" name="matricula" required maxlength="30">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="matricula">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label for="email" class="col-sm-2 col-form-label">E-mail:</label>
+                                                    <label for="inputEmail3" class="col-sm-2 col-form-label">E-mail:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="email" class="form-control" id="email" name="email" required>
+                                                        <input type="email" class="form-control" id="inputEmail3" name="email">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label for="senha" class="col-sm-2 col-form-label">Senha:</label>
+                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Senha:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="password" class="form-control" id="senha" name="senha" required>
+                                                        <input type="password" class="form-control" id="inputPassword3" name="senha">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label for="tipo" class="col-sm-2 col-form-label">Tipo de Usuário:</label>
+                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Tipo de Usuário:</label>
                                                     <div class="col-sm-10">
-                                                        <select class="form-control" id="tipo" name="tipo">
+                                                        <select class="form-control" name="tipo">
                                                             <option selected>Selecione</option>
                                                             <option value="1">Administrador</option>
-                                                            <option value="0">Professor</option>
-                                                            <option value="0">Aluno</option>
+                                                            <option value="0">Usuário Comum</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -306,44 +277,6 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                                         <button class="btn btn-outline-danger" data-dismiss="modal" aria-label="Close">Cancelar</button>
                                                     </div>
                                                 </div>
-                                            </form> -->
-                                            <form name="formUser" action="../processa/novo_usuario.php" method="POST">
-                                                <div class="form-row">
-                                                    <div class="col">
-                                                        <input type="text" class="form-control" placeholder="Nome" name="pnome"> </br></br>
-                                                    </div>
-                                                    <div class="col">
-                                                        <input type="text" class="form-control" placeholder="Sobrenome" name="unome"> </br></br>
-                                                    </div>
-                                                </div>
-                                                <div class="form-row">
-                                                    <div class="col">
-                                                        <input type="text" class="form-control" placeholder="E-mail" name="email"> </br></br>
-                                                    </div>
-                                                    <div class="col">
-                                                        <input type="text" class="form-control" placeholder="Senha" name="senha"> </br></br>
-                                                    </div>
-                                                </div>
-                                                <div class="form-row">
-                                                    <div class="col">
-                                                        <input type="text" class="form-control" placeholder="CPF" name="matricula"> </br></br>
-                                                    </div>
-                                                    <div class="col">
-                                                        <input type="text" class="form-control" placeholder="Matrícula" name="cpf"> </br></br>
-                                                    </div>
-                                                </div>
-                                                <div class="form-row">
-                                                    <label class="form-label">Tipo de Usuário:</label>
-                                                    <div class="col">
-                                                        <select class="form-control" name="tipo">
-                                                            <option selected>Selecione</option>
-                                                            <option value="1">Administrador</option>
-                                                            <option value="0">Professor</option>
-                                                            <option value="0">Aluno</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <input type="submit" onclick="return validar()">
                                             </form>
                                         </div>
                                     </div>
