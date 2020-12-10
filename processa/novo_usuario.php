@@ -25,7 +25,7 @@
     if($result_query){
         echo"
         <META HTTP-EQUIV=REFRESH CONTENT = '0;URL =
-        https://lib-teste.herokuapp.com/admin.php?link=2'>
+        https://lib-teste.herokuapp.com/1_admin/admin.php?link=2'>
         <script type=\"text/javascript\">
             alert(\"Usuário cadastrado com Sucesso!\");
         </script>
@@ -33,7 +33,7 @@
     }else{
         echo"
         <META HTTP-EQUIV=REFRESH CONTENT = '0;URL =
-        https://lib-teste.herokuapp.com/admin.php?link=2'>
+        https://lib-teste.herokuapp.com/1_admin/admin.php?link=2'>
         <script type=\"text/javascript\">
             alert(\"Erro ao cadastrar usuário!\");
         </script>

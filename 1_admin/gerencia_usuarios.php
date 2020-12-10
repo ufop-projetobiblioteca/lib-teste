@@ -224,7 +224,7 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                         </div>
                                         <div class="modal-body">
-                                            <form method="POST" action="admin.php?link=10">
+                                            <form method="POST" action="../processa/novo_usuario.php">
                                                 <div class="form-group row">
                                                     <label for="inputEmail3" class="col-sm-2 col-form-label">CPF:</label>
                                                     <div class="col-sm-10">
