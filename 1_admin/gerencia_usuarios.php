@@ -36,24 +36,29 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
     </script>
 
     <script>
-        // Disable form submissions if there are invalid fields
-        (function() {
-            'use strict';
-            window.addEventListener('load', function() {
-                // Get the forms we want to add validation styles to
-                var forms = document.getElementsByClassName('needs-validation');
-                // Loop over them and prevent submission
-                var validation = Array.prototype.filter.call(forms, function(form) {
-                    form.addEventListener('submit', function(event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
-        })();
+        function validar() {
+            var nome = formuser.nome.value;
+            var email = formuser.email.value;
+            var senha = formuser.senha.value;
+
+            if (nome == "") {
+                alert('Preencha o campo nome.');
+                formuser.nome.focus();
+                return false;
+            }
+
+            if (email == "" || email.indexOf('@') == -1) {
+                alert('Preencha o campo E-mail.');
+                formuser.email.focus();
+                return false;
+            }
+
+            if (senha == "" || senha.length <= 5) {
+                alert('Preencha o campo senha com minimo 6 caracteres');
+                formuser.senha.focus();
+                return false;
+            }
+        }
     </script>
 </head>
 
@@ -244,29 +249,8 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                         </div>
                                         <div class="modal-body">
-                                            <form method="POST" action="../processa/novo_usuario.php" class="was-validated">
-                                                <div class="form-group">
-                                                    <label for="uname">Username:</label>
-                                                    <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
-                                                    <div class="valid-feedback">Valid.</div>
-                                                    <div class="invalid-feedback">Please fill out this field.</div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="pwd">Password:</label>
-                                                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
-                                                    <div class="valid-feedback">Valid.</div>
-                                                    <div class="invalid-feedback">Please fill out this field.</div>
-                                                </div>
-                                                <div class="form-group form-check">
-                                                    <label class="form-check-label">
-                                                        <input class="form-check-input" type="checkbox" name="remember" required> I agree on blabla.
-                                                        <div class="valid-feedback">Valid.</div>
-                                                        <div class="invalid-feedback">Check this checkbox to continue.</div>
-                                                    </label>
-                                                </div>
-                                                <button type="submit" class="btn btn-primary">Submit</button>
-                                            </form>
-                                            <!-- <div class="form-group row">
+                                            <!-- <form method="POST" action="../processa/novo_usuario.php" class="was-validated">
+                                                <div class="form-group row">
                                                     <label for="cpf" class="col-sm-2 col-form-label">CPF:</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" id="cpf" name="cpf" required maxlength="11" minlength="11" aria-describedby="cpfHelp">
@@ -321,8 +305,35 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                                         <button type="submit" class="btn btn-outline-success">Cadastrar</button>
                                                         <button class="btn btn-outline-danger" data-dismiss="modal" aria-label="Close">Cancelar</button>
                                                     </div>
-                                                </div> 
-                                            </form>-->
+                                                </div>
+                                            </form> -->
+                                            <form name="formUser" action="../processa/novo_usuario.php" method="POST">
+                                                <div class="form-row">
+                                                    <div class="col">
+                                                        <input type="text" class="form-control" placeholder="Nome">
+                                                    </div>
+                                                    <div class="col">
+                                                        <input type="text" class="form-control" placeholder="Sobrenome">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col">
+                                                        <input type="text" class="form-control" placeholder="E-mail">
+                                                    </div>
+                                                    <div class="col">
+                                                        <input type="text" class="form-control" placeholder="Senha">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col">
+                                                        <input type="text" class="form-control" placeholder="CPF">
+                                                    </div>
+                                                    <div class="col">
+                                                        <input type="text" class="form-control" placeholder="Matrícula">
+                                                    </div>
+                                                </div>
+                                                <input type="submit" onclick="return validar()">
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
