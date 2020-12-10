@@ -225,48 +225,48 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                         <div class="modal-body">
                                             <form method="POST" action="../processa/novo_usuario.php">
                                                 <div class="form-group row">
-                                                    <label for="inputCPF" class="col-sm-2 col-form-label">CPF:</label>
+                                                    <label for="cpf" class="col-sm-2 col-form-label">CPF:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputCPF" name="cpf" required maxlength="11" minlength="11" aria-describedby="cpfHelp">
+                                                        <input type="text" class="form-control" id="cpf" name="cpf" required maxlength="11" minlength="11" aria-describedby="cpfHelp">
                                                         <small id="cpfHelp" class="text-muted">
                                                             Somente números.
                                                         </small>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label for="inputPNome" class="col-sm-2 col-form-label">Nome:</label>
+                                                    <label for="pnome" class="col-sm-2 col-form-label">Nome:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputPNome" name="pnome" required maxlength="30" minlength="2">
+                                                        <input type="text" class="form-control" id="pnome" name="pnome" required maxlength="30" minlength="2">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label for="inputUNome" class="col-sm-2 col-form-label">Sobrenome:</label>
+                                                    <label for="unome" class="col-sm-2 col-form-label">Sobrenome:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputUNome" name="unome" required maxlength="30" minlength="2">
+                                                        <input type="text" class="form-control" id="unome" name="unome" required maxlength="30" minlength="2">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label for="inputMatricula" class="col-sm-2 col-form-label">Matrícula:</label>
+                                                    <label for="matricula" class="col-sm-2 col-form-label">Matrícula:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputMatricula" name="matricula" required maxlength="30">
+                                                        <input type="text" class="form-control" id="matricula" name="matricula" required maxlength="30">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label for="inputEmail" class="col-sm-2 col-form-label">E-mail:</label>
+                                                    <label for="email" class="col-sm-2 col-form-label">E-mail:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="email" class="form-control" id="inputEmail" name="email" required>
+                                                        <input type="email" class="form-control" id="email" name="email" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label for="inputPassword" class="col-sm-2 col-form-label">Senha:</label>
+                                                    <label for="senha" class="col-sm-2 col-form-label">Senha:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="password" class="form-control" id="inputPassword" name="senha" required>
+                                                        <input type="password" class="form-control" id="senha" name="senha" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label for="inputType" class="col-sm-2 col-form-label">Tipo de Usuário:</label>
+                                                    <label for="tipo" class="col-sm-2 col-form-label">Tipo de Usuário:</label>
                                                     <div class="col-sm-10">
-                                                        <select class="form-control" id="inputType" name="tipo">
+                                                        <select class="form-control" id="tipo" name="tipo">
                                                             <option selected>Selecione</option>
                                                             <option value="1">Administrador</option>
                                                             <option value="0">Professor</option>
