@@ -13,7 +13,8 @@
 
     $result_user = "INSERT INTO usuarios VALUES ('$cpf', '$tipo', '$pnome','$unome', '$matricula', '$email', '$senha')";
     $result_query = pg_query($conexao, $result_user);
-    echo pg_result_status($result_query);
+    $teste = pg_result_status($result_query);
+    echo $teste;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
