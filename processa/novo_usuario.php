@@ -13,6 +13,7 @@
 
     $result_user = "INSERT INTO usuarios VALUES ('$cpf', '$tipo', '$pnome','$unome', '$matricula', '$email', '$senha')";
     $result_query = pg_query($conexao, $result_user);
+    echo pg_result_status($result_query);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -22,7 +23,7 @@
 </head>
 <body>
 <?php
-    if($result_query){
+    /* if($result_query){
         echo"
         <META HTTP-EQUIV=REFRESH CONTENT = '0;URL =
         https://lib-teste.herokuapp.com/1_admin/admin.php?link=2'>
@@ -38,7 +39,7 @@
             alert(\"Erro ao cadastrar usuário!\");
         </script>
         ";
-    }
+    } */
 ?>
 </body>
 </html>
