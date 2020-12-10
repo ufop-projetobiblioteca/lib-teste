@@ -126,7 +126,7 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                             </blockquote>
                                         </div>
                                         <div class="modal-footer">
-                                            <a class="btn btn-outline-danger" href='admin.php?link=9&id=<?php echo $row_usuario['matricula']; ?>' role="button">Excluir</a>
+                                            <a class="btn btn-outline-danger" href='../processa/deleta_usuario.php?id=<?php echo $row_usuario['matricula']; ?>' role="button">Excluir</a>
                                             <a class="btn btn-outline-primary" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
                                         </div>
                                     </div>
@@ -145,47 +145,47 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <form method="POST" action="processa/processa_edt_usuario.php">
+                                            <form method="POST" action="../processa/edita_usuario.php">
                                                 <div class="form-group row">
                                                     <label for="inputEmail3" class="col-sm-2 col-form-label">CPF:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputEmail3" name="cpf" value="<?php echo $row_usuario['cpf'] ?>">
+                                                        <input type="text" class="form-control" id="inputEmail3" name="cpf" value="<?php echo $row_usuario['cpf'] ?>" required maxlength="11" minlength="11">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputPassword3" class="col-sm-2 col-form-label">Nome:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputPassword3" name="pnome" value="<?php echo $row_usuario['pnome'] ?>">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="pnome" value="<?php echo $row_usuario['pnome'] ?>" required maxlength="30" minlength="3">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputEmail3" class="col-sm-2 col-form-label">Sobrenome:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputEmail3" name="unome" value="<?php echo $row_usuario['unome'] ?>">
+                                                        <input type="text" class="form-control" id="inputEmail3" name="unome" value="<?php echo $row_usuario['unome'] ?>" required maxlength="30" minlength="3">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputPassword3" class="col-sm-2 col-form-label">Matrícula:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputPassword3" name="matricula" value="<?php echo $row_usuario['matricula'] ?>">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="matricula" value="<?php echo $row_usuario['matricula'] ?>" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputEmail3" class="col-sm-2 col-form-label">E-mail:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="email" class="form-control" id="inputEmail3" name="email" value="<?php echo $row_usuario['email'] ?>">
+                                                        <input type="email" class="form-control" id="inputEmail3" name="email" value="<?php echo $row_usuario['email'] ?>" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputPassword3" class="col-sm-2 col-form-label">Senha:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="password" class="form-control" id="inputPassword3" name="senha" value="<?php echo $row_usuario['senha'] ?>">
+                                                        <input type="password" class="form-control" id="inputPassword3" name="senha" value="<?php echo $row_usuario['senha'] ?>" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputPassword3" class="col-sm-2 col-form-label">Tipo de Usuário:</label>
                                                     <div class="col-sm-10">
-                                                        <select class="form-control" name="tipo">
+                                                        <select class="form-control" name="tipo" required>
                                                             <option>Selecione</option>
                                                             <option value="1" <?php
                                                                                 if ($row_usuario['tipo_usuario'] == 1) {
