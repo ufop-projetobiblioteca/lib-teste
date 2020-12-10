@@ -262,7 +262,7 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label for="inputPassword3" class="col-sm-2 col-form-label" required>Tipo de Usuário:</label>
+                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Tipo de Usuário:</label>
                                                     <div class="col-sm-10">
                                                         <select class="form-control" name="tipo">
                                                             <option selected>Selecione</option>
