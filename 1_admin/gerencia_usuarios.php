@@ -310,10 +310,10 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                             <form name="formUser" action="../processa/novo_usuario.php" method="POST">
                                                 <div class="form-row">
                                                     <div class="col">
-                                                        <input type="text" class="form-control" placeholder="Nome" name="nome"> </br></br>
+                                                        <input type="text" class="form-control" placeholder="Nome" name="pnome"> </br></br>
                                                     </div>
                                                     <div class="col">
-                                                        <input type="text" class="form-control" placeholder="Sobrenome"> </br></br>
+                                                        <input type="text" class="form-control" placeholder="Sobrenome" name="unome"> </br></br>
                                                     </div>
                                                 </div>
                                                 <div class="form-row">
@@ -326,16 +326,16 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                                 </div>
                                                 <div class="form-row">
                                                     <div class="col">
-                                                        <input type="text" class="form-control" placeholder="CPF"> </br></br>
+                                                        <input type="text" class="form-control" placeholder="CPF" name="matricula"> </br></br>
                                                     </div>
                                                     <div class="col">
-                                                        <input type="text" class="form-control" placeholder="Matrícula"> </br></br>
+                                                        <input type="text" class="form-control" placeholder="Matrícula" name="cpf"> </br></br>
                                                     </div>
                                                 </div>
                                                 <div class="form-row">
-                                                    <label for="tipo" class="form-control">Tipo de Usuário:</label>
+                                                    <label class="form-label">Tipo de Usuário:</label>
                                                     <div class="col">
-                                                        <select class="form-control" id="tipo" name="tipo">
+                                                        <select class="form-control" name="tipo">
                                                             <option selected>Selecione</option>
                                                             <option value="1">Administrador</option>
                                                             <option value="0">Professor</option>
