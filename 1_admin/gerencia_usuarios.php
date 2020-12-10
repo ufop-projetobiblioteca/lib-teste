@@ -228,19 +228,19 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                                 <div class="form-group row">
                                                     <label for="inputEmail3" class="col-sm-2 col-form-label">CPF:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputEmail3" name="cpf" required>
+                                                        <input type="text" class="form-control" id="inputEmail3" name="cpf" required maxlength="11" minlength="11">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputPassword3" class="col-sm-2 col-form-label">Nome:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputPassword3" name="pnome" required>
+                                                        <input type="text" class="form-control" id="inputPassword3" name="pnome" required maxlength="30" minlength="3">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputEmail3" class="col-sm-2 col-form-label">Sobrenome:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputEmail3" name="unome" required>
+                                                        <input type="text" class="form-control" id="inputEmail3" name="unome" required maxlength="30" minlength="3">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -262,7 +262,7 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Tipo de Usuário:</label>
+                                                    <label for="inputPassword3" class="col-sm-2 col-form-label" required>Tipo de Usuário:</label>
                                                     <div class="col-sm-10">
                                                         <select class="form-control" name="tipo">
                                                             <option selected>Selecione</option>
