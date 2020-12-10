@@ -228,46 +228,47 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                                 <div class="form-group row">
                                                     <label for="inputEmail3" class="col-sm-2 col-form-label">CPF:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputEmail3" name="cpf">
+                                                        <input type="text" class="form-control" id="inputEmail3" name="cpf" required maxlength="11" minlength="11">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputPassword3" class="col-sm-2 col-form-label">Nome:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputPassword3" name="pnome">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="pnome" required maxlength="30" minlength="3">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputEmail3" class="col-sm-2 col-form-label">Sobrenome:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputEmail3" name="unome">
+                                                        <input type="text" class="form-control" id="inputEmail3" name="unome" required maxlength="30" minlength="3">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputPassword3" class="col-sm-2 col-form-label">Matrícula:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputPassword3" name="matricula">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="matricula" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputEmail3" class="col-sm-2 col-form-label">E-mail:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="email" class="form-control" id="inputEmail3" name="email">
+                                                        <input type="email" class="form-control" id="inputEmail3" name="email" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputPassword3" class="col-sm-2 col-form-label">Senha:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="password" class="form-control" id="inputPassword3" name="senha">
+                                                        <input type="password" class="form-control" id="inputPassword3" name="senha" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Tipo de Usuário:</label>
+                                                    <label for="inputPassword3" class="col-sm-2 col-form-label" required>Tipo de Usuário:</label>
                                                     <div class="col-sm-10">
                                                         <select class="form-control" name="tipo">
                                                             <option selected>Selecione</option>
                                                             <option value="1">Administrador</option>
-                                                            <option value="0">Usuário Comum</option>
+                                                            <option value="0">Professor</option>
+                                                            <option value="0">Aluno</option>
                                                         </select>
                                                     </div>
                                                 </div>

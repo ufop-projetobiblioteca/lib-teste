@@ -3,7 +3,7 @@
     include_once("../conexao.php");
 
     $cpf = filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_STRING);
-    $tipo = filter_input(INPUT_POST, 'tipo', FILTER_SANITIZE_EMAIL);
+    $tipo = filter_input(INPUT_POST, 'tipo');
     $pnome = filter_input(INPUT_POST, 'pnome', FILTER_SANITIZE_STRING);
     $unome = filter_input(INPUT_POST, 'unome', FILTER_SANITIZE_STRING);
     $matricula = filter_input(INPUT_POST, 'matricula', FILTER_SANITIZE_STRING);
