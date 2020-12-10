@@ -225,7 +225,7 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                         <div class="modal-body">
                                             <form method="POST" action="../processa/novo_usuario.php">
                                                 <div class="form-group row">
-                                                    <label for="inputEmail" class="col-sm-2 col-form-label">CPF:</label>
+                                                    <label for="inputCPF" class="col-sm-2 col-form-label">CPF:</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" id="inputCPF" name="cpf" required maxlength="11" minlength="11" aria-describedby="cpfHelp">
                                                         <small id="cpfHelp" class="text-muted">
@@ -234,42 +234,43 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Nome:</label>
+                                                    <label for="inputPNome" class="col-sm-2 col-form-label">Nome:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputPassword3" name="pnome">
+                                                        <input type="text" class="form-control" id="inputPNome" name="pnome" required maxlength="30" minlength="2">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label for="inputEmail3" class="col-sm-2 col-form-label">Sobrenome:</label>
+                                                    <label for="inputUNome" class="col-sm-2 col-form-label">Sobrenome:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputEmail3" name="unome">
+                                                        <input type="text" class="form-control" id="inputUNome" name="unome" required maxlength="30" minlength="2">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Matrícula:</label>
+                                                    <label for="inputMatricula" class="col-sm-2 col-form-label">Matrícula:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputPassword3" name="matricula">
+                                                        <input type="text" class="form-control" id="inputMatricula" name="matricula" required maxlength="30">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label for="inputEmail3" class="col-sm-2 col-form-label">E-mail:</label>
+                                                    <label for="inputEmail" class="col-sm-2 col-form-label">E-mail:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="email" class="form-control" id="inputEmail3" name="email">
+                                                        <input type="email" class="form-control" id="inputEmail" name="email" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Senha:</label>
+                                                    <label for="inputPassword" class="col-sm-2 col-form-label">Senha:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="password" class="form-control" id="inputPassword3" name="senha">
+                                                        <input type="password" class="form-control" id="inputPassword" name="senha" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
-                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Tipo de Usuário:</label>
+                                                    <label for="inputType" class="col-sm-2 col-form-label">Tipo de Usuário:</label>
                                                     <div class="col-sm-10">
-                                                        <select class="form-control" name="tipo">
+                                                        <select class="form-control" id="inputType" name="tipo">
                                                             <option selected>Selecione</option>
                                                             <option value="1">Administrador</option>
-                                                            <option value="0">Usuário Comum</option>
+                                                            <option value="0">Professor</option>
+                                                            <option value="0">Aluno</option>
                                                         </select>
                                                     </div>
                                                 </div>
