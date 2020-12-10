@@ -103,7 +103,6 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                             </dl>
                                         </div>
                                         <div class="modal-footer">
-                                            <!--<a class="btn btn-outline-warning" href='admin.php?link=7&id=<php echo $row_usuario['matricula']; ?>' role="button">Editar</a>-->
                                             <a class="btn btn-outline-warning" role="button" data-dismiss="modal" data-toggle="modal" data-target="#modalEditar<?php echo $row_usuario['matricula']; ?>">Editar</a>
                                             <a class="btn btn-outline-danger" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
                                         </div>
@@ -224,11 +223,14 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                         </div>
                                         <div class="modal-body">
-                                            <form method="POST" action="admin.php?link=10">
+                                            <form method="POST" action="../processa/novo_usuario.php">
                                                 <div class="form-group row">
-                                                    <label for="inputEmail3" class="col-sm-2 col-form-label">CPF:</label>
+                                                    <label for="inputEmail" class="col-sm-2 col-form-label">CPF:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputEmail3" name="cpf">
+                                                        <input type="text" class="form-control" id="inputCPF" name="cpf" required maxlength="11" minlength="11" aria-describedby="cpfHelp">
+                                                        <small id="cpfHelp" class="text-muted">
+                                                            Somente números.
+                                                        </small>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
