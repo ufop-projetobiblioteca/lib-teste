@@ -35,7 +35,7 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
         });
     </script>
 
-    <script>
+    <script type="text/javascript">
         function validar() {
             var nome = formuser.nome.value;
             var email = formuser.email.value;
@@ -310,19 +310,21 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                             <form name="formUser" action="../processa/novo_usuario.php" method="POST">
                                                 <div class="form-row">
                                                     <div class="col">
-                                                        <input type="text" class="form-control" placeholder="Nome">
+                                                        <input type="text" class="form-control" placeholder="Nome" name="nome">
                                                     </div>
                                                     <div class="col">
                                                         <input type="text" class="form-control" placeholder="Sobrenome">
                                                     </div>
+                                                    <br><br>
                                                 </div>
                                                 <div class="form-row">
                                                     <div class="col">
-                                                        <input type="text" class="form-control" placeholder="E-mail">
+                                                        <input type="text" class="form-control" placeholder="E-mail" name="email">
                                                     </div>
                                                     <div class="col">
-                                                        <input type="text" class="form-control" placeholder="Senha">
+                                                        <input type="text" class="form-control" placeholder="Senha" name="senha">
                                                     </div>
+                                                    <br><br>
                                                 </div>
                                                 <div class="form-row">
                                                     <div class="col">
@@ -330,6 +332,18 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                                     </div>
                                                     <div class="col">
                                                         <input type="text" class="form-control" placeholder="Matrícula">
+                                                    </div>
+                                                    <br><br>
+                                                </div>
+                                                <div class="form-row">
+                                                    <label for="tipo" class="form-control">Tipo de Usuário:</label>
+                                                    <div class="col">
+                                                        <select class="form-control" id="tipo" name="tipo">
+                                                            <option selected>Selecione</option>
+                                                            <option value="1">Administrador</option>
+                                                            <option value="0">Professor</option>
+                                                            <option value="0">Aluno</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                                 <input type="submit" onclick="return validar()">
