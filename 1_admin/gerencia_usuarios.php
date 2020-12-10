@@ -37,25 +37,25 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
 
     <script type="text/javascript">
         function validar() {
-            var nome = formuser.nome.value;
-            var email = formuser.email.value;
-            var senha = formuser.senha.value;
+            var nome = formUser.nome.value;
+            var email = formUser.email.value;
+            var senha = formUser.senha.value;
 
             if (nome == "") {
                 alert('Preencha o campo nome.');
-                formuser.nome.focus();
+                formUser.nome.focus();
                 return false;
             }
 
             if (email == "" || email.indexOf('@') == -1) {
                 alert('Preencha o campo E-mail.');
-                formuser.email.focus();
+                formUser.email.focus();
                 return false;
             }
 
             if (senha == "" || senha.length <= 5) {
                 alert('Preencha o campo senha com minimo 6 caracteres');
-                formuser.senha.focus();
+                formUser.senha.focus();
                 return false;
             }
         }
@@ -310,30 +310,27 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                             <form name="formUser" action="../processa/novo_usuario.php" method="POST">
                                                 <div class="form-row">
                                                     <div class="col">
-                                                        <input type="text" class="form-control" placeholder="Nome" name="nome">
+                                                        <input type="text" class="form-control" placeholder="Nome" name="nome"> </br></br>
                                                     </div>
                                                     <div class="col">
-                                                        <input type="text" class="form-control" placeholder="Sobrenome">
+                                                        <input type="text" class="form-control" placeholder="Sobrenome"> </br></br>
                                                     </div>
-                                                    <br><br>
                                                 </div>
                                                 <div class="form-row">
                                                     <div class="col">
-                                                        <input type="text" class="form-control" placeholder="E-mail" name="email">
+                                                        <input type="text" class="form-control" placeholder="E-mail" name="email"> </br></br>
                                                     </div>
                                                     <div class="col">
-                                                        <input type="text" class="form-control" placeholder="Senha" name="senha">
+                                                        <input type="text" class="form-control" placeholder="Senha" name="senha"> </br></br>
                                                     </div>
-                                                    <br><br>
                                                 </div>
                                                 <div class="form-row">
                                                     <div class="col">
-                                                        <input type="text" class="form-control" placeholder="CPF">
+                                                        <input type="text" class="form-control" placeholder="CPF"> </br></br>
                                                     </div>
                                                     <div class="col">
-                                                        <input type="text" class="form-control" placeholder="Matrícula">
+                                                        <input type="text" class="form-control" placeholder="Matrícula"> </br></br>
                                                     </div>
-                                                    <br><br>
                                                 </div>
                                                 <div class="form-row">
                                                     <label for="tipo" class="form-control">Tipo de Usuário:</label>
