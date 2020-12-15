@@ -125,7 +125,7 @@ include_once("../conexao.php");
                 </div>
             </div>
         </div>
-        <div class="footer-copyright bg-dark text-center py-3">
+        <div class="footer-copyright bg-light text-center py-3">
             <font color="white">© 2020 Copyright:</font>
             <a href="https://www.google.com"> MDBootstrap.com</a>
         </div>
