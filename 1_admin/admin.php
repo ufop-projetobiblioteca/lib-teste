@@ -108,7 +108,7 @@ include_once("../conexao.php");
         ?>
         <div id="rodape">
             <footer class="footer bg-light mt-auto navbar-fixed-bottom py-3" id="footer">
-                <div class="container text-center">
+                <div class="container-fluid text-center">
                     <div class="row d-flex align-items-center">
                         <div class="col">
                             <a href="https://www.google.com">
