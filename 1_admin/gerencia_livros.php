@@ -135,33 +135,27 @@ $resultado_livro = pg_query($conexao, $result_livro);
                                                 <div class="form-group row">
                                                     <label for="inputEmail3" class="col-sm-2 col-form-label">Título:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputEmail3" name="nome" value="<?php echo $row_livros['nome'] ?>">
+                                                        <input type="text" class="form-control" id="inputEmail3" name="nome" value="<?php echo $row_livros['nome'] ?>" required maxlength="30">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputPassword3" class="col-sm-2 col-form-label">ISBN:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputPassword3" name="isbn" value="<?php echo $row_livros['isbn'] ?>">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="isbn" value="<?php echo $row_livros['isbn'] ?>" required maxlength="30">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputEmail3" class="col-sm-2 col-form-label">Autor:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputEmail3" name="autor" value="<?php echo $row_livros['autor'] ?>">
+                                                        <input type="text" class="form-control" id="inputEmail3" name="autor" value="<?php echo $row_livros['autor'] ?>" required maxlength="30">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputPassword3" class="col-sm-2 col-form-label">Edição:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputPassword3" name="edicao" value="<?php echo $row_livros['edicao'] ?>">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="edicao" value="<?php echo $row_livros['edicao'] ?>" required maxlength="30">
                                                     </div>
                                                 </div>
-                                                <!-- <div class="form-group row">
-                                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Sessão:</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputPassword3" name="sessao_id" value="?php echo $row_livros['sessao_id'] ?>">
-                                                    </div>
-                                                </div> -->
                                                 <input type="hidden" name="id_livros" value="<?php echo $row_livros['id_livros']; ?>">
                                                 <div class="form-group row">
                                                     <div class="col-sm-10">
@@ -190,37 +184,37 @@ $resultado_livro = pg_query($conexao, $result_livro);
                                                 <div class="form-group row">
                                                     <label for="inputEmail3" class="col-sm-2 col-form-label">ID:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputEmail3" name="id_livro">
+                                                        <input type="text" class="form-control" id="inputEmail3" name="id_livro" required maxlength="30">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputPassword3" class="col-sm-2 col-form-label">Título:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputPassword3" name="nome">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="nome" required maxlength="30">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputPassword3" class="col-sm-2 col-form-label">ISBN:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputPassword3" name="isbn">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="isbn" required maxlength="30">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputEmail3" class="col-sm-2 col-form-label">Autor:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputEmail3" name="autor">
+                                                        <input type="text" class="form-control" id="inputEmail3" name="autor" required maxlength="30">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputPassword3" class="col-sm-2 col-form-label">Edição:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputPassword3" name="edicao">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="edicao" required maxlength="30">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputEmail3" class="col-sm-2 col-form-label">Sessão:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputEmail3" name="sessao_id">
+                                                        <input type="text" class="form-control" id="inputEmail3" name="sessao_id" required maxlength="30">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -256,12 +250,6 @@ $resultado_livro = pg_query($conexao, $result_livro);
                                                     <label for="inputPassword3" class="col-sm-2 col-form-label">Código de Localização:</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control" id="inputPassword3" name="codlocalizacao">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label for="inputEmail3" class="col-sm-2 col-form-label">ISBN:</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputEmail3" name="exisbn">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
