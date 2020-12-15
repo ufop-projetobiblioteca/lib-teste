@@ -1,6 +1,6 @@
 .footer {
     position: absolute;   /* posição absoluta */
-    bottom: -1;   /* Fixa a div no fim da página */
+    bottom: 0;   /* Fixa a div no fim da página */
     width: 100%;   /* Largura estende por toda página da div */
     height: 100px;   /* Altura da div */
     }

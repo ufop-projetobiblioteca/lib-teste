@@ -208,7 +208,7 @@ $resultado_livro = pg_query($conexao, $result_livro);
                                                 <div class="form-group row">
                                                     <label for="inputPassword3" class="col-sm-2 col-form-label">Edição:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputPassword3" name="edicao" required maxlength="30">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="edicao" required maxlength="10">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">

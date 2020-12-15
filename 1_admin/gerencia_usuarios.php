@@ -103,7 +103,6 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                             </dl>
                                         </div>
                                         <div class="modal-footer">
-                                            <!--<a class="btn btn-outline-warning" href='admin.php?link=7&id=<php echo $row_usuario['matricula']; ?>' role="button">Editar</a>-->
                                             <a class="btn btn-outline-warning" role="button" data-dismiss="modal" data-toggle="modal" data-target="#modalEditar<?php echo $row_usuario['matricula']; ?>">Editar</a>
                                             <a class="btn btn-outline-danger" role="button" data-dismiss="modal" aria-label="Close">Cancelar</a>
                                         </div>
@@ -149,25 +148,25 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                                 <div class="form-group row">
                                                     <label for="inputEmail3" class="col-sm-2 col-form-label">CPF:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputEmail3" name="cpf" value="<?php echo $row_usuario['cpf'] ?>" required maxlength="11" minlength="11">
+                                                        <input type="text" class="form-control" id="inputEmail3" name="cpf" value="<?php echo $row_usuario['cpf'] ?>" pattern="[0-9]{11}" required maxlength="11" minlength="11">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputPassword3" class="col-sm-2 col-form-label">Nome:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputPassword3" name="pnome" value="<?php echo $row_usuario['pnome'] ?>" required maxlength="30" minlength="3">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="pnome" value="<?php echo $row_usuario['pnome'] ?>" pattern="[A-Za-zÀ-ú ']{3,}" required maxlength="30" minlength="3">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputEmail3" class="col-sm-2 col-form-label">Sobrenome:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputEmail3" name="unome" value="<?php echo $row_usuario['unome'] ?>" required maxlength="30" minlength="3">
+                                                        <input type="text" class="form-control" id="inputEmail3" name="unome" value="<?php echo $row_usuario['unome'] ?>" pattern="[A-Za-zÀ-ú ']{3,}" required maxlength="30" minlength="3">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputPassword3" class="col-sm-2 col-form-label">Matrícula:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputPassword3" name="matricula" value="<?php echo $row_usuario['matricula'] ?>" required>
+                                                        <input type="text" class="form-control" id="inputPassword3" name="matricula" value="<?php echo $row_usuario['matricula'] ?>" required maxlength="30">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -179,7 +178,7 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                                 <div class="form-group row">
                                                     <label for="inputPassword3" class="col-sm-2 col-form-label">Senha:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="password" class="form-control" id="inputPassword3" name="senha" value="<?php echo $row_usuario['senha'] ?>" required>
+                                                        <input type="password" class="form-control" id="inputPassword3" name="senha" value="<?php echo $row_usuario['senha'] ?>" required maxlength="20" minlength="4">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -197,6 +196,11 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                                                                     echo 'selected';
                                                                                 }
                                                                                 ?>>Aluno</option>
+                                                            <option value="2" <?php
+                                                                                if ($row_usuario['tipo_usuario'] == 2) {
+                                                                                    echo 'selected';
+                                                                                }
+                                                                                ?>>Professor</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -234,13 +238,13 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                                 <div class="form-group row">
                                                     <label for="inputPassword3" class="col-sm-2 col-form-label">Nome:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputPassword3" name="pnome" pattern ="[A-Za-zÀ-ú ']{3,}" required maxlength="30" minlength="3">
+                                                        <input type="text" class="form-control" id="inputPassword3" name="pnome" pattern="[A-Za-zÀ-ú ']{3,}" required maxlength="30" minlength="3">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="inputEmail3" class="col-sm-2 col-form-label">Sobrenome:</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputEmail3" name="unome" required maxlength="30" minlength="3">
+                                                        <input type="text" class="form-control" id="inputEmail3" name="unome" pattern="[A-Za-zÀ-ú ']{3,}" required maxlength="30" minlength="3">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -267,7 +271,7 @@ $row_usuario_usuario = pg_query($conexao, $result_usuario);
                                                         <select class="form-control" name="tipo">
                                                             <option selected>Selecione</option>
                                                             <option value="1">Administrador</option>
-                                                            <option value="0">Professor</option>
+                                                            <option value="2">Professor</option>
                                                             <option value="0">Aluno</option>
                                                         </select>
                                                     </div>
