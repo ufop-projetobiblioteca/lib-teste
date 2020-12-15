@@ -33,31 +33,7 @@
     </div>
 </main>
 
-<footer class="footer mt-auto py-3 bg-light">
-    <div class="container">
-        <div class="row d-flex align-items-center">
-            <div class="col">
-                <a href="https://www.google.com">
-                    <img border="0" src="../img/icea.png" class="img-fluid" alt="iceaLogo" width="100" height="100">
-                </a>
-            </div>
-            <div class="col">
-                <a href="https://www.google.com">
-                    <img border="0" src="../img/decsi.png" class="img-fluid" alt="decsiLogo" width="100" height="100">
-                </a>
-            </div>
-            <div class="col">
-                <a href="https://www.google.com">
-                    <img border="0" src="../img/imobilis.png" class="img-fluid" alt="imobilisLogo" width="100" height="100">
-                </a>
-            </div>
-        </div>
-        <div class="footer-copyright bg-light text-center py-3">
-            <font color="black">© 2020 Copyright:</font>
-            <a href="https://www.google.com"> MDBootstrap.com</a>
-        </div>
-    </div>
-</footer>
+
 
 <script src="../js/bootstrap.bundle.min.js"></script>
 
