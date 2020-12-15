@@ -84,52 +84,56 @@ include_once("../conexao.php");
 </head>
 
 <body>
-    <?php
-    include_once('menu_admin.php');
+    <div id="tudo">
+        <?php
+        include_once('menu_admin.php');
+        
+        $link = $_GET["link"];
 
-    $link = $_GET["link"];
+        $pages[1] = "../bem_vindo.php";
+        $pages[2] = "gerencia_usuarios.php";
+        $pages[3] = "gerencia_livros.php";
+        $pages[4] = "gerencia_emprestimos.php";
+        $pages[5] = "gerencia_reservas.php";
 
-    $pages[1] = "../bem_vindo.php";
-    $pages[2] = "gerencia_usuarios.php";
-    $pages[3] = "gerencia_livros.php";
-    $pages[4] = "gerencia_emprestimos.php";
-    $pages[5] = "gerencia_reservas.php";
-
-    if (!empty($link)) {
-        if (file_exists($pages[$link])) {
-            include $pages[$link];
+        if (!empty($link)) {
+            if (file_exists($pages[$link])) {
+                include $pages[$link];
+            } else {
+                include "../bem_vindo.php";
+            }
         } else {
             include "../bem_vindo.php";
         }
-    } else {
-        include "../bem_vindo.php";
-    }
-    ?>
-    <footer class="footer bg-light mt-auto navbar-fixed-bottom py-3" id="footer">
-        <div class="container text-center">
-            <div class="row d-flex align-items-center">
-                <div class="col">
-                    <a href="https://www.google.com">
-                        <img border="0" src="../img/icea.png" class="img-fluid" alt="iceaLogo" width="100" height="100">
-                    </a>
+        ?>
+        <div id="rodape">
+            <footer class="footer bg-light mt-auto navbar-fixed-bottom py-3" id="footer">
+                <div class="container text-center">
+                    <div class="row d-flex align-items-center">
+                        <div class="col">
+                            <a href="https://www.google.com">
+                                <img border="0" src="../img/icea.png" class="img-fluid" alt="iceaLogo" width="100" height="100">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.google.com">
+                                <img border="0" src="../img/decsi.png" class="img-fluid" alt="decsiLogo" width="100" height="100">
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.google.com">
+                                <img border="0" src="../img/imobilis.png" class="img-fluid" alt="imobilisLogo" width="100" height="100">
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col">
-                    <a href="https://www.google.com">
-                        <img border="0" src="../img/decsi.png" class="img-fluid" alt="decsiLogo" width="100" height="100">
-                    </a>
+                <div class="footer-copyright bg-light text-center py-3">
+                    <font color="black">© 2020 Copyright:</font>
+                    <a href="https://www.google.com"> MDBootstrap.com</a>
                 </div>
-                <div class="col">
-                    <a href="https://www.google.com">
-                        <img border="0" src="../img/imobilis.png" class="img-fluid" alt="imobilisLogo" width="100" height="100">
-                    </a>
-                </div>
-            </div>
+            </footer>
         </div>
-        <div class="footer-copyright bg-light text-center py-3">
-            <font color="black">© 2020 Copyright:</font>
-            <a href="https://www.google.com"> MDBootstrap.com</a>
-        </div>
-    </footer>
+    </div>
 </body>
 
 </html>
