@@ -8,26 +8,20 @@ include_once("../conexao.php");
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Victor Dias">
-    <link rel="icon" href="../img/icone-biblioteca.ico">
-
+    <meta name="generator" content="Hugo 0.79.0">
     <title>Biblioteca</title>
+
+    <link rel="icon" href="../img/icone-biblioteca.ico">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/">
 
     <!-- Principal CSS do Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Estilos customizados para esse template -->
-    <link href="../css/sticky-footer-navbar.css" rel="stylesheet">
-
     <!-- Datatables CSS library -->
-    <link rel="stylesheet" type="text/css" href="../css/jquery.dataTables.min.css" />
-
-    <!-- Custom styles for this template -->
-    <link href="../css/starter-template.css" rel="stylesheet">
-
-    <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/jquery.dataTables.min.css">
 
     <style>
         .bd-placeholder-img {
@@ -46,11 +40,10 @@ include_once("../conexao.php");
         }
     </style>
 
+    <!-- Estilos customizados para esse template -->
+    <link href="../css/sticky-footer-navbar.css" rel="stylesheet">
+
     <!-- Principal JavaScript do Bootstrap -->
-    <!-- ================================= -->
-
-    <!-- Foi colocado no final para a página carregar mais rápido -->
-
     <script src="../js/jquery-3.3.1.slim.min.js"></script>
 
     <script>
@@ -83,11 +76,10 @@ include_once("../conexao.php");
 
 </head>
 
-<body>
-    <div id="tudo">
-        <?php
-        include_once('menu_admin.php');
-        
+<body class="d-flex flex-column h-100">
+    <!-- <?php
+        include_once('menu_teste.php');
+
         $link = $_GET["link"];
 
         $pages[1] = "../bem_vindo.php";
@@ -133,7 +125,7 @@ include_once("../conexao.php");
                 </div>
             </footer>
         </div>
-    </div>
+    </div> -->
 </body>
 
 </html>
