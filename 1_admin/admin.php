@@ -105,7 +105,7 @@ include_once("../conexao.php");
         include "../bem_vindo.php";
     }
     ?>
-    <footer class="footer bg-dark mt-auto navbar-fixed-bottom py-3" id="footer">
+    <footer class="footer bg-light mt-auto navbar-fixed-bottom py-3" id="footer">
         <div class="container text-center">
             <div class="row d-flex align-items-center">
                 <div class="col">
